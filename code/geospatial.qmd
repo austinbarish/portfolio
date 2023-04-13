@@ -3,3 +3,8 @@
 
 
 * Banks have many offices. Locations mean the main office.
+* Attempted to query all the addresses with geopy but estimated time would have been 16 hours of runtime.
+* Instead we use the zip code coordiantes as proxy for the banks main offices.
+
+Zip code data obtained from "ZIP Code Tabulation Areas" in
+https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html
