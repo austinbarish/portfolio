@@ -2,9 +2,13 @@
 
 
 
-* Banks have many offices. Locations mean the main office.
+* Banks have many offices. Locations mean the main office. As per the FDIC the main office is the headquarters listed in the charter. Which may not be the same as the corporate headquarter.
 * Attempted to query all the addresses with geopy but estimated time would have been 16 hours of runtime.
 * Instead we use the zip code coordiantes as proxy for the banks main offices.
 
 Zip code data obtained from "ZIP Code Tabulation Areas" in
 https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html
+
+We use the Folium Python library - a leaflet.js wrapper - which will allow us to use OpenStreetMap.
+
+Many banks have moved to south dakota.
