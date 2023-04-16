@@ -10,16 +10,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: geospatial.qmd
-        text: Geospatial      
-      - href: plot-2.qmd
-        text: plot-2      
-      - href: plot-3.qmd
-        text: plot-3      
-      - href: plot-4.qmd
-        text: plot-4      
-      - href: plot-5.qmd
-        text: plot-5
+      - href: the_fdic.qmd
+        text: The FDIC        
+      - href: methods.qmd
+        text: Methods        
+      - href: code.qmd
+        text: Code        
+      - href: methods.qmd
+        text: Methods        
+      - href: authors.qmd
+        text: Authors        
   page-footer:
     left: |
       Project by Group 4 <br>
@@ -34,3 +34,4 @@ format:
     css: styles.css
     toc: true
 
+bibliography: references.bib
