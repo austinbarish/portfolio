@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b1b9e26cdad13532aed2663406c4f0db {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b1b9e26cdad13532aed2663406c4f0db" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b1b9e26cdad13532aed2663406c4f0db = L.map(
+                "map_b1b9e26cdad13532aed2663406c4f0db",
+                {
+                    center: [37.8, -96.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8c74cf23a6eadff4a39e389cc5fe9ffc = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+            var circle_marker_2ab26d43f0f955dda81ba4019a3d921f = L.circleMarker(
+                [32.82009245528456, -86.69528799186988],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.0445946399999997, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_c694179b3fcd2f575416bd77c40c83f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90f844521e709b99ed5ad9db96c160ab = $(`<div id="html_90f844521e709b99ed5ad9db96c160ab" style="width: 100.0%; height: 100.0%;">State: Alabama<br>Total Assets: 152230<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_c694179b3fcd2f575416bd77c40c83f1.setContent(html_90f844521e709b99ed5ad9db96c160ab);
+            
+        
+
+        circle_marker_2ab26d43f0f955dda81ba4019a3d921f.bindPopup(popup_c694179b3fcd2f575416bd77c40c83f1)
+        ;
+
+        
+    
+    
+            var circle_marker_7f029a1628b15ab69dc36c8bfa0f6293 = L.circleMarker(
+                [60.86188525, -143.3533175],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.10264284, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_2fdad852b6448b5472b45a19f9ce94b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1efac65d1124817763e4edf3331c04d = $(`<div id="html_a1efac65d1124817763e4edf3331c04d" style="width: 100.0%; height: 100.0%;">State: Alaska<br>Total Assets: 5132<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_2fdad852b6448b5472b45a19f9ce94b1.setContent(html_a1efac65d1124817763e4edf3331c04d);
+            
+        
+
+        circle_marker_7f029a1628b15ab69dc36c8bfa0f6293.bindPopup(popup_2fdad852b6448b5472b45a19f9ce94b1)
+        ;
+
+        
+    
+    
+            var circle_marker_8ab880743218f1d1747ac6f137980de4 = L.circleMarker(
+                [-14.322923, -170.752349],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.0015119200000000001, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_b373089df37ef696cd63d8e0376cdf17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b47d54228378c39d6978443a12d2494 = $(`<div id="html_4b47d54228378c39d6978443a12d2494" style="width: 100.0%; height: 100.0%;">State: American Samoa<br>Total Assets: 76<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_b373089df37ef696cd63d8e0376cdf17.setContent(html_4b47d54228378c39d6978443a12d2494);
+            
+        
+
+        circle_marker_8ab880743218f1d1747ac6f137980de4.bindPopup(popup_b373089df37ef696cd63d8e0376cdf17)
+        ;
+
+        
+    
+    
+            var circle_marker_1b55c6838c74762255a70e24ae6118ff = L.circleMarker(
+                [33.503587448275866, -112.20534134482759],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.9713253999999999, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_d5a931867ff17501d61716ca2f766e1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c228b64bb0a82b9c6878d26dc7b19988 = $(`<div id="html_c228b64bb0a82b9c6878d26dc7b19988" style="width: 100.0%; height: 100.0%;">State: Arizona<br>Total Assets: 48566<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_d5a931867ff17501d61716ca2f766e1b.setContent(html_c228b64bb0a82b9c6878d26dc7b19988);
+            
+        
+
+        circle_marker_1b55c6838c74762255a70e24ae6118ff.bindPopup(popup_d5a931867ff17501d61716ca2f766e1b)
+        ;
+
+        
+    
+    
+            var circle_marker_cde4030ae72e437689455845ee8b3ada = L.circleMarker(
+                [34.88534431147541, -92.49014444262296],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6364879, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_67a0ffa8687e004c356e66eff49cc334 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2628ef48718fcb684a333ca4144a34ae = $(`<div id="html_2628ef48718fcb684a333ca4144a34ae" style="width: 100.0%; height: 100.0%;">State: Arkansas<br>Total Assets: 31824<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_67a0ffa8687e004c356e66eff49cc334.setContent(html_2628ef48718fcb684a333ca4144a34ae);
+            
+        
+
+        circle_marker_cde4030ae72e437689455845ee8b3ada.bindPopup(popup_67a0ffa8687e004c356e66eff49cc334)
+        ;
+
+        
+    
+    
+            var circle_marker_14d7eee6efeefa00df71c54b4030a57c = L.circleMarker(
+                [35.79595523444975, -119.68359653110052],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.42122704, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_f4e40f4479ede1bc4856b7e25c5f96db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a041b1aa4bda65182c3cfc9afdb30dc = $(`<div id="html_1a041b1aa4bda65182c3cfc9afdb30dc" style="width: 100.0%; height: 100.0%;">State: California<br>Total Assets: 571061<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_f4e40f4479ede1bc4856b7e25c5f96db.setContent(html_1a041b1aa4bda65182c3cfc9afdb30dc);
+            
+        
+
+        circle_marker_14d7eee6efeefa00df71c54b4030a57c.bindPopup(popup_f4e40f4479ede1bc4856b7e25c5f96db)
+        ;
+
+        
+    
+    
+            var circle_marker_0a2b576f308ba97e67bb3237e523dc6c = L.circleMarker(
+                [39.17573114285715, -105.17426209821431],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.63132794, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_de3faab72d1ba755b02eae5c31ce352d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9e6bf9b0f83eb6205ddca371303cefb = $(`<div id="html_f9e6bf9b0f83eb6205ddca371303cefb" style="width: 100.0%; height: 100.0%;">State: Colorado<br>Total Assets: 31566<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_de3faab72d1ba755b02eae5c31ce352d.setContent(html_f9e6bf9b0f83eb6205ddca371303cefb);
+            
+        
+
+        circle_marker_0a2b576f308ba97e67bb3237e523dc6c.bindPopup(popup_de3faab72d1ba755b02eae5c31ce352d)
+        ;
+
+        
+    
+    
+            var circle_marker_5adfa58e849a9efbb4816e218217a8ac = L.circleMarker(
+                [41.592558702127654, -72.8900956382979],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.97437732, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_062c03942bbde217e7af9c65fec2cf12 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3397527a90e166d4aaf87a2bcbfb0307 = $(`<div id="html_3397527a90e166d4aaf87a2bcbfb0307" style="width: 100.0%; height: 100.0%;">State: Connecticut<br>Total Assets: 48719<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_062c03942bbde217e7af9c65fec2cf12.setContent(html_3397527a90e166d4aaf87a2bcbfb0307);
+            
+        
+
+        circle_marker_5adfa58e849a9efbb4816e218217a8ac.bindPopup(popup_062c03942bbde217e7af9c65fec2cf12)
+        ;
+
+        
+    
+    
+            var circle_marker_5e9a3bb3eb4d5482cbf1c7814a3eed28 = L.circleMarker(
+                [39.27206588235294, -75.51504411764707],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.5915479599999998, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_95170ecd06b6a06813951127d3fb1bef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33433f0cbc446fcee3e102509c1c809c = $(`<div id="html_33433f0cbc446fcee3e102509c1c809c" style="width: 100.0%; height: 100.0%;">State: Delaware<br>Total Assets: 179577<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_95170ecd06b6a06813951127d3fb1bef.setContent(html_33433f0cbc446fcee3e102509c1c809c);
+            
+        
+
+        circle_marker_5e9a3bb3eb4d5482cbf1c7814a3eed28.bindPopup(popup_95170ecd06b6a06813951127d3fb1bef)
+        ;
+
+        
+    
+    
+            var circle_marker_c9b4fdde6966fbdf1b110c4a0c34ad09 = L.circleMarker(
+                [38.90267266666667, -77.02333266666666],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.014993820000000001, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_b5646ede9c20f9f4bac91ac31d43479c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30d1ef822974d0424e3d931996ab8f42 = $(`<div id="html_30d1ef822974d0424e3d931996ab8f42" style="width: 100.0%; height: 100.0%;">State: District Of Columbia<br>Total Assets: 750<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_b5646ede9c20f9f4bac91ac31d43479c.setContent(html_30d1ef822974d0424e3d931996ab8f42);
+            
+        
+
+        circle_marker_c9b4fdde6966fbdf1b110c4a0c34ad09.bindPopup(popup_b5646ede9c20f9f4bac91ac31d43479c)
+        ;
+
+        
+    
+    
+            var circle_marker_4701e42b9fd04c0a009e4d6e988e6faf = L.circleMarker(
+                [28.005171866666668, -81.97292124285713],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.86080192, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_c796e2082cc19a756aa55e0ab1fe512d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f12f0b027253b70b71a0eff4018d64c = $(`<div id="html_6f12f0b027253b70b71a0eff4018d64c" style="width: 100.0%; height: 100.0%;">State: Florida<br>Total Assets: 93040<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_c796e2082cc19a756aa55e0ab1fe512d.setContent(html_6f12f0b027253b70b71a0eff4018d64c);
+            
+        
+
+        circle_marker_4701e42b9fd04c0a009e4d6e988e6faf.bindPopup(popup_c796e2082cc19a756aa55e0ab1fe512d)
+        ;
+
+        
+    
+    
+            var circle_marker_f579ea471342cd4064db0dfb90180121 = L.circleMarker(
+                [33.03426358796295, -83.66250134722216],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.6228658400000002, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_ea02c11eaf1c26d84e2b141326c61190 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7faa689f2e8c785b18195e1eb3358392 = $(`<div id="html_7faa689f2e8c785b18195e1eb3358392" style="width: 100.0%; height: 100.0%;">State: Georgia<br>Total Assets: 181143<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_ea02c11eaf1c26d84e2b141326c61190.setContent(html_7faa689f2e8c785b18195e1eb3358392);
+            
+        
+
+        circle_marker_f579ea471342cd4064db0dfb90180121.bindPopup(popup_ea02c11eaf1c26d84e2b141326c61190)
+        ;
+
+        
+    
+    
+            var circle_marker_ffac1a675608fdbe911fa3840f5fb274 = L.circleMarker(
+                [13.452852, 144.747191],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.01794642, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_d82b88fa21bcdc024975204afb774980 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ffaadf031506f8b352708091d3c0ef4 = $(`<div id="html_5ffaadf031506f8b352708091d3c0ef4" style="width: 100.0%; height: 100.0%;">State: Guam<br>Total Assets: 897<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_d82b88fa21bcdc024975204afb774980.setContent(html_5ffaadf031506f8b352708091d3c0ef4);
+            
+        
+
+        circle_marker_ffac1a675608fdbe911fa3840f5fb274.bindPopup(popup_d82b88fa21bcdc024975204afb774980)
+        ;
+
+        
+    
+    
+            var circle_marker_eeab0c9f0c4cd3a7233e5c98d94675fa = L.circleMarker(
+                [21.336027, -157.83335],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.56741958, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_e4ec16b7e03d0d04099d26b10b8ee731 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32b2f1d366ae2d6a6b2974c0e954fe40 = $(`<div id="html_32b2f1d366ae2d6a6b2974c0e954fe40" style="width: 100.0%; height: 100.0%;">State: Hawaii<br>Total Assets: 28371<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_e4ec16b7e03d0d04099d26b10b8ee731.setContent(html_32b2f1d366ae2d6a6b2974c0e954fe40);
+            
+        
+
+        circle_marker_eeab0c9f0c4cd3a7233e5c98d94675fa.bindPopup(popup_e4ec16b7e03d0d04099d26b10b8ee731)
+        ;
+
+        
+    
+    
+            var circle_marker_3babcdf19f25ea64a851d052d23c9acc = L.circleMarker(
+                [44.2059925882353, -114.72584947058823],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.07818426, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_c9c035e291f0c25d878c877eae524353 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_344087ee9a51a6f09eaed4a52177175f = $(`<div id="html_344087ee9a51a6f09eaed4a52177175f" style="width: 100.0%; height: 100.0%;">State: Idaho<br>Total Assets: 3909<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_c9c035e291f0c25d878c877eae524353.setContent(html_344087ee9a51a6f09eaed4a52177175f);
+            
+        
+
+        circle_marker_3babcdf19f25ea64a851d052d23c9acc.bindPopup(popup_c9c035e291f0c25d878c877eae524353)
+        ;
+
+        
+    
+    
+            var circle_marker_289a09fb8a159ae3ed511015134d494d = L.circleMarker(
+                [40.64032528900708, -88.91670039539004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.21649208, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_3ce859c3aeac88ceeedfb5bbc98e0ef0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53fb5f4106f60c327ffb7ff207f8567e = $(`<div id="html_53fb5f4106f60c327ffb7ff207f8567e" style="width: 100.0%; height: 100.0%;">State: Illinois<br>Total Assets: 260825<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_3ce859c3aeac88ceeedfb5bbc98e0ef0.setContent(html_53fb5f4106f60c327ffb7ff207f8567e);
+            
+        
+
+        circle_marker_289a09fb8a159ae3ed511015134d494d.bindPopup(popup_3ce859c3aeac88ceeedfb5bbc98e0ef0)
+        ;
+
+        
+    
+    
+            var circle_marker_096e6a0dea9a1be493c373b962a7fce6 = L.circleMarker(
+                [40.04907160784317, -86.25154476470584],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.3662429600000001, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_b42ba4d55955eca333b1263026d07933 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d56ccabcb1cf1dd578368f05bd98f0aa = $(`<div id="html_d56ccabcb1cf1dd578368f05bd98f0aa" style="width: 100.0%; height: 100.0%;">State: Indiana<br>Total Assets: 68312<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_b42ba4d55955eca333b1263026d07933.setContent(html_d56ccabcb1cf1dd578368f05bd98f0aa);
+            
+        
+
+        circle_marker_096e6a0dea9a1be493c373b962a7fce6.bindPopup(popup_b42ba4d55955eca333b1263026d07933)
+        ;
+
+        
+    
+    
+            var circle_marker_c0312b75377af665917587775c235d6c = L.circleMarker(
+                [42.16217801369862, -93.29749164041087],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.04772236, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_b8a50e4792770da2550f3c62a36dab33 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d6603f7a78a09a622ee12d9f59e72b0 = $(`<div id="html_7d6603f7a78a09a622ee12d9f59e72b0" style="width: 100.0%; height: 100.0%;">State: Iowa<br>Total Assets: 52386<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_b8a50e4792770da2550f3c62a36dab33.setContent(html_7d6603f7a78a09a622ee12d9f59e72b0);
+            
+        
+
+        circle_marker_c0312b75377af665917587775c235d6c.bindPopup(popup_b8a50e4792770da2550f3c62a36dab33)
+        ;
+
+        
+    
+    
+            var circle_marker_bbbc3b18274f7522d6a7014402788919 = L.circleMarker(
+                [38.538153606382956, -97.16405716666668],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.93115848, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_3c694543783b2a2288c38ca82d6ec883 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_41d6fec22508ac3bd13899aafc22967e = $(`<div id="html_41d6fec22508ac3bd13899aafc22967e" style="width: 100.0%; height: 100.0%;">State: Kansas<br>Total Assets: 46558<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_3c694543783b2a2288c38ca82d6ec883.setContent(html_41d6fec22508ac3bd13899aafc22967e);
+            
+        
+
+        circle_marker_bbbc3b18274f7522d6a7014402788919.bindPopup(popup_3c694543783b2a2288c38ca82d6ec883)
+        ;
+
+        
+    
+    
+            var circle_marker_079df573d37a96167605eaf8d5bcc574 = L.circleMarker(
+                [37.6836941125, -85.32645566875],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.78174604, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_f880ff3083fca1a1850c26a32169ccdb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b223c7a72ac8e5b570f9dc73906558e7 = $(`<div id="html_b223c7a72ac8e5b570f9dc73906558e7" style="width: 100.0%; height: 100.0%;">State: Kentucky<br>Total Assets: 39087<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_f880ff3083fca1a1850c26a32169ccdb.setContent(html_b223c7a72ac8e5b570f9dc73906558e7);
+            
+        
+
+        circle_marker_079df573d37a96167605eaf8d5bcc574.bindPopup(popup_f880ff3083fca1a1850c26a32169ccdb)
+        ;
+
+        
+    
+    
+            var circle_marker_33f3445f77e61aedc5bfdbce8aed7140 = L.circleMarker(
+                [31.00435971698113, -91.81977800943393],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.48408888, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_eef613600a7006cee75cc5bef43d0e78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_172b40e22349714b925f3327f15c3dae = $(`<div id="html_172b40e22349714b925f3327f15c3dae" style="width: 100.0%; height: 100.0%;">State: Louisiana<br>Total Assets: 24204<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_eef613600a7006cee75cc5bef43d0e78.setContent(html_172b40e22349714b925f3327f15c3dae);
+            
+        
+
+        circle_marker_33f3445f77e61aedc5bfdbce8aed7140.bindPopup(popup_eef613600a7006cee75cc5bef43d0e78)
+        ;
+
+        
+    
+    
+            var circle_marker_bfa5af8cb20e25ffbe71c8d79c94c65e = L.circleMarker(
+                [44.479876444444436, -69.45987688888889],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.24093896, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_884776e618e82c5d6ce2ad47300d305c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a4ed86277d7ddf01bb0dceefda41cad7 = $(`<div id="html_a4ed86277d7ddf01bb0dceefda41cad7" style="width: 100.0%; height: 100.0%;">State: Maine<br>Total Assets: 12047<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_884776e618e82c5d6ce2ad47300d305c.setContent(html_a4ed86277d7ddf01bb0dceefda41cad7);
+            
+        
+
+        circle_marker_bfa5af8cb20e25ffbe71c8d79c94c65e.bindPopup(popup_884776e618e82c5d6ce2ad47300d305c)
+        ;
+
+        
+    
+    
+            var circle_marker_04f2f481a44a3839b847ff486f355bf5 = L.circleMarker(
+                [39.15332778571429, -76.64187066666669],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.04599438, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_a68c472fd1958dae07c49519a666df96 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07f07ca9d4ddb482e7bfb6196e4f0e04 = $(`<div id="html_07f07ca9d4ddb482e7bfb6196e4f0e04" style="width: 100.0%; height: 100.0%;">State: Maryland<br>Total Assets: 52300<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_a68c472fd1958dae07c49519a666df96.setContent(html_07f07ca9d4ddb482e7bfb6196e4f0e04);
+            
+        
+
+        circle_marker_04f2f481a44a3839b847ff486f355bf5.bindPopup(popup_a68c472fd1958dae07c49519a666df96)
+        ;
+
+        
+    
+    
+            var circle_marker_1c23dd06619efc87ad09fa9df540e5fb = L.circleMarker(
+                [42.27384367669174, -71.32648406015038],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.81545736, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_54f2aff4e24f48f60cb5a39f4440bf2e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e604af9951462f5f6df7496108f48e7 = $(`<div id="html_7e604af9951462f5f6df7496108f48e7" style="width: 100.0%; height: 100.0%;">State: Massachusetts<br>Total Assets: 190773<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_54f2aff4e24f48f60cb5a39f4440bf2e.setContent(html_7e604af9951462f5f6df7496108f48e7);
+            
+        
+
+        circle_marker_1c23dd06619efc87ad09fa9df540e5fb.bindPopup(popup_54f2aff4e24f48f60cb5a39f4440bf2e)
+        ;
+
+        
+    
+    
+            var circle_marker_5f6f2e909eadc1293c738894b0dd0d3e = L.circleMarker(
+                [43.52940339160839, -84.8973968321678],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.38718434, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_c3a26565cb3274ceec0456ea84f7d57b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc9091a3d0caaf5eb813771f264d35ba = $(`<div id="html_dc9091a3d0caaf5eb813771f264d35ba" style="width: 100.0%; height: 100.0%;">State: Michigan<br>Total Assets: 119359<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_c3a26565cb3274ceec0456ea84f7d57b.setContent(html_dc9091a3d0caaf5eb813771f264d35ba);
+            
+        
+
+        circle_marker_5f6f2e909eadc1293c738894b0dd0d3e.bindPopup(popup_c3a26565cb3274ceec0456ea84f7d57b)
+        ;
+
+        
+    
+    
+            var circle_marker_cc6172901d473f000322502308235066 = L.circleMarker(
+                [45.26951029381442, -94.21281046907211],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.14958028, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_0a32742daa2f16f44da13befba7ca15d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e45a5a1d98b5050aa7b87cd6db19581 = $(`<div id="html_6e45a5a1d98b5050aa7b87cd6db19581" style="width: 100.0%; height: 100.0%;">State: Minnesota<br>Total Assets: 57479<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_0a32742daa2f16f44da13befba7ca15d.setContent(html_6e45a5a1d98b5050aa7b87cd6db19581);
+            
+        
+
+        circle_marker_cc6172901d473f000322502308235066.bindPopup(popup_0a32742daa2f16f44da13befba7ca15d)
+        ;
+
+        
+    
+    
+            var circle_marker_aa593b5031a3ac629c33678acd3b2d55 = L.circleMarker(
+                [32.84646710256411, -89.69612751282051],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.60798328, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_4858d6b923229979cd58b64f0a79039e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_842cca3d5f1b3a3731ebd172ddf47c08 = $(`<div id="html_842cca3d5f1b3a3731ebd172ddf47c08" style="width: 100.0%; height: 100.0%;">State: Mississippi<br>Total Assets: 30399<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_4858d6b923229979cd58b64f0a79039e.setContent(html_842cca3d5f1b3a3731ebd172ddf47c08);
+            
+        
+
+        circle_marker_aa593b5031a3ac629c33678acd3b2d55.bindPopup(popup_4858d6b923229979cd58b64f0a79039e)
+        ;
+
+        
+    
+    
+            var circle_marker_fedd024f41d413ff9bf319795f50c1db = L.circleMarker(
+                [38.43614940425533, -92.51994363829789],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.59237642, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_47eb01be7d020e50947d4797c042a605 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f2a0252cd7de71bfd3700aa9671ccfb8 = $(`<div id="html_f2a0252cd7de71bfd3700aa9671ccfb8" style="width: 100.0%; height: 100.0%;">State: Missouri<br>Total Assets: 79619<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_47eb01be7d020e50947d4797c042a605.setContent(html_f2a0252cd7de71bfd3700aa9671ccfb8);
+            
+        
+
+        circle_marker_fedd024f41d413ff9bf319795f50c1db.bindPopup(popup_47eb01be7d020e50947d4797c042a605)
+        ;
+
+        
+    
+    
+            var circle_marker_f4e60847dd05e6d38766200ef2faac1d = L.circleMarker(
+                [46.86675262121213, -110.7602433030303],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.27556852, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_c83b7f85826bb2bc0871e66bd3fb6005 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff0ce9ac1bb66ac1efde3e272000b9ca = $(`<div id="html_ff0ce9ac1bb66ac1efde3e272000b9ca" style="width: 100.0%; height: 100.0%;">State: Montana<br>Total Assets: 13778<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_c83b7f85826bb2bc0871e66bd3fb6005.setContent(html_ff0ce9ac1bb66ac1efde3e272000b9ca);
+            
+        
+
+        circle_marker_f4e60847dd05e6d38766200ef2faac1d.bindPopup(popup_c83b7f85826bb2bc0871e66bd3fb6005)
+        ;
+
+        
+    
+    
+            var circle_marker_e3d7a6e5ab38e833d4d4dd9125f7fbcc = L.circleMarker(
+                [41.18228810666669, -98.12572789333329],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.7676014, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_6c717c31857e598d746f594204636fa8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3a7e85594dc0a2c136c16c00cadde76 = $(`<div id="html_e3a7e85594dc0a2c136c16c00cadde76" style="width: 100.0%; height: 100.0%;">State: Nebraska<br>Total Assets: 38380<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_6c717c31857e598d746f594204636fa8.setContent(html_e3a7e85594dc0a2c136c16c00cadde76);
+            
+        
+
+        circle_marker_e3d7a6e5ab38e833d4d4dd9125f7fbcc.bindPopup(popup_6c717c31857e598d746f594204636fa8)
+        ;
+
+        
+    
+    
+            var circle_marker_d5284b95eb5a4ff926201b57531462ef = L.circleMarker(
+                [37.58684745, -116.52703010000002],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.81050682, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_0f2dc79161478fe569651741901d8221 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_01ab10b82ec2bb0425d12f4f9e5af518 = $(`<div id="html_01ab10b82ec2bb0425d12f4f9e5af518" style="width: 100.0%; height: 100.0%;">State: Nevada<br>Total Assets: 40525<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_0f2dc79161478fe569651741901d8221.setContent(html_01ab10b82ec2bb0425d12f4f9e5af518);
+            
+        
+
+        circle_marker_d5284b95eb5a4ff926201b57531462ef.bindPopup(popup_0f2dc79161478fe569651741901d8221)
+        ;
+
+        
+    
+    
+            var circle_marker_0987d3b22234bcdc059786b59c62d7cb = L.circleMarker(
+                [43.43728312000001, -71.57344232000001],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.44874172, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_914460c072219363666a2203214d54ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b276a70eb175b48f4f7b88454b43b7f8 = $(`<div id="html_b276a70eb175b48f4f7b88454b43b7f8" style="width: 100.0%; height: 100.0%;">State: New Hampshire<br>Total Assets: 22437<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_914460c072219363666a2203214d54ff.setContent(html_b276a70eb175b48f4f7b88454b43b7f8);
+            
+        
+
+        circle_marker_0987d3b22234bcdc059786b59c62d7cb.bindPopup(popup_914460c072219363666a2203214d54ff)
+        ;
+
+        
+    
+    
+            var circle_marker_3eca020fd10f262323aecdddf3963dd5 = L.circleMarker(
+                [40.40033633057852, -74.46735541322315],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.64303494, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_aec0be0f527f6f1470aaefb4155d06a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_899f559813cc68d29171a4ed592c28f1 = $(`<div id="html_899f559813cc68d29171a4ed592c28f1" style="width: 100.0%; height: 100.0%;">State: New Jersey<br>Total Assets: 132152<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_aec0be0f527f6f1470aaefb4155d06a4.setContent(html_899f559813cc68d29171a4ed592c28f1);
+            
+        
+
+        circle_marker_3eca020fd10f262323aecdddf3963dd5.bindPopup(popup_aec0be0f527f6f1470aaefb4155d06a4)
+        ;
+
+        
+    
+    
+            var circle_marker_82ea20fd6e4d5501c5132d89a18cb03f = L.circleMarker(
+                [34.503242354838704, -106.14787483870965],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.36698146, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_d68d7a6c22c5236b74c17d5ed5eccbbd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aaec9a6611526874539274d2b188bc10 = $(`<div id="html_aaec9a6611526874539274d2b188bc10" style="width: 100.0%; height: 100.0%;">State: New Mexico<br>Total Assets: 18349<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_d68d7a6c22c5236b74c17d5ed5eccbbd.setContent(html_aaec9a6611526874539274d2b188bc10);
+            
+        
+
+        circle_marker_82ea20fd6e4d5501c5132d89a18cb03f.bindPopup(popup_d68d7a6c22c5236b74c17d5ed5eccbbd)
+        ;
+
+        
+    
+    
+            var circle_marker_27366d3442ec52ec8dfb3361366961bc = L.circleMarker(
+                [42.033693322368435, -75.0825580460526],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 31.07724068, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_e50ad4d7d3a7b434b0992c0647dd1504 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b5265b9a1b79f3c9c84e1d33d0e6d14 = $(`<div id="html_4b5265b9a1b79f3c9c84e1d33d0e6d14" style="width: 100.0%; height: 100.0%;">State: New York<br>Total Assets: 1553862<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_e50ad4d7d3a7b434b0992c0647dd1504.setContent(html_4b5265b9a1b79f3c9c84e1d33d0e6d14);
+            
+        
+
+        circle_marker_27366d3442ec52ec8dfb3361366961bc.bindPopup(popup_e50ad4d7d3a7b434b0992c0647dd1504)
+        ;
+
+        
+    
+    
+            var circle_marker_1a8f77b150b2509202f456040ea7a693 = L.circleMarker(
+                [35.59592917241379, -79.78904774712643],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.4223299799999998, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_8e56a24398c2c187a01386e19bcad98b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f06f5727c9770475145cbdb31d3cc8f8 = $(`<div id="html_f06f5727c9770475145cbdb31d3cc8f8" style="width: 100.0%; height: 100.0%;">State: North Carolina<br>Total Assets: 121116<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_8e56a24398c2c187a01386e19bcad98b.setContent(html_f06f5727c9770475145cbdb31d3cc8f8);
+            
+        
+
+        circle_marker_1a8f77b150b2509202f456040ea7a693.bindPopup(popup_8e56a24398c2c187a01386e19bcad98b)
+        ;
+
+        
+    
+    
+            var circle_marker_0401300c3ce312356a4a2de112d075f0 = L.circleMarker(
+                [47.467772704545446, -99.62602360227267],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.24518579999999998, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_800ffe946176e10710ad6c73d9fbe081 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3bc17b9d40e896460b644e36ea28b3bf = $(`<div id="html_3bc17b9d40e896460b644e36ea28b3bf" style="width: 100.0%; height: 100.0%;">State: North Dakota<br>Total Assets: 12259<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_800ffe946176e10710ad6c73d9fbe081.setContent(html_3bc17b9d40e896460b644e36ea28b3bf);
+            
+        
+
+        circle_marker_0401300c3ce312356a4a2de112d075f0.bindPopup(popup_800ffe946176e10710ad6c73d9fbe081)
+        ;
+
+        
+    
+    
+            var circle_marker_00d3fb296f7abf1f692ed3761b8b71e5 = L.circleMarker(
+                [40.31599254042553, -82.96977280425536],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.313603839999999, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_d6268edc08ac6c8d13867c4f9994ee00 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f539fdda9ab63aca1345545c1cb6104 = $(`<div id="html_8f539fdda9ab63aca1345545c1cb6104" style="width: 100.0%; height: 100.0%;">State: Ohio<br>Total Assets: 465680<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_d6268edc08ac6c8d13867c4f9994ee00.setContent(html_8f539fdda9ab63aca1345545c1cb6104);
+            
+        
+
+        circle_marker_00d3fb296f7abf1f692ed3761b8b71e5.bindPopup(popup_d6268edc08ac6c8d13867c4f9994ee00)
+        ;
+
+        
+    
+    
+            var circle_marker_9d9e59ad9f059a7b8bd5eaf2265be9e5 = L.circleMarker(
+                [35.66763521243524, -97.23974225906736],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8291434, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_99733fad85803e72dabd8537f5e3e509 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d387f6a85abb1f38c33705ce84ca295a = $(`<div id="html_d387f6a85abb1f38c33705ce84ca295a" style="width: 100.0%; height: 100.0%;">State: Oklahoma<br>Total Assets: 41457<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_99733fad85803e72dabd8537f5e3e509.setContent(html_d387f6a85abb1f38c33705ce84ca295a);
+            
+        
+
+        circle_marker_9d9e59ad9f059a7b8bd5eaf2265be9e5.bindPopup(popup_99733fad85803e72dabd8537f5e3e509)
+        ;
+
+        
+    
+    
+            var circle_marker_a610538d598e888d908a0fe416fc9acd = L.circleMarker(
+                [44.66504109999999, -122.3238865],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.41202502, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_06da141e797d9d670e6d18d1f76ff7a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_15a7c2e2700fde547389a51302c2149d = $(`<div id="html_15a7c2e2700fde547389a51302c2149d" style="width: 100.0%; height: 100.0%;">State: Oregon<br>Total Assets: 20601<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_06da141e797d9d670e6d18d1f76ff7a9.setContent(html_15a7c2e2700fde547389a51302c2149d);
+            
+        
+
+        circle_marker_a610538d598e888d908a0fe416fc9acd.bindPopup(popup_06da141e797d9d670e6d18d1f76ff7a9)
+        ;
+
+        
+    
+    
+            var circle_marker_c9b1b928be38d04a0e072c5e75ffa8d1 = L.circleMarker(
+                [40.52517024770641, -77.14754195412844],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.5143812599999995, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_00fa3614f9a8babe335a50c9aea4eed0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e69ccb62e58183ab84b2ef4ff97e0a51 = $(`<div id="html_e69ccb62e58183ab84b2ef4ff97e0a51" style="width: 100.0%; height: 100.0%;">State: Pennsylvania<br>Total Assets: 275719<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_00fa3614f9a8babe335a50c9aea4eed0.setContent(html_e69ccb62e58183ab84b2ef4ff97e0a51);
+            
+        
+
+        circle_marker_c9b1b928be38d04a0e072c5e75ffa8d1.bindPopup(popup_00fa3614f9a8babe335a50c9aea4eed0)
+        ;
+
+        
+    
+    
+            var circle_marker_53fe75fb47f0839bc90bb1279d6416e9 = L.circleMarker(
+                [18.371744, -66.35160024999999],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.5592114, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_973d1797f3066c014c60f0de566211f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_246a02ac4b9a833f6a9783b57fbce015 = $(`<div id="html_246a02ac4b9a833f6a9783b57fbce015" style="width: 100.0%; height: 100.0%;">State: Puerto Rico<br>Total Assets: 27961<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_973d1797f3066c014c60f0de566211f1.setContent(html_246a02ac4b9a833f6a9783b57fbce015);
+            
+        
+
+        circle_marker_53fe75fb47f0839bc90bb1279d6416e9.bindPopup(popup_973d1797f3066c014c60f0de566211f1)
+        ;
+
+        
+    
+    
+            var circle_marker_6e55b704f8a60cbd4986be545ff373c1 = L.circleMarker(
+                [41.71578611111111, -71.486821],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0155256, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_29bbd3b54956fa2e3222500226c582bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4cc85821bab40833fbdb7a2cdd88f492 = $(`<div id="html_4cc85821bab40833fbdb7a2cdd88f492" style="width: 100.0%; height: 100.0%;">State: Rhode Island<br>Total Assets: 200776<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_29bbd3b54956fa2e3222500226c582bb.setContent(html_4cc85821bab40833fbdb7a2cdd88f492);
+            
+        
+
+        circle_marker_6e55b704f8a60cbd4986be545ff373c1.bindPopup(popup_29bbd3b54956fa2e3222500226c582bb)
+        ;
+
+        
+    
+    
+            var circle_marker_74be85d630787e3de6f57c3da0876ff0 = L.circleMarker(
+                [34.10485004225352, -80.96844932394366],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.63726176, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_4ee1cb3f367b74e445447e6876811363 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef1d80e8ef4013348b9b974a3fe10032 = $(`<div id="html_ef1d80e8ef4013348b9b974a3fe10032" style="width: 100.0%; height: 100.0%;">State: South Carolina<br>Total Assets: 31863<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_4ee1cb3f367b74e445447e6876811363.setContent(html_ef1d80e8ef4013348b9b974a3fe10032);
+            
+        
+
+        circle_marker_74be85d630787e3de6f57c3da0876ff0.bindPopup(popup_4ee1cb3f367b74e445447e6876811363)
+        ;
+
+        
+    
+    
+            var circle_marker_a73f1329f3d52a68e51e978db04be57c = L.circleMarker(
+                [44.196239000000006, -98.32785615662652],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.4727986, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_208ca6ec36017203a9881b638de9b76d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14f1eeb6d25ed56fbee9b24de0108923 = $(`<div id="html_14f1eeb6d25ed56fbee9b24de0108923" style="width: 100.0%; height: 100.0%;">State: South Dakota<br>Total Assets: 73640<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_208ca6ec36017203a9881b638de9b76d.setContent(html_14f1eeb6d25ed56fbee9b24de0108923);
+            
+        
+
+        circle_marker_a73f1329f3d52a68e51e978db04be57c.bindPopup(popup_208ca6ec36017203a9881b638de9b76d)
+        ;
+
+        
+    
+    
+            var circle_marker_ac2efa4bbba5077042d21786fbb3140e = L.circleMarker(
+                [35.82967211111112, -86.70093067361113],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.3379225, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_233e2a68ef602072f355775f0bf3687c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bacbc61389d2ad03216162687951ed02 = $(`<div id="html_bacbc61389d2ad03216162687951ed02" style="width: 100.0%; height: 100.0%;">State: Tennessee<br>Total Assets: 66896<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_233e2a68ef602072f355775f0bf3687c.setContent(html_bacbc61389d2ad03216162687951ed02);
+            
+        
+
+        circle_marker_ac2efa4bbba5077042d21786fbb3140e.bindPopup(popup_233e2a68ef602072f355775f0bf3687c)
+        ;
+
+        
+    
+    
+            var circle_marker_50ddd4339c9b08d90418f318b32d782e = L.circleMarker(
+                [31.516865576642314, -97.79097582116785],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.8637812800000004, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_c461a82a7abd037d0489d8d7661eba4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d7f36294a0728967647785e4aacf02f0 = $(`<div id="html_d7f36294a0728967647785e4aacf02f0" style="width: 100.0%; height: 100.0%;">State: Texas<br>Total Assets: 193189<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_c461a82a7abd037d0489d8d7661eba4e.setContent(html_d7f36294a0728967647785e4aacf02f0);
+            
+        
+
+        circle_marker_50ddd4339c9b08d90418f318b32d782e.bindPopup(popup_c461a82a7abd037d0489d8d7661eba4e)
+        ;
+
+        
+    
+    
+            var circle_marker_f83ae5b64222d1cddd6981c2f3a775d5 = L.circleMarker(
+                [40.41652072972972, -111.87410551351351],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.7433857999999995, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_b3054ba68544f61c82e4318c503625e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a5e3fb776f115d38223621bb16b1055d = $(`<div id="html_a5e3fb776f115d38223621bb16b1055d" style="width: 100.0%; height: 100.0%;">State: Utah<br>Total Assets: 137169<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_b3054ba68544f61c82e4318c503625e8.setContent(html_a5e3fb776f115d38223621bb16b1055d);
+            
+        
+
+        circle_marker_f83ae5b64222d1cddd6981c2f3a775d5.bindPopup(popup_b3054ba68544f61c82e4318c503625e8)
+        ;
+
+        
+    
+    
+            var circle_marker_878bb84b404b3297bf310f68da0ab007 = L.circleMarker(
+                [43.953351999999995, -72.68069522222224],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.14429302, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_2f3e811640763e9d9809394c94bf08a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0fa44e4ecfd1867c5c1790ccad56168f = $(`<div id="html_0fa44e4ecfd1867c5c1790ccad56168f" style="width: 100.0%; height: 100.0%;">State: Vermont<br>Total Assets: 7215<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_2f3e811640763e9d9809394c94bf08a4.setContent(html_0fa44e4ecfd1867c5c1790ccad56168f);
+            
+        
+
+        circle_marker_878bb84b404b3297bf310f68da0ab007.bindPopup(popup_2f3e811640763e9d9809394c94bf08a4)
+        ;
+
+        
+    
+    
+            var circle_marker_7009072bcfb3e2a34aaf264079d0a556 = L.circleMarker(
+                [17.736627, -64.708215],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.00241456, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_005d7cc4654f62c43661d507c844f455 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e59cda7638834c39824d1e882fd306d9 = $(`<div id="html_e59cda7638834c39824d1e882fd306d9" style="width: 100.0%; height: 100.0%;">State: Virgin Islands<br>Total Assets: 121<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_005d7cc4654f62c43661d507c844f455.setContent(html_e59cda7638834c39824d1e882fd306d9);
+            
+        
+
+        circle_marker_7009072bcfb3e2a34aaf264079d0a556.bindPopup(popup_005d7cc4654f62c43661d507c844f455)
+        ;
+
+        
+    
+    
+            var circle_marker_c872a861aaebffc5281d311c977af04f = L.circleMarker(
+                [37.700463580357145, -78.64193607142859],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.9927553000000002, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_92688740e064e5159993d25b1785b797 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_02768d26d6961fd7c7a73860b1dd68aa = $(`<div id="html_02768d26d6961fd7c7a73860b1dd68aa" style="width: 100.0%; height: 100.0%;">State: Virginia<br>Total Assets: 149638<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_92688740e064e5159993d25b1785b797.setContent(html_02768d26d6961fd7c7a73860b1dd68aa);
+            
+        
+
+        circle_marker_c872a861aaebffc5281d311c977af04f.bindPopup(popup_92688740e064e5159993d25b1785b797)
+        ;
+
+        
+    
+    
+            var circle_marker_40af61110a9b8f75f745c23391a7e23a = L.circleMarker(
+                [47.39788034722223, -121.44086515277783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.4210992800000002, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_a0fa2d7d15164a7ed55e2b56f96907b4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94818f868a366252e45e750e24a17a43 = $(`<div id="html_94818f868a366252e45e750e24a17a43" style="width: 100.0%; height: 100.0%;">State: Washington<br>Total Assets: 71055<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_a0fa2d7d15164a7ed55e2b56f96907b4.setContent(html_94818f868a366252e45e750e24a17a43);
+            
+        
+
+        circle_marker_40af61110a9b8f75f745c23391a7e23a.bindPopup(popup_a0fa2d7d15164a7ed55e2b56f96907b4)
+        ;
+
+        
+    
+    
+            var circle_marker_f9fa35e067d4b95924ccf8ce8246bc43 = L.circleMarker(
+                [38.817564741379314, -80.6418557586207],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.39285272, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_3375ea05b81f9e258f510c28be2ef013 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ddb80a229b2959dcd24460217ae7cd0 = $(`<div id="html_0ddb80a229b2959dcd24460217ae7cd0" style="width: 100.0%; height: 100.0%;">State: West Virginia<br>Total Assets: 19643<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_3375ea05b81f9e258f510c28be2ef013.setContent(html_0ddb80a229b2959dcd24460217ae7cd0);
+            
+        
+
+        circle_marker_f9fa35e067d4b95924ccf8ce8246bc43.bindPopup(popup_3375ea05b81f9e258f510c28be2ef013)
+        ;
+
+        
+    
+    
+            var circle_marker_b3bedc40f427b5682d73630a8c5565cf = L.circleMarker(
+                [43.97258703265308, -89.64306080816324],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.2643330400000001, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_163cc1512200ce543b4431f0d29dd04b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7dbf8bd7614bfdf1943ef318c3b49a2d = $(`<div id="html_7dbf8bd7614bfdf1943ef318c3b49a2d" style="width: 100.0%; height: 100.0%;">State: Wisconsin<br>Total Assets: 63217<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_163cc1512200ce543b4431f0d29dd04b.setContent(html_7dbf8bd7614bfdf1943ef318c3b49a2d);
+            
+        
+
+        circle_marker_b3bedc40f427b5682d73630a8c5565cf.bindPopup(popup_163cc1512200ce543b4431f0d29dd04b)
+        ;
+
+        
+    
+    
+            var circle_marker_cc581caed34c1f0a81349e9d50a881f0 = L.circleMarker(
+                [43.10272185714285, -107.1197851142857],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.14730086, "stroke": true, "weight": 3}
+            ).addTo(map_b1b9e26cdad13532aed2663406c4f0db);
+        
+    
+        var popup_22853e936db6792183100ef01523e780 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90211e7e335cdedddb6273aa3f226e08 = $(`<div id="html_90211e7e335cdedddb6273aa3f226e08" style="width: 100.0%; height: 100.0%;">State: Wyoming<br>Total Assets: 7365<br>Date: 2002-12-31 00:00:00</div>`)[0];
+                popup_22853e936db6792183100ef01523e780.setContent(html_90211e7e335cdedddb6273aa3f226e08);
+            
+        
+
+        circle_marker_cc581caed34c1f0a81349e9d50a881f0.bindPopup(popup_22853e936db6792183100ef01523e780)
+        ;
+
+        
+    
+</script>
+</html>
