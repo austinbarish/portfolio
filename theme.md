@@ -25,3 +25,21 @@ For the red to contrast this green, we will use a similarly bright red to show t
 *Other*
 
 More colors may be added as they come up throughout this project; these colors only serve as a basis for our first visualizations. Similarly, we have yet to pick a color to be the primary color for the elements of our project that are not in visualizations such as headers or a page sidebar. Quarto's default blue would likely be the leading candidate. 
+
+**Bank Colors**
+
+*Citigroup*
+
+Citigroup uses a darker blue represented by the hex code of: #003A72. More information can be found here:https://www.schemecolor.com/citigroup-logo-colors.php 
+
+*JP Morgan Chase*
+
+JP Morgan's primary blue is a very similar dark blue to Citigroup and Bank of America, therefore we will use Chase Bank's light blue to make it clear. The hex code for this is #117ACA and more information can be found here: https://www.schemecolor.com/chase-bank-logo.php 
+
+*Bank of America*
+
+Bank of America also has the common dark blue that makes it difficult to identify. Therefore we will use its secondary color, a candy red represented by hex code: #E61030. More information can be found here: https://www.schemecolor.com/bank-of-america-logo-colors.php 
+
+*Wells Fargo*
+
+Wells Fargo has perhaps the most distinct colors of the four major banks, using red and yellow as its primary colors. We will use its yellow since the red is too similar to other banks. The yellow we will use is hex code: #ffcc02 as found here: https://www.color-hex.com/color-palette/109504 
