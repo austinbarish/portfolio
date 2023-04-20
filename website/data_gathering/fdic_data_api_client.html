@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Website Advanced Data Visualization - FDIC Data API Client</title>
+<title>Where is your money, and why? - FDIC Data API Client</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,11 +59,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../img/favicon.ico" rel="icon">
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -74,12 +71,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -92,12 +83,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -108,10 +95,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Website Advanced Data Visualization</span>
+    <span class="navbar-title">Where is your money, and why?</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -122,10 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../the_fdic.html" rel="" target="">
- <span class="menu-text">The FDIC</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../methods.html" rel="" target="">
  <span class="menu-text">Methods</span></a>
   </li>  
@@ -134,8 +116,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Code</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../methods.html" rel="" target="">
- <span class="menu-text">Methods</span></a>
+    <a class="nav-link" href="../data.html" rel="" target="">
+ <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../authors.html" rel="" target="">
@@ -186,14 +168,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="code" class="level2">
 <h2 class="anchored" data-anchor-id="code">Code</h2>
 <p>Import libraries</p>
-<div class="cell" data-execution_count="2">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> urllib.parse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Define function</p>
-<div class="cell" data-execution_count="3">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set endpoint</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>endpoint <span class="op">=</span> <span class="st">'https://banks.data.fdic.gov/api/'</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -229,11 +211,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame(financials)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Query the data</p>
-<div class="cell" data-execution_count="93">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># params</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>reporting_period <span class="op">=</span> <span class="st">'2022-12-31'</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>fields <span class="op">=</span> <span class="st">'REPDTE,CERT,NAME,CITY,STNAME,ASSET,DEPDOM,BKCLASS,ADDRESS,ZIP,EQ,LIAB,ESTYMD,ENDEFYMD,'</span> <span class="co"># no spaces between!</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>result_limit <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>result_limit <span class="op">=</span> <span class="dv">10000</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># call</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>all_financial_reporting_data <span class="op">=</span> get_all_financial_reporting_data(endpoint, reporting_period, fields, result_limit)</span>
@@ -242,194 +224,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> all_financial_reporting_data <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    all_financial_reporting_data <span class="op">=</span> all_financial_reporting_data.sort_values(<span class="st">'CERT'</span>)</span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    display(all_financial_reporting_data.head())</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    all_financial_reporting_data.to_csv(<span class="ss">f'quarterly_financials/</span><span class="sc">{</span>reporting_period<span class="sc">}</span><span class="ss">_quarterly_financials.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">ZIP</th>
-<th data-quarto-table-cell-role="th">BKCLASS</th>
-<th data-quarto-table-cell-role="th">REPDTE</th>
-<th data-quarto-table-cell-role="th">DEPDOM</th>
-<th data-quarto-table-cell-role="th">ASSET</th>
-<th data-quarto-table-cell-role="th">STNAME</th>
-<th data-quarto-table-cell-role="th">EQ</th>
-<th data-quarto-table-cell-role="th">NAME</th>
-<th data-quarto-table-cell-role="th">CITY</th>
-<th data-quarto-table-cell-role="th">ADDRESS</th>
-<th data-quarto-table-cell-role="th">ENDEFYMD</th>
-<th data-quarto-table-cell-role="th">CERT</th>
-<th data-quarto-table-cell-role="th">ESTYMD</th>
-<th data-quarto-table-cell-role="th">LIAB</th>
-<th data-quarto-table-cell-role="th">ID</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">7</td>
-<td>48858</td>
-<td>SM</td>
-<td>20221231</td>
-<td>1753341</td>
-<td>1981367</td>
-<td>MICHIGAN</td>
-<td>157576</td>
-<td>ISABELLA BANK</td>
-<td>MOUNT PLEASANT</td>
-<td>200 E BROADWAY ST</td>
-<td>99991231</td>
-<td>1005</td>
-<td>19030701</td>
-<td>1823791</td>
-<td>1005_20221231</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">12</td>
-<td>49230</td>
-<td>SM</td>
-<td>20221231</td>
-<td>101624</td>
-<td>113473</td>
-<td>MICHIGAN</td>
-<td>10543</td>
-<td>BANK MICHIGAN</td>
-<td>BROOKLYN</td>
-<td>417 S MAIN ST</td>
-<td>99991231</td>
-<td>1008</td>
-<td>19071001</td>
-<td>102930</td>
-<td>1008_20221231</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">25</td>
-<td>49345</td>
-<td>SM</td>
-<td>20221231</td>
-<td>2126308</td>
-<td>2382585</td>
-<td>MICHIGAN</td>
-<td>192540</td>
-<td>CHOICEONE BANK</td>
-<td>SPARTA</td>
-<td>109 E DIVISION ST</td>
-<td>99991231</td>
-<td>1014</td>
-<td>18980101</td>
-<td>2190045</td>
-<td>1014_20221231</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">49</td>
-<td>53818</td>
-<td>N</td>
-<td>20221231</td>
-<td>306266</td>
-<td>331939</td>
-<td>WISCONSIN</td>
-<td>16877</td>
-<td>CLARE BANK NATIONAL ASSN</td>
-<td>PLATTEVILLE</td>
-<td>345 W PINE ST</td>
-<td>99991231</td>
-<td>1022</td>
-<td>19051028</td>
-<td>315062</td>
-<td>1022_20221231</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>53946</td>
-<td>NM</td>
-<td>20221231</td>
-<td>123276</td>
-<td>148421</td>
-<td>WISCONSIN</td>
-<td>10659</td>
-<td>ERGO BANK</td>
-<td>MARKESAN</td>
-<td>86 E WATER ST</td>
-<td>99991231</td>
-<td>10004</td>
-<td>19100120</td>
-<td>137762</td>
-<td>10004_20221231</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#all_financial_reporting_data.to_csv(f'../../data/quarterly_financials/{reporting_period}_quarterly_financials.csv', index=False) # save</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Check data</p>
-<div class="cell" data-execution_count="77">
+<div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>display(all_financial_reporting_data.shape)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>column_to_check <span class="op">=</span> <span class="st">'ACTIVE'</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>display(pd.DataFrame({<span class="st">'col1'</span>: all_financial_reporting_data[column_to_check].value_counts().index, <span class="st">'count'</span>: all_financial_reporting_data[column_to_check].value_counts().values}))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#column_to_check = 'ACTIVE'</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#display(pd.DataFrame({'col1': all_financial_reporting_data[column_to_check].value_counts().index, 'count': all_financial_reporting_data[column_to_check].value_counts().values}))</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>(4715, 15)</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">col1</th>
-<th data-quarto-table-cell-role="th">count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1</td>
-<td>4715</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
 </div>
 <p>Get the last quarter for the past 30 years</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>today <span class="op">=</span> pd.Timestamp.now().date()</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># define the start and end dates of the range (inclusive)</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>start_date <span class="op">=</span> <span class="st">'1992-03-31'</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>end_date <span class="op">=</span> <span class="st">'2012-03-31'</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># generate a list of dates within the range, with a frequency of 1 quarter</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>dates <span class="op">=</span> pd.date_range(start<span class="op">=</span>start_date, end<span class="op">=</span>end_date, freq<span class="op">=</span><span class="st">'Q'</span>)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># loop</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> date <span class="kw">in</span> dates:</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># get end of quarter</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    end_of_quarter <span class="op">=</span> date.strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>) <span class="co"># format</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    fields <span class="op">=</span> <span class="st">'REPDTE,CERT,NAME,CITY,STNAME,ASSET,DEPDOM,BKCLASS,ADDRESS,ZIP,EQ,LIAB,ESTYMD,ENDEFYMD,'</span> <span class="co"># no spaces between!</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    result_limit <span class="op">=</span> <span class="dv">10000</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    all_financial_reporting_data <span class="op">=</span> get_all_financial_reporting_data(endpoint, end_of_quarter, fields, result_limit)</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># display</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> all_financial_reporting_data <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>        all_financial_reporting_data <span class="op">=</span> all_financial_reporting_data.sort_values(<span class="st">'CERT'</span>)</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>        all_financial_reporting_data.to_csv(<span class="ss">f'../../data/quarterly_financials/</span><span class="sc">{</span>end_of_quarter<span class="sc">}</span><span class="ss">_quarterly_financials.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>end_of_quarter<span class="sc">}</span><span class="ss"> done'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>1992-03-31 done</code></pre>
-</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>today <span class="op">=</span> pd.Timestamp.now().date()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># define the start and end dates of the range (inclusive)</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>start_date <span class="op">=</span> <span class="st">'1992-03-31'</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>end_date <span class="op">=</span> <span class="st">'2022-12-31'</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># generate a list of dates within the range, with a frequency of 1 quarter</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>dates <span class="op">=</span> pd.date_range(start<span class="op">=</span>start_date, end<span class="op">=</span>end_date, freq<span class="op">=</span><span class="st">'Q'</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># loop</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> date <span class="kw">in</span> dates:</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># get end of quarter</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    end_of_quarter <span class="op">=</span> date.strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>) <span class="co"># format</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    fields <span class="op">=</span> <span class="st">'REPDTE,CERT,NAME,CITY,STNAME,ASSET,DEPDOM,BKCLASS,ADDRESS,ZIP,EQ,LIAB,ESTYMD,ENDEFYMD,EQR,'</span> <span class="co"># no spaces between!</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    result_limit <span class="op">=</span> <span class="dv">10000</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># call</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    all_financial_reporting_data <span class="op">=</span> get_all_financial_reporting_data(endpoint, end_of_quarter, fields, result_limit)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># display</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> all_financial_reporting_data <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        all_financial_reporting_data <span class="op">=</span> all_financial_reporting_data.sort_values(<span class="st">'CERT'</span>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        all_financial_reporting_data.to_csv(<span class="ss">f'../../data/quarterly_financials/</span><span class="sc">{</span>end_of_quarter<span class="sc">}</span><span class="ss">_quarterly_financials.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>end_of_quarter<span class="sc">}</span><span class="ss"> done'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -672,7 +504,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Project by Group 4 <br></div>   
+    <div class="nav-footer-left">A project by <a href="authors.qmd">Group 4</a> <br></div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
