@@ -4,7 +4,7 @@
 
 ### Austin Barish
 ![](../img/authors/austin_barish.png)
- I am currently a senior at Georgetown Majoring in Economics and Philosophy while pursuing Georgetown's accelerated Data Science degree. I am originally from Denver, Colorado, and love sports, particularly skiing. I have been in DC for the past 3-ish years now and absolutely love it. I am particularly interested in economic research, sports data, and environmental causes. abb110@georgetown.edu
+ I am currently a senior at Georgetown majoring in Economics and Philosophy while pursuing Georgetown's accelerated Data Science degree. I am originally from Denver, Colorado, and love sports, particularly skiing. I have been in DC for the past 3-ish years now and absolutely love it. I am particularly interested in economic research, sports data, and environmental causes. abb110@georgetown.edu
 
 ### Jordan Rinaldi
 ![](../img/authors/jordan_rinaldi.png)
