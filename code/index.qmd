@@ -1,11 +1,4 @@
-# What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-## Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+# Introduction
 
-```{r}
-library(gt)
-gt(mtcars)
-```
-
+On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in the largest U.S. bank failure since the 2008 financial crisis. The 40-year-long bank operation suddenly stopped after depositors panicked when learning that the bank was short on capital. The bank found itself in this position due to several factors, including incorrect investment allocation and customers requiring to use more cash in the bank as Venture Capital firms cut back their funding [@vanian_heres_2023]. The public quickly turned its attention to the Federal Deposit Insurance Corporation (FDIC). The FDIC is an independent government agency tasked with insuring deposits, supervising financial institutions, and dealing with the orderly management of a bank failure. Most famously,  the FDIC provides a standard insurance amount of $250,000 per depositor, per insured bank, which has accomplished for no depositor to lose a penny of insured funds due to a failure since 1934 [@federal_deposit_insurance_corporation_what_2020]. It became apparent that the general public needed to be made aware of the FDIC system, its role in the financial system, and its importance in preserving the financial well-being of the U.S. population. In this report, we seek to provide a glimpse into the FDIC system and offer a rich visual representation of the system's mechanics.

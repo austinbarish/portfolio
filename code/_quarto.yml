@@ -5,19 +5,17 @@ project:
   output-dir: ../website
 
 website:
-  title: Website {{< var topic.name >}}
+  title: Where is your money, and why?
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - href: the_fdic.qmd
-        text: The FDIC        
+        text: Home      
       - href: methods.qmd
         text: Methods        
       - href: code.qmd
         text: Code        
       - href: methods.qmd
-        text: Methods        
+        text: Methods
       - href: authors.qmd
         text: Authors        
   page-footer:
