@@ -53,7 +53,7 @@ html_structure = """
 
 # add iframes to the html
 for i, date in enumerate(unique_dates):
-    map_path = f'../img/plots/map_{i}.html'
+    map_path = f'../website/plots/map_{i}.html'
     html_structure += f'<div class="map-box"><div class="map-title">{date}</div>{IFrame(src=map_path, width=350, height=300)._repr_html_()}</div>'
 
 # close html
@@ -108,7 +108,7 @@ Looking at the most recent decade, we see that the top 5 banks in the US hold th
 #| label: fig-state-bank-deposits
 #| fig-cap: "shows the differences in the size of the deposits in California, Ohio, Texas, North Carolina, New York, and South Dakota."
 
-IFrame(src='../img/plots/plot-3.html', width=700, height=600)
+IFrame(src='../website/plots/plot-3.html', width=700, height=600)
 
 ```
 
@@ -131,7 +131,7 @@ A bank's equity capital ratio, similar to a bank's tier 1 capital ratio, is the 
 #| label: fig-top-bottom-histogram
 #| fig-cap: "A line plot "
 
-IFrame(src='../img/plots/eqr/plot1.html', width=700, height=600)
+IFrame(src='../website/plots/eqr/plot1.html', width=700, height=600)
 
 ```
 
@@ -144,7 +144,7 @@ For this portion of the analysis, I chose to examine banks that represent the to
 #| label: fig-quarters-line-graph
 #| fig-cap: "A line plot "
 
-IFrame(src='../img/plots/eqr/plot2.html', width=700, height=600)
+IFrame(src='../website/plots/eqr/plot2.html', width=700, height=600)
 
 ```
 
@@ -157,7 +157,7 @@ We see based on the line graph above that, for the most part, the 4 major banks 
 #| label: fig-eqr-and-assets
 #| fig-cap: "A line plot "
 
-IFrame(src='../img/plots/eqr/plot3.html', width=700, height=600)
+IFrame(src='../website/plots/eqr/plot3.html', width=700, height=600)
 
 ```
 
@@ -171,7 +171,7 @@ This plot attempts to look at smaller banks in terms of mean total assets owned 
 #| label: fig-bubble-plot
 #| fig-cap: "A line plot "
 
-IFrame(src='../img/plots/eqr/plot4.html', width=700, height=600)
+IFrame(src='../website/plots/eqr/plot4.html', width=700, height=600)
 
 ```
 
