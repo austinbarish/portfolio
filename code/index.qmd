@@ -1,6 +1,14 @@
 
 # Where is your money, and why?
 
+```{python}
+#| echo: false
+
+# libraries
+from IPython.display import display, HTML, IFrame
+
+```
+
 ## Introduction
 
 On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in the largest U.S. bank failure since the 2008 financial crisis. The 40-year-long bank operation suddenly stopped after depositors panicked when learning that the bank was short on capital. The bank found itself in this position due to several factors, including incorrect investment allocation and customers requiring to use more cash in the bank as Venture Capital firms cut back their funding [@vanian_heres_2023]. The public quickly turned its attention to the Federal Deposit Insurance Corporation (FDIC). The FDIC is an independent government agency tasked with insuring deposits, supervising financial institutions, and dealing with the orderly management of a bank failure. Most famously,  the FDIC provides a standard insurance amount of $250,000 per depositor, per insured bank, which has accomplished for no depositor to lose a penny of insured funds due to a failure since 1934 [@federal_deposit_insurance_corporation_what_2020]. The case of the FDIC showcased just one of the fascinating aspects of the U.S. banking system that was largely unknown to the general public. It also inspired us to carry out this project. With it, we aim to inform our audience of several distinguishing facts about the U.S. banking system.
@@ -8,3 +16,68 @@ On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in
 ## What does it mean for money to "be" somewhere?
 
 Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer's accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve's definition of a bank's location: its main office as listed in the bank's charter [@board_of_governors_of_the_federal_reserve_system_frb_2022].
+
+
+### Figure 1
+
+```{python}
+#| echo: false
+
+unique_dates = ['1992-12-31', '2002-12-31', '2012-12-31', '2022-12-31']
+
+# init html structure
+html_structure = """
+<style>
+    .map-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .map-box {
+        width: 50%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .map-title {
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+<div class="map-container">
+"""
+
+# add iframes to the html
+for i, date in enumerate(unique_dates):
+    map_path = f'data_cleaning/geospatial_data_html/map_{i}.html'
+    html_structure += f'<div class="map-box"><div class="map-title">{date}</div>{IFrame(src=map_path, width=350, height=300)._repr_html_()}</div>'
+
+# close html
+html_structure += '</div>'
+# show
+display(HTML(html_structure))
+
+
+```
+
+
+### Figure 2
+
+```{python}
+#| echo: false
+
+IFrame(src='data_cleaning/geospatial_data_html/heatmap.html', width=700, height=600)
+
+```
+
+
+## A story about the top 5 banks
+
+
+
+## What about deposits?
+
+
+
+## Should we be worried?
+
+
+## Conclusion
