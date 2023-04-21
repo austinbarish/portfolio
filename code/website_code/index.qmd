@@ -148,6 +148,19 @@ IFrame(src='../img/plots/eqr/plot3.html', width=700, height=600)
 This plot attempts to look at smaller banks in terms of mean total assets owned over all quarters and forecast their average equity capital ratio. This heatmap contains over 200,000 unique banks, all with average total assets owned below 500,000. Based on the values of the heatmap, we see that the majority of these banks hold a small amount of assets, typically below 100,000. Nevertheless, most banks that make up this proportion maintain an equity capital ratio between 8 and 12, which is consistent relative to the average that we have previously examined. 
 
 
+### Figure X: Bubble Plot
+
+```{python}
+#| echo: false
+
+IFrame(src='../img/plots/eqr/plot4.html', width=700, height=600)
+
+```
+
+A major trend we notice when looking at this time series bubble plot is the gradual increase in quantity of banks with an equity capital ratio in the range of the average that is consistent with what we have been examining thus far. What is also noticeable is that there does not appear to be a major distinction by bank class. State chartered stock savings banks, denoted in the legend as SI, appear to always have a relatively low equity capital ratio, while commercial and federal savings banks, denoted as N, NM, and SB in the above plot, tend to have a higher equity capital ratio.
+
+
+
 ## Conclusion
 
 
