@@ -22,12 +22,12 @@ On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in
 Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer's accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve's definition of a bank's location: its main office as listed in the bank's charter [@board_of_governors_of_the_federal_reserve_system_frb_2022].
 
 
-#### **Grid bubble map of the progression of bank assets per decade**
+#### **Grid bubble map of the progression of bank assets per decade per state** {#sec-grid-bubble-map}
 
 ```{python}
 #| echo: false
 #| label: fig-grid-bubble-map
-#| fig-cap: "A line plot "
+#| fig-cap: "shows a 2x2 grid of Folium maps depicting the relative size of fourth-quarter U.S. bank assets per state every ten years since 1992."
 
 unique_dates = ['1992-12-31', '2002-12-31', '2012-12-31', '2022-12-31']
 
@@ -65,12 +65,12 @@ display(HTML(html_structure))
 ```
 
 
-#### **Dot map with heatmap of bank assets as of Q4 2022**
+#### **Dot map with heatmap overlay of bank assets as of Q4 2022** {#sec-dot-and-heatmap}
 
 ```{python}
 #| echo: false
 #| label: fig-dot-and-heatmap
-#| fig-cap: "A line plot "
+#| fig-cap: "shows dots representing the ZIP Code of the FDIC-insured banks' location within the U.S., where the bubbles represent the relative size of the assets, allowing one to see the location of the largest banks."
 
 IFrame(src='../img/plots/heatmap.html', width=700, height=600)
 
@@ -99,14 +99,14 @@ This plot breaks down the banks in the banks in the US by dividing them into gro
 
 Looking at the most recent decade, we see that the top 5 banks in the US hold the same amount in assets as the next 125 banks in the US, and have about 3 times as many assets as every other bank in the country, which amounts to a total of 4031 banks. We see a large skew in the distribution of assets across the country, and this shows how concentrated the banking industry is right at the top. Furthermore, looking at the temporal trends, we also notice that the top 5 banks have not always dominated all other banks, and the distribution has progressively gotten more and more concentrated at the top.
 
-## Visualizing deposits
+## Bank deposits by state {#sec-state-bank-deposits}
 
 #### **State bank deposits by bank**
 
 ```{python}
 #| echo: false
 #| label: fig-state-bank-deposits
-#| fig-cap: "A line plot "
+#| fig-cap: "shows the differences in the size of the deposits in California, Ohio, Texas, North Carolina, New York, and South Dakota."
 
 IFrame(src='../img/plots/plot-3.html', width=700, height=600)
 
@@ -116,7 +116,7 @@ There is a lot to unpack with this plot. First, your eyes might be drawn to the 
 
 Secondly, and most importantly to our story here, is the differences in the size of the deposits in these states. You may even be confused at first and guess that the labels are on the wrong states because your intuition tells you that California, Texas, and New York should have significantly more cash in the bank than smaller states like South Dakota. However, that is where we were just as surprised as you are. As you may have noticed in our geo-spacial plot, huge banks are located in cities you would not expect. For example, Wells Fargo and Citibank are centered in Sioux Falls, South Dakota. As you can see, the deposits in these banks completely envelop the rest of the deposits in the state. Similarly, in Ohio and North Carolina, the large banks located there make up the majority of the total deposits in the state. 
 
-Why these banks are located in these unlikely locations is up to speculations, but regulation could certainly play a role, namely, corporate tax rates. South Dakota and Ohio both lack any corporate taxes and North Carolina has one of the lowest in the country (https://taxfoundation.org/publications/state-corporate-income-tax-rates-and-brackets/). These corporate taxes may help explain why Wells Fargo moved from California to South Dakota in 2003, or why Citibank followed them to Sioux Falls in 2011. There certainly could be more at play, however, tax breaks and heavy regulation may help explain why big banks are leaving the country's richest states for ones that will not tax them. 
+Why these banks are located in these unlikely locations is up to speculations, but regulation could certainly play a role, namely, corporate tax rates. South Dakota and Ohio both lack any corporate taxes and North Carolina has one of the lowest in the country [@fritts_state_2023]. These corporate taxes may help explain why Wells Fargo moved from California to South Dakota in 2003, or why Citibank followed them to Sioux Falls in 2011. There certainly could be more at play, however, tax breaks and heavy regulation may help explain why big banks are leaving the country's richest states for ones that will not tax them. 
 
 
 

@@ -132,7 +132,7 @@ div.csl-indent {
   <li><a href="#figure-x-the-distribution-of-commercial-banks-in-the-us-by-the-assets-in-possession" id="toc-figure-x-the-distribution-of-commercial-banks-in-the-us-by-the-assets-in-possession" class="nav-link" data-scroll-target="#figure-x-the-distribution-of-commercial-banks-in-the-us-by-the-assets-in-possession">Figure X: The distribution of commercial banks in the US by the assets in possession</a></li>
   <li><a href="#figure-x-breakdown-of-top-5-banks-the-next-125-banks-and-all-other-banks" id="toc-figure-x-breakdown-of-top-5-banks-the-next-125-banks-and-all-other-banks" class="nav-link" data-scroll-target="#figure-x-breakdown-of-top-5-banks-the-next-125-banks-and-all-other-banks">Figure X: Breakdown of top 5 banks, the next 125 banks, and all other banks</a></li>
   </ul></li>
-  <li><a href="#visualizing-deposits" id="toc-visualizing-deposits" class="nav-link" data-scroll-target="#visualizing-deposits">Visualizing deposits</a></li>
+  <li><a href="#sec-state-bank-deposits" id="toc-sec-state-bank-deposits" class="nav-link" data-scroll-target="#sec-state-bank-deposits">Bank deposits by state</a></li>
   <li><a href="#the-health-of-the-system" id="toc-the-health-of-the-system" class="nav-link" data-scroll-target="#the-health-of-the-system">The health of the system</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -172,8 +172,8 @@ div.csl-indent {
 <section id="what-does-it-mean-for-money-to-be-somewhere" class="level2">
 <h2 class="anchored" data-anchor-id="what-does-it-mean-for-money-to-be-somewhere">What does it mean for money to “be” somewhere?</h2>
 <p>Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer’s accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve’s definition of a bank’s location: its main office as listed in the bank’s charter <span class="citation" data-cites="board_of_governors_of_the_federal_reserve_system_frb_2022">(<a href="#ref-board_of_governors_of_the_federal_reserve_system_frb_2022" role="doc-biblioref">Board of Governors of the Federal Reserve System 2022</a>)</span>.</p>
-<section id="grid-bubble-map-of-the-progression-of-bank-assets-per-decade" class="level4">
-<h4 class="anchored" data-anchor-id="grid-bubble-map-of-the-progression-of-bank-assets-per-decade"><strong>Grid bubble map of the progression of bank assets per decade</strong></h4>
+<section id="sec-grid-bubble-map" class="level4">
+<h4 class="anchored" data-anchor-id="sec-grid-bubble-map"><strong>Grid bubble map of the progression of bank assets per decade per state</strong></h4>
 <div class="cell" data-execution_count="2">
 <div id="fig-grid-bubble-map" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -203,20 +203,20 @@ div.csl-indent {
         </div><div class="map-box"><div class="map-title">2022-12-31</div>
         <iframe width="350" height="300" src="../img/plots/map_3.html" frameborder="0" allowfullscreen=""></iframe>
         </div></div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: shows a 2x2 grid of Folium maps depicting the relative size of fourth-quarter U.S. bank assets per state every ten years since 1992.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="dot-map-with-heatmap-of-bank-assets-as-of-q4-2022" class="level4">
-<h4 class="anchored" data-anchor-id="dot-map-with-heatmap-of-bank-assets-as-of-q4-2022"><strong>Dot map with heatmap of bank assets as of Q4 2022</strong></h4>
+<section id="sec-dot-and-heatmap" class="level4">
+<h4 class="anchored" data-anchor-id="sec-dot-and-heatmap"><strong>Dot map with heatmap overlay of bank assets as of Q4 2022</strong></h4>
 <div class="cell" data-execution_count="3">
 <div id="fig-dot-and-heatmap" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../img/plots/heatmap.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: shows dots representing the ZIP Code of the FDIC-insured banks’ location within the U.S., where the bubbles represent the relative size of the assets, allowing one to see the location of the largest banks.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -242,8 +242,8 @@ div.csl-indent {
 <p>Looking at the most recent decade, we see that the top 5 banks in the US hold the same amount in assets as the next 125 banks in the US, and have about 3 times as many assets as every other bank in the country, which amounts to a total of 4031 banks. We see a large skew in the distribution of assets across the country, and this shows how concentrated the banking industry is right at the top. Furthermore, looking at the temporal trends, we also notice that the top 5 banks have not always dominated all other banks, and the distribution has progressively gotten more and more concentrated at the top.</p>
 </section>
 </section>
-<section id="visualizing-deposits" class="level2">
-<h2 class="anchored" data-anchor-id="visualizing-deposits">Visualizing deposits</h2>
+<section id="sec-state-bank-deposits" class="level2">
+<h2 class="anchored" data-anchor-id="sec-state-bank-deposits">Bank deposits by state</h2>
 <section id="state-bank-deposits-by-bank" class="level4">
 <h4 class="anchored" data-anchor-id="state-bank-deposits-by-bank"><strong>State bank deposits by bank</strong></h4>
 <div class="cell" data-execution_count="4">
@@ -252,13 +252,13 @@ div.csl-indent {
 
         <iframe width="700" height="600" src="../img/plots/plot-3.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: shows the differences in the size of the deposits in California, Ohio, Texas, North Carolina, New York, and South Dakota.</figcaption><p></p>
 </figure>
 </div>
 </div>
 <p>There is a lot to unpack with this plot. First, your eyes might be drawn to the rapid growth beginning in 2020 across the board but most obviously in Texas. Meanwhile, there is no obvious drop in deposits from the pandemic. Instead, we see the massive influx of cash into the banking system as a product of the pandemic and stimulus packages.</p>
 <p>Secondly, and most importantly to our story here, is the differences in the size of the deposits in these states. You may even be confused at first and guess that the labels are on the wrong states because your intuition tells you that California, Texas, and New York should have significantly more cash in the bank than smaller states like South Dakota. However, that is where we were just as surprised as you are. As you may have noticed in our geo-spacial plot, huge banks are located in cities you would not expect. For example, Wells Fargo and Citibank are centered in Sioux Falls, South Dakota. As you can see, the deposits in these banks completely envelop the rest of the deposits in the state. Similarly, in Ohio and North Carolina, the large banks located there make up the majority of the total deposits in the state.</p>
-<p>Why these banks are located in these unlikely locations is up to speculations, but regulation could certainly play a role, namely, corporate tax rates. South Dakota and Ohio both lack any corporate taxes and North Carolina has one of the lowest in the country (https://taxfoundation.org/publications/state-corporate-income-tax-rates-and-brackets/). These corporate taxes may help explain why Wells Fargo moved from California to South Dakota in 2003, or why Citibank followed them to Sioux Falls in 2011. There certainly could be more at play, however, tax breaks and heavy regulation may help explain why big banks are leaving the country’s richest states for ones that will not tax them.</p>
+<p>Why these banks are located in these unlikely locations is up to speculations, but regulation could certainly play a role, namely, corporate tax rates. South Dakota and Ohio both lack any corporate taxes and North Carolina has one of the lowest in the country <span class="citation" data-cites="fritts_state_2023">(<a href="#ref-fritts_state_2023" role="doc-biblioref">Fritts 2023</a>)</span>. These corporate taxes may help explain why Wells Fargo moved from California to South Dakota in 2003, or why Citibank followed them to Sioux Falls in 2011. There certainly could be more at play, however, tax breaks and heavy regulation may help explain why big banks are leaving the country’s richest states for ones that will not tax them.</p>
 </section>
 </section>
 <section id="the-health-of-the-system" class="level2">
@@ -337,6 +337,9 @@ Board of Governors of the Federal Reserve System. 2022. <span>“<span>FRB</span
 </div>
 <div id="ref-federal_deposit_insurance_corporation_what_2020" class="csl-entry" role="listitem">
 Federal Deposit Insurance Corporation. 2020. <span>“What <span>We</span> <span>Do</span>.”</span> <em>Federal Deposit Insurance Corporation</em>. <a href="https://www.fdic.gov/about/what-we-do/index.html">https://www.fdic.gov/about/what-we-do/index.html</a>.
+</div>
+<div id="ref-fritts_state_2023" class="csl-entry" role="listitem">
+Fritts, Janelle. 2023. <span>“State <span>Corporate</span> <span>Income</span> <span>Tax</span> <span>Rates</span> and <span>Brackets</span>.”</span> <em>Tax Foundation</em>. <a href="https://taxfoundation.org/publications/state-corporate-income-tax-rates-and-brackets/">https://taxfoundation.org/publications/state-corporate-income-tax-rates-and-brackets/</a>.
 </div>
 <div id="ref-vanian_heres_2023" class="csl-entry" role="listitem">
 Vanian, Jonathan, Rohan Goswami. 2023. <span>“Here’s How the Second-Biggest Bank Collapse in <span>U</span>.<span>S</span>. History Happened in Just 48 Hours.”</span> <em>CNBC</em>. <a href="https://www.cnbc.com/2023/03/10/silicon-valley-bank-collapse-how-it-happened.html">https://www.cnbc.com/2023/03/10/silicon-valley-bank-collapse-how-it-happened.html</a>.

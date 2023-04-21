@@ -3,12 +3,20 @@
 This section describes the process, considerations, and tools that went into developing each visualization in the Home tab. All the code for this project is available on [GitHub](https://github.com/anly503/spring2023-project-team-4/tree/main/code).
 
 
-### Figure X: Grid bubble map of the progression of bank assets per decade
+### Figure 1: Grid bubble map of the progression of bank assets per decade per state 
+[View plot](index.qmd#sec-grid-bubble-map)
 
+This plot is constructed using the `Folium` and `Geopandas` Python libraries and uses the quarterly financial data collected with the API client we built. We then combined this data with the ZIP code coordinate data to estimate the bank's location. This join procedure added latitude and longitude columns to the data set, which we then combined into a two-tuple named `zip_coordinates`.
 
+To produce the plots, we first converted the data into a Geodataframe. Next, we created a function named. `plot_bank_assets_by_date()`, that filters the Geodataframe by date and then groups by state. Then, the function creates a `Folium` map and plots the bubbles. The function is run four times for December 31st of 1992, 2002, 2012, and 2022. The resulting plots are organized into a 2 x 2 grid and rendered as HTML. The end product is a grid of `Folium` plots that allow the user to see the progression of the growth of bank assets in each decade and fully interact with each of these maps.
 
+Alternative attempts to produce this plot included cluster markers which failed to capture the size of the banks' assets, rather than just the count. Additionally, we set up a date slider with a play button, which did not allow for an immersive visual experience due to the plot `Folium` plot having to re-render each time. Future versions of this plot may include server-side action that allows for this kind of functionality.
 
-### Figure X: Dot map with heatmap of bank assets as of Q4 2022
+### Figure 2: Dot map with heatmap overlay of bank assets as of Q4 2022
+[View plot](index.qmd#sec-dot-and-heatmap)
+
+This second geospatial plot follows a similar logic to the previous; however, it only shows data as of December 31st, 2022. The main difference is that it shows a point in the ZIP code where each bank is. The plot also has a heatmap overlay showing the concentration of banks in the U.S. map. This plot also uses bubble size to show the size of the banks' assets, in which the largest banks in the U.S. distinguish themselves clearly.
+
 
 ### Figure X: temporal trend of the total domestic deposits in the US for the past 3 decades
 
@@ -20,8 +28,9 @@ This section describes the process, considerations, and tools that went into dev
 
 
 ### Figure X: State bank deposits by bank
+[View plot](index.qmd#sec-state-bank-deposits)
 
-The data for this plot comes from the quarterly bank financial data collected using the FDIC API. Then, in the Data Cleaning tab, we grouped the data by state, by bank, and by date meaning our data now showed the total assets, deposits, etc. that each bank in a given state held in a given quarter. This helped to shrink what was previously a massive dataset. However, that was still quite large. Therefore, that data file (../data/quarterly_banks_by_state/quarterly_banks_by_state.csv) is not in our github, however, you can see the code to create this file under ./code/data_cleaning/quarterly_data_cleaning.ipynb. Running this notebook will allow you to see exactly what data we are using.
+The data for this plot comes from the quarterly bank financial data collected using the FDIC API. Then, in the Data Cleaning tab, we grouped the data by state, by bank, and by date meaning our data now showed the total assets, deposits, etc. that each bank in a given state held in a given quarter. This helped to shrink what was previously a massive dataset. However, that was still quite large. Therefore, that data file was added to `.gitignore`, however, you can see the code to create this file under `quarterly_data_cleaning.ipynb`. Running this notebook will allow you to see exactly what data we are using.
 
 This plot went through a lot of variations. It began by included every state's total assets in five year windows with a slider to let the user move through the data. We then realize that five years was no where near enough time to see meaningful change so we expanded it to a decade long window. From there we realized that it would be better to just show all of the time at once, so the slider was scrapped. After doing some digging with the geo-spacial data, we found some interesting trends with the amount of money deposited in states you would not expect, such as South Dakota. In particular, we found that the biggest banks had tons of assets here. Quickly we realized this was worth exploring further so I split the data up by banks. However, it remained difficult to see how different the amounts of money was between states as you had to flip back and forth using the button. Finally, we switched to this subplot view which displays all of the states at once. The left column features the top three states by GDP while the right column features the three states we felt were most surprising in containing a ton of deposits despite being smaller states. They are all sorted vertically by GDP. 
 
