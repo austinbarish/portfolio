@@ -172,6 +172,7 @@ div.csl-indent {
 <section id="what-does-it-mean-for-money-to-be-somewhere" class="level2">
 <h2 class="anchored" data-anchor-id="what-does-it-mean-for-money-to-be-somewhere">What does it mean for money to “be” somewhere?</h2>
 <p>Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer’s accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve’s definition of a bank’s location: its main office as listed in the bank’s charter <span class="citation" data-cites="board_of_governors_of_the_federal_reserve_system_frb_2022">(<a href="#ref-board_of_governors_of_the_federal_reserve_system_frb_2022" role="doc-biblioref">Board of Governors of the Federal Reserve System 2022</a>)</span>.</p>
+<p><a href="#fig-grid-bubble-map">Figure&nbsp;1</a> shows expected behavior from 1992 to 2002: assets growing in the U.S. are the main financial hubs of New York and California. However, something strange started to happen in 2012. Assets start rapidly growing in South Dakota, Ohio, and North Carolina. By the fourth quarter of 2022, these assets have kept growing. What is happening?</p>
 <section id="sec-grid-bubble-map" class="level4">
 <h4 class="anchored" data-anchor-id="sec-grid-bubble-map"><strong>Grid bubble map of the progression of bank assets per decade per state</strong></h4>
 <div class="cell" data-execution_count="2">
@@ -210,11 +211,12 @@ div.csl-indent {
 </section>
 <section id="sec-dot-and-heatmap" class="level4">
 <h4 class="anchored" data-anchor-id="sec-dot-and-heatmap"><strong>Dot map with heatmap overlay of bank assets as of Q4 2022</strong></h4>
+<p>In <a href="#fig-dot-and-heatmap">Figure&nbsp;2</a>, we take a deeper dive into what’s going on. We can see in the heatmap layer that there are many places in the U.S. where banks aggregate; however, there is nothing that seems particularly special about South Dakota, Ohio, and North Carolina. However, upon further inspection, if we zoom into the plot, we can see that Citibank and Wells Fargo are in South Dakota, JP Morgan Chase in Ohio, and Bank of America ignored Carolina. How can this be?</p>
 <div class="cell" data-execution_count="3">
 <div id="fig-dot-and-heatmap" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
-        <iframe width="700" height="600" src="../img/plots/heatmap.html" frameborder="0" allowfullscreen=""></iframe>
+        <iframe width="700" height="600" src="../website/plots/heatmap.html" frameborder="0" allowfullscreen=""></iframe>
         
 <p></p><figcaption class="figure-caption">Figure&nbsp;2: shows dots representing the ZIP Code of the FDIC-insured banks’ location within the U.S., where the bubbles represent the relative size of the assets, allowing one to see the location of the largest banks.</figcaption><p></p>
 </figure>
