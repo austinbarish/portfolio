@@ -68,6 +68,9 @@ div.csl-indent {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -124,35 +127,107 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#where-is-your-money-and-why" id="toc-where-is-your-money-and-why" class="nav-link active" data-scroll-target="#where-is-your-money-and-why">Where is your money, and why?</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-does-it-mean-for-money-to-be-somewhere" id="toc-what-does-it-mean-for-money-to-be-somewhere" class="nav-link" data-scroll-target="#what-does-it-mean-for-money-to-be-somewhere">What does it mean for money to “be” somewhere?</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#what-does-it-mean-for-money-to-be-somewhere" id="toc-what-does-it-mean-for-money-to-be-somewhere" class="nav-link" data-scroll-target="#what-does-it-mean-for-money-to-be-somewhere">What does it mean for money to “be” somewhere?</a></li>
+  <li><a href="#figure-1" id="toc-figure-1" class="nav-link" data-scroll-target="#figure-1">Figure 1</a></li>
+  <li><a href="#figure-2" id="toc-figure-2" class="nav-link" data-scroll-target="#figure-2">Figure 2</a></li>
   </ul></li>
+  <li><a href="#a-story-about-the-top-5-banks" id="toc-a-story-about-the-top-5-banks" class="nav-link" data-scroll-target="#a-story-about-the-top-5-banks">A story about the top 5 banks</a></li>
+  <li><a href="#what-about-deposits" id="toc-what-about-deposits" class="nav-link" data-scroll-target="#what-about-deposits">What about deposits?</a></li>
+  <li><a href="#should-we-be-worried" id="toc-should-we-be-worried" class="nav-link" data-scroll-target="#should-we-be-worried">Should we be worried?</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Where is your money, and why?</h1>
+</div>
 
 
-<section id="where-is-your-money-and-why" class="level1">
-<h1>Where is your money, and why?</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in the largest U.S. bank failure since the 2008 financial crisis. The 40-year-long bank operation suddenly stopped after depositors panicked when learning that the bank was short on capital. The bank found itself in this position due to several factors, including incorrect investment allocation and customers requiring to use more cash in the bank as Venture Capital firms cut back their funding <span class="citation" data-cites="vanian_heres_2023">(<a href="#ref-vanian_heres_2023" role="doc-biblioref">Vanian 2023</a>)</span>. The public quickly turned its attention to the Federal Deposit Insurance Corporation (FDIC). The FDIC is an independent government agency tasked with insuring deposits, supervising financial institutions, and dealing with the orderly management of a bank failure. Most famously, the FDIC provides a standard insurance amount of $250,000 per depositor, per insured bank, which has accomplished for no depositor to lose a penny of insured funds due to a failure since 1934 <span class="citation" data-cites="federal_deposit_insurance_corporation_what_2020">(<a href="#ref-federal_deposit_insurance_corporation_what_2020" role="doc-biblioref">Federal Deposit Insurance Corporation 2020</a>)</span>. The case of the FDIC showcased just one of the fascinating aspects of the U.S. banking system that was largely unknown to the general public. It also inspired us to carry out this project. With it, we aim to inform our audience of several distinguishing facts about the U.S. banking system. They may come in handy one day.</p>
+<p>On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in the largest U.S. bank failure since the 2008 financial crisis. The 40-year-long bank operation suddenly stopped after depositors panicked when learning that the bank was short on capital. The bank found itself in this position due to several factors, including incorrect investment allocation and customers requiring to use more cash in the bank as Venture Capital firms cut back their funding <span class="citation" data-cites="vanian_heres_2023">(<a href="#ref-vanian_heres_2023" role="doc-biblioref">Vanian 2023</a>)</span>. The public quickly turned its attention to the Federal Deposit Insurance Corporation (FDIC). The FDIC is an independent government agency tasked with insuring deposits, supervising financial institutions, and dealing with the orderly management of a bank failure. Most famously, the FDIC provides a standard insurance amount of $250,000 per depositor, per insured bank, which has accomplished for no depositor to lose a penny of insured funds due to a failure since 1934 <span class="citation" data-cites="federal_deposit_insurance_corporation_what_2020">(<a href="#ref-federal_deposit_insurance_corporation_what_2020" role="doc-biblioref">Federal Deposit Insurance Corporation 2020</a>)</span>. The case of the FDIC showcased just one of the fascinating aspects of the U.S. banking system that was largely unknown to the general public. It also inspired us to carry out this project. With it, we aim to inform our audience of several distinguishing facts about the U.S. banking system.</p>
 </section>
 <section id="what-does-it-mean-for-money-to-be-somewhere" class="level2">
 <h2 class="anchored" data-anchor-id="what-does-it-mean-for-money-to-be-somewhere">What does it mean for money to “be” somewhere?</h2>
 <p>Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer’s accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve’s definition of a bank’s location: its main office as listed in the bank’s charter <span class="citation" data-cites="board_of_governors_of_the_federal_reserve_system_frb_2022">(<a href="#ref-board_of_governors_of_the_federal_reserve_system_frb_2022" role="doc-biblioref">Board of Governors of the Federal Reserve System 2022</a>)</span>.</p>
+<section id="figure-1" class="level3">
+<h3 class="anchored" data-anchor-id="figure-1">Figure 1</h3>
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+
+<style>
+    .map-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .map-box {
+        width: 50%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .map-title {
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+<div class="map-container">
+<div class="map-box"><div class="map-title">1992-12-31</div>
+        <iframe width="350" height="300" src="data_cleaning/geospatial_data_html/map_0.html" frameborder="0" allowfullscreen=""></iframe>
+        </div><div class="map-box"><div class="map-title">2002-12-31</div>
+        <iframe width="350" height="300" src="data_cleaning/geospatial_data_html/map_1.html" frameborder="0" allowfullscreen=""></iframe>
+        </div><div class="map-box"><div class="map-title">2012-12-31</div>
+        <iframe width="350" height="300" src="data_cleaning/geospatial_data_html/map_2.html" frameborder="0" allowfullscreen=""></iframe>
+        </div><div class="map-box"><div class="map-title">2022-12-31</div>
+        <iframe width="350" height="300" src="data_cleaning/geospatial_data_html/map_3.html" frameborder="0" allowfullscreen=""></iframe>
+        </div></div>
+</div>
+</div>
+</section>
+<section id="figure-2" class="level3">
+<h3 class="anchored" data-anchor-id="figure-2">Figure 2</h3>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="3">
+
+        <iframe width="700" height="600" src="data_cleaning/geospatial_data_html/heatmap.html" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+</section>
+</section>
+<section id="a-story-about-the-top-5-banks" class="level2">
+<h2 class="anchored" data-anchor-id="a-story-about-the-top-5-banks">A story about the top 5 banks</h2>
+</section>
+<section id="what-about-deposits" class="level2">
+<h2 class="anchored" data-anchor-id="what-about-deposits">What about deposits?</h2>
+</section>
+<section id="should-we-be-worried" class="level2">
+<h2 class="anchored" data-anchor-id="should-we-be-worried">Should we be worried?</h2>
+</section>
+<section id="conclusion" class="level2">
+
 
 
 
 </section>
-</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Conclusion</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-board_of_governors_of_the_federal_reserve_system_frb_2022" class="csl-entry" role="listitem">
 Board of Governors of the Federal Reserve System. 2022. <span>“<span>FRB</span>: <span>Large</span> <span>Commercial</span> <span>Banks</span>– <span>December</span> 31, 2022.”</span> <a href="https://www.federalreserve.gov/releases/lbr/current/">https://www.federalreserve.gov/releases/lbr/current/</a>.
 </div>
