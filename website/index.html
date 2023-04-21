@@ -168,14 +168,26 @@ div.csl-indent {
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in the largest U.S. bank failure since the 2008 financial crisis. The 40-year-long bank operation suddenly stopped after depositors panicked when learning that the bank was short on capital. The bank found itself in this position due to several factors, including incorrect investment allocation and customers requiring to use more cash in the bank as Venture Capital firms cut back their funding <span class="citation" data-cites="vanian_heres_2023">(<a href="#ref-vanian_heres_2023" role="doc-biblioref">Vanian 2023</a>)</span>. The public quickly turned its attention to the Federal Deposit Insurance Corporation (FDIC). The FDIC is an independent government agency tasked with insuring deposits, supervising financial institutions, and dealing with the orderly management of a bank failure. Most famously, the FDIC provides a standard insurance amount of $250,000 per depositor, per insured bank, which has accomplished for no depositor to lose a penny of insured funds due to a failure since 1934 <span class="citation" data-cites="federal_deposit_insurance_corporation_what_2020">(<a href="#ref-federal_deposit_insurance_corporation_what_2020" role="doc-biblioref">Federal Deposit Insurance Corporation 2020</a>)</span>. The case of the FDIC showcased just one of the fascinating aspects of the U.S. banking system that was largely unknown to the general public. It also inspired us to carry out this project. With it, we aim to inform our audience of several distinguishing facts about the U.S. banking system.</p>
+<p>First, let’s explore the assets, equity, or liabilities by state in <a href="#fig-interactive-table">Figure&nbsp;1</a>:</p>
+<div class="cell" data-execution_count="2">
+<div id="fig-interactive-table" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+
+
+        <iframe width="700" height="600" src="../website/plots/interactive_table.html" frameborder="0" allowfullscreen=""></iframe>
+        
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: shows an interactive table with a dropdown allowing the selection of assets, equity, or liabilities.</figcaption><p></p>
+</figure>
+</div>
+</div>
 </section>
 <section id="what-does-it-mean-for-money-to-be-somewhere" class="level2">
 <h2 class="anchored" data-anchor-id="what-does-it-mean-for-money-to-be-somewhere">What does it mean for money to “be” somewhere?</h2>
 <p>Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer’s accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve’s definition of a bank’s location: its main office as listed in the bank’s charter <span class="citation" data-cites="board_of_governors_of_the_federal_reserve_system_frb_2022">(<a href="#ref-board_of_governors_of_the_federal_reserve_system_frb_2022" role="doc-biblioref">Board of Governors of the Federal Reserve System 2022</a>)</span>.</p>
-<p><a href="#fig-grid-bubble-map">Figure&nbsp;1</a> shows expected behavior from 1992 to 2002: assets growing in the U.S. are the main financial hubs of New York and California. However, something strange started to happen in 2012. Assets start rapidly growing in South Dakota, Ohio, and North Carolina. By the fourth quarter of 2022, these assets have kept growing. What is happening?</p>
+<p><a href="#fig-grid-bubble-map">Figure&nbsp;2</a> shows expected behavior from 1992 to 2002: assets growing in the U.S. are the main financial hubs of New York and California. However, something strange started to happen in 2012. Assets start rapidly growing in South Dakota, Ohio, and North Carolina. By the fourth quarter of 2022, these assets have kept growing. What is happening?</p>
 <section id="sec-grid-bubble-map" class="level4">
 <h4 class="anchored" data-anchor-id="sec-grid-bubble-map"><strong>Grid bubble map of the progression of bank assets per decade per state</strong></h4>
-<div class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="3">
 <div id="fig-grid-bubble-map" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
@@ -204,21 +216,21 @@ div.csl-indent {
         </div><div class="map-box"><div class="map-title">2022-12-31</div>
         <iframe width="350" height="300" src="../website/plots/map_3.html" frameborder="0" allowfullscreen=""></iframe>
         </div></div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: shows a 2x2 grid of Folium maps depicting the relative size of fourth-quarter U.S. bank assets per state every ten years since 1992.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: shows a 2x2 grid of Folium maps depicting the relative size of fourth-quarter U.S. bank assets per state every ten years since 1992.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </section>
 <section id="sec-dot-and-heatmap" class="level4">
 <h4 class="anchored" data-anchor-id="sec-dot-and-heatmap"><strong>Dot map with heatmap overlay of bank assets as of Q4 2022</strong></h4>
-<p>In <a href="#fig-dot-and-heatmap">Figure&nbsp;2</a>, we take a deeper dive into what’s going on. We can see in the heatmap layer that there are many places in the U.S. where banks aggregate; however, there is nothing that seems particularly special about South Dakota, Ohio, and North Carolina. However, upon further inspection, if we zoom into the plot, we can see that Citibank and Wells Fargo are in South Dakota, JP Morgan Chase in Ohio, and Bank of America ignored Carolina. How can this be?</p>
-<div class="cell" data-execution_count="3">
+<p>In <a href="#fig-dot-and-heatmap">Figure&nbsp;3</a>, we take a deeper dive into what’s going on. We can see in the heatmap layer that there are many places in the U.S. where banks aggregate; however, there is nothing that seems particularly special about South Dakota, Ohio, and North Carolina. However, upon further inspection, if we zoom into the plot, we can see that Citibank and Wells Fargo are in South Dakota, JP Morgan Chase in Ohio, and Bank of America ignored Carolina. How can this be?</p>
+<div class="cell" data-execution_count="4">
 <div id="fig-dot-and-heatmap" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/heatmap.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: shows dots representing the ZIP Code of the FDIC-insured banks’ location within the U.S., where the bubbles represent the relative size of the assets, allowing one to see the location of the largest banks.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: shows dots representing the ZIP Code of the FDIC-insured banks’ location within the U.S., where the bubbles represent the relative size of the assets, allowing one to see the location of the largest banks.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -248,17 +260,17 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="sec-state-bank-deposits">Bank deposits by state</h2>
 <section id="state-bank-deposits-by-bank" class="level4">
 <h4 class="anchored" data-anchor-id="state-bank-deposits-by-bank"><strong>State bank deposits by bank</strong></h4>
-<div class="cell" data-execution_count="4">
+<div class="cell" data-execution_count="5">
 <div id="fig-state-bank-deposits" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/plot-3.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: shows the differences in the size of the deposits in California, Ohio, Texas, North Carolina, New York, and South Dakota.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4: shows the differences in the size of the deposits in California, Ohio, Texas, North Carolina, New York, and South Dakota.</figcaption><p></p>
 </figure>
 </div>
 </div>
-<p>There is a lot to unpack with <a href="#fig-state-bank-deposits">Figure&nbsp;3</a>. First, your eyes might be drawn to the rapid growth beginning in 2020 across the board but most obviously in Texas. Meanwhile, there is no obvious drop in deposits from the pandemic. Instead, we see the massive influx of cash into the banking system as a product of the pandemic and stimulus packages.</p>
+<p>There is a lot to unpack with <a href="#fig-state-bank-deposits">Figure&nbsp;4</a>. First, your eyes might be drawn to the rapid growth beginning in 2020 across the board but most obviously in Texas. Meanwhile, there is no obvious drop in deposits from the pandemic. Instead, we see the massive influx of cash into the banking system as a product of the pandemic and stimulus packages.</p>
 <p>Secondly, and most importantly to our story here, is the differences in the size of the deposits in these states. You may even be confused at first and guess that the labels are on the wrong states because your intuition tells you that California, Texas, and New York should have significantly more cash in the bank than smaller states like South Dakota. However, that is where we were just as surprised as you are. As you may have noticed in our geo-spacial plot, huge banks are located in cities you would not expect. For example, Wells Fargo and Citibank are centered in Sioux Falls, South Dakota. As you can see, the deposits in these banks completely envelop the rest of the deposits in the state. Similarly, in Ohio and North Carolina, the large banks located there make up the majority of the total deposits in the state.</p>
 <p>Why these banks are located in these unlikely locations is up to speculations, but regulation could certainly play a role, namely, corporate tax rates. South Dakota and Ohio both lack any corporate taxes and North Carolina has one of the lowest in the country <span class="citation" data-cites="fritts_state_2023">(<a href="#ref-fritts_state_2023" role="doc-biblioref">Fritts 2023</a>)</span>. These corporate taxes may help explain why Wells Fargo moved from California to South Dakota in 2003, or why Citibank followed them to Sioux Falls in 2011. There certainly could be more at play, however, tax breaks and heavy regulation may help explain why big banks are leaving the country’s richest states for ones that will not tax them.</p>
 </section>
@@ -268,13 +280,13 @@ div.csl-indent {
 <p>A bank’s equity capital ratio, similar to a bank’s tier 1 capital ratio, is the amount of a bank’s equity as a measure of its total capital. It is a measure of a bank’s financial strength and ability to withstand economic downturns and absorb losses. The FDIC often requires a minimum 4% equity capital ratio for banks that it insures in order to allow the bank to become less reliant on debt and increase shareholder satisfaction. The equity capital ratio is an interesting figure to help project the stability of a bank.</p>
 <section id="top-and-bottom-20-histogram" class="level4">
 <h4 class="anchored" data-anchor-id="top-and-bottom-20-histogram"><strong>Top and Bottom 20 Histogram</strong></h4>
-<div class="cell" data-execution_count="5">
+<div class="cell" data-execution_count="6">
 <div id="fig-top-bottom-histogram" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/eqr/plot1.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;4: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5: A line plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -282,13 +294,13 @@ div.csl-indent {
 </section>
 <section id="quarters-line-graph" class="level4">
 <h4 class="anchored" data-anchor-id="quarters-line-graph"><strong>Quarters Line Graph</strong></h4>
-<div class="cell" data-execution_count="6">
+<div class="cell" data-execution_count="7">
 <div id="fig-quarters-line-graph" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/eqr/plot2.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;5: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6: A line plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -296,13 +308,13 @@ div.csl-indent {
 </section>
 <section id="eqr-and-assets-small-counts" class="level4">
 <h4 class="anchored" data-anchor-id="eqr-and-assets-small-counts"><strong>EQR and Assets: Small Counts</strong></h4>
-<div class="cell" data-execution_count="7">
+<div class="cell" data-execution_count="8">
 <div id="fig-eqr-and-assets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/eqr/plot3.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;6: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7: A line plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -310,13 +322,13 @@ div.csl-indent {
 </section>
 <section id="bubble-plot" class="level4">
 <h4 class="anchored" data-anchor-id="bubble-plot"><strong>Bubble Plot</strong></h4>
-<div class="cell" data-execution_count="8">
+<div class="cell" data-execution_count="9">
 <div id="fig-bubble-plot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/eqr/plot4.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;7: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;8: A line plot</figcaption><p></p>
 </figure>
 </div>
 </div>
