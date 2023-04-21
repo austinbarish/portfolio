@@ -1,0 +1,38 @@
+# to render `cd` to the code directoy and run `quarto render` (just those 2 commands)
+
+project:
+  type: website
+  output-dir: ../../website
+
+website:
+  title: Where is your money, and why?
+  search: false
+  favicon: ../../img/favicon.ico
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home      
+      - href: methods.qmd
+        text: Methods        
+      - href: code.qmd
+        text: Code        
+      - href: data.qmd
+        text: Data
+      - href: authors.qmd
+        text: Authors        
+  page-footer:
+    left: |
+      A project by [Group 4](authors.qmd) <br>
+    right: |
+      Made with [Quarto](https://quarto.org/)<br>
+      [View the source at {{< fa brands github >}} GitHub]({{< var course.github >}})
+
+
+format:
+  html:
+    theme:
+      - sandstone
+      - custom.scss
+    toc: true
+
+bibliography: references.bib
