@@ -13,9 +13,7 @@ website:
       - href: index.qmd
         text: Home       
       - href: methods.qmd
-        text: Methods        
-      - href: code.qmd
-        text: Code        
+        text: Methods              
       - href: data.qmd
         text: Data
       - href: authors.qmd

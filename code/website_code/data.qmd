@@ -1,5 +1,8 @@
 # Data {#data .unnumbered}
 
+This section contains a thorough description of the data used in this project. First, we discuss the banking data, its collection, and its main definitions. Second, we describe the coordinate data used for the geospatial plots. All data table are available on [GitHub](https://github.com/anly503/spring2023-project-team-4/tree/main/data).
+
+
 ## Banking data
 
 We gathered the data from the FDIC's API  [@federal_deposit_insurance_corporation_bankfind_2023]. The API allows querying financial institutions' general and structural data, historical financial information, and bank failure information. In this study, we focus on historical financial information. The FDIC API offers a comprehensive menu of fields covering all the previously mentioned topics, from financial ratios, income and balance sheet data, bank structure information, and more (field list available [here](https://github.com/anly503/spring2023-project-team-4/tree/main/data/data_documentation)).

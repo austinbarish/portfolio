@@ -1,4 +1,6 @@
-# Methods {#welcome .unnumbered}
+# Methods {#methods .unnumbered}
+
+This section describes the process, considerations, and tools that went into developing each visualization in the Home tab. All the code for this project is available on [GitHub](https://github.com/anly503/spring2023-project-team-4/tree/main/code).
 
 
 ### Figure X: Grid bubble map of the progression of bank assets per decade
