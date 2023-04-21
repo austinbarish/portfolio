@@ -94,23 +94,58 @@ IFrame(src='../website/plots/heatmap.html', width=700, height=600)
 ```
 
 
-## A story about the top 5 banks
+## A story about the top banks
 
-### Figure X: temporal trend of the total domestic deposits in the US for the past 3 decades
+### Figure 1: temporal trend of the total domestic deposits in the US for the past 3 decades
 
+```{python}
+#| echo: false
+#| label: fig-temporal-assets
+#| fig-cap: "A stacked bar plot"
 
-The above plot provides a temporal trend of the total domestic deposits in the US for the past 3 decades. Looking at this particular plot, we see a staggering uptick in bank deposits over the past 3 decades. Breaking down the assets by the bank class, we also see that each of the bank classes also have their own trends in terms of growth over the years. Firstly, looking at National Member Banks, we see that the majority of deposits belong to them. These banks are ones that are members of the Federal Reserve Bank, the central bank of the US. However, from the temporal trends, we see that National Member Banks did not always hold the majority of assets in the country. The only time there was an apparent upshot in the assets was around the 2000 mark, when the National Member Banks got a hold of a lot more assets and skyrocketed ahead of the other types of banks. We also see that Stock & Mutual Savings Banks have the last deposited in them, as they offer the most risk.
+IFrame(src='../website/plots/timeseries/plot_1.html', width=700, height=600)
 
-### Figure X: Disparity of the top 4 banks
+```
+
+The above plot provides a temporal trend of the total domestic deposits in the US for the past 3 decades. Looking at this particular plot, we see a staggering uptick in bank deposits over the past 3 decades. Breaking down the assets by the bank class, we also see that each of the bank classes also have their own trends in terms of growth over the years. Firstly, looking at National Member Banks, we see that the majority of deposits belong to them. These banks are ones that are members of the Federal Reserve Bank, the central bank of the US. However, from the temporal trends, we see that National Member Banks did not always hold the majority of assets in the country. The only time there was an apparent upshot in the assets was around the 2000 mark, when the National Member Banks got a hold of a lot more assets and skyrocketed ahead of the other types of banks. We also see that Stock & Mutual Savings Banks have the least deposited in them, as they offer the most risk.
+
+### Figure 2: Disparity of the top 4 banks
+
+```{python}
+#| echo: false
+#| label: fig-top-banks
+#| fig-cap: "A bar plot"
+
+IFrame(src='../website/plots/timeseries/plot_2.html', width=700, height=600)
+
+```
 
 The US is home to some of the largest and most popular commercial banks in the world. These banks offer a wide array of services to individuals and businesses. The banks we're most familiar with are the ones that are prevalent not only all over the country, but all over the world as well. These multinationals field a behemoth of assets, and dominate the entire industry. In the US, we see that there are 4 main banks which dominate the rest of the top 10. These banks are JP Morgan Chase, Bank of America, Wells Fargo, and Citibank. The stark desparity in these top 4 is noticeable by examining how Wells Fargo, the 4th largest bank in the US by assets, holds \$1.73B, while US Bank, the 5th largest bank, only holds \$584M, which is about 3 times less then that of US Bank. This resembles a skew in the distribution of assets held by the top 10 commercial banks in the US, with the top 4 banks holding the majority of the assets.
 
+### Figure 3: The distribution of commercial banks in the US by the assets in possession
 
-### Figure X: The distribution of commercial banks in the US by the assets in possession
+
+```{python}
+#| echo: false
+#| label: fig-top-commercial
+#| fig-cap: "A bar plot"
+
+IFrame(src='../website/plots/timeseries/plot_3.html', width=700, height=600)
+
+```
 
 Looking at the distribution of commercial banks in the US by the assets in possession, we get a better idea of what the entire distribution of assets is across the country. Our knowledge is mostly limited to the big brand names of banks: JP Morgan Chase, Wells Fargo, Bank of America, etc. These banks are the minority in the larger picture, as their access to capital and resources is only enjoyed by 3.6% of banks in the US. The majority of these banks only hold between \$100,000 and \$1M, taking up 62.4% of the entire distribution. Surprisingly, we see that a substantial 15.7% of banks are extremely small, holding less than \$100,000 in assets in 2022. Only a small fraction of these banks are in fact extremely large, but as we will see in the next plot, they hold immense amounts of assets.
 
-### Figure X: Breakdown of top 5 banks, the next 125 banks, and all other banks
+### Figure 4: Breakdown of top 5 banks, the next 125 banks, and all other banks
+
+```{python}
+#| echo: false
+#| label: fig-grouped
+#| fig-cap: "A grouped bar plot "
+
+IFrame(src='../website/plots/timeseries/plot_4.html', width=700, height=600)
+
+```
 
 This plot breaks down the banks in the banks in the US by dividing them into groups: the top 5 banks, the next 125 banks, and all other banks. The total assets held by these banks is measured over the past 30 years, and this is was determines the groups and rankings.
 
