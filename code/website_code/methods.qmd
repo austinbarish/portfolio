@@ -3,16 +3,22 @@
 This section describes the process, considerations, and tools that went into developing each visualization in the Home tab. All the code for this project is available on [GitHub](https://github.com/anly503/spring2023-project-team-4/tree/main/code).
 
 
-### Figure 1: Grid bubble map of the progression of bank assets per decade per state 
+### Figure 1: Table of US bank assets, equity and liabilities per state of of 2022Q4
+[View plot](index.qmd#sec-interactive-table)
+
+The interactive table was built with the quarterly financials data set collected with the API client we built. We first selected rows with December 31st, 2022, as their filing date, and then we aggregated them by equities, liabilities, and assets. Next, we performed formatting on the numbers format and colors and then created a figure that aggregated the three tables. A drop-down was also added, which changes the display of the financial metrics selected.
+
+
+### Figure 2: Grid bubble map of the progression of bank assets per decade per state 
 [View plot](index.qmd#sec-grid-bubble-map)
 
-This plot is constructed using the `Folium` and `Geopandas` Python libraries and uses the quarterly financial data collected with the API client we built. We then combined this data with the ZIP code coordinate data to estimate the bank's location. This join procedure added latitude and longitude columns to the data set, which we then combined into a two-tuple named `zip_coordinates`.
+This plot is constructed using the `Folium` and `Geopandas` Python libraries and uses the quarterly financial data. We then combined this data with the ZIP code coordinate data to estimate the bank's location. This join procedure added latitude and longitude columns to the data set, which we then combined into a two-tuple named `zip_coordinates`.
 
 To produce the plots, we first converted the data into a Geodataframe. Next, we created a function named. `plot_bank_assets_by_date()`, that filters the Geodataframe by date and then groups by state. Then, the function creates a `Folium` map and plots the bubbles. The function is run four times for December 31st of 1992, 2002, 2012, and 2022. The resulting plots are organized into a 2 x 2 grid and rendered as HTML. The end product is a grid of `Folium` plots that allow the user to see the progression of the growth of bank assets in each decade and fully interact with each of these maps.
 
 Alternative attempts to produce this plot included cluster markers which failed to capture the size of the banks' assets, rather than just the count. Additionally, we set up a date slider with a play button, which did not allow for an immersive visual experience due to the plot `Folium` plot having to re-render each time. Future versions of this plot may include server-side action that allows for this kind of functionality.
 
-### Figure 2: Dot map with heatmap overlay of bank assets as of Q4 2022
+### Figure 3: Dot map with heatmap overlay of bank assets as of Q4 2022
 [View plot](index.qmd#sec-dot-and-heatmap)
 
 This second geospatial plot follows a similar logic to the previous; however, it only shows data as of December 31st, 2022. The main difference is that it shows a point in the ZIP code where each bank is. The plot also has a heatmap overlay showing the concentration of banks in the U.S. map. This plot also uses bubble size to show the size of the banks' assets, in which the largest banks in the U.S. distinguish themselves clearly.
@@ -44,16 +50,8 @@ This plot went through a lot of variations. It began by included every state's t
 Before the final submission, we will look to make some of the data selection more clearly with column titles. Additionally, we may look to add some annotations that point out some important dates. For example, Wells Fargo moving from California to South Dakota in 2003. We may also consider adding an additional line to each state displaying their full deposit totals to highlight the rapid drops of increases of gaining or losing a big bank.
 
 
-### Figure X: EQR
+### Figure X: EQR Plots
 
 For this portion of the analysis, I chose to examine banks that represent the top and bottom 20 in average EQR by quarter. For this analysis, I filtered out any banks that do not appear in the data for more than 100 quarters (roughly 80% of the quarters). This is to eliminate any potential outliers in the data. The mean value does not all observations in the data; it only includes all banks with more than 100 quarters of data since Q1 1992. Looking at the histogram, we notice that the average EQR of 11.22 is far closer to the 20 banks that have the lowest equity capital ratio compared to the 20 banks that have the highest equity capital ratio. Looking at the 5 number summary, we see that the average (11.22) is lower than the median (10.27), indicating that there are a few banks with a far higher equity capital ratio than the majority of the rest of the banks in the FDIC database. When we more closely examine the banks that fall in the range of top or bottom 20, we see that there is no consistent state across these banks. It is noteworthy that Michigan has 2 of the 3 highest banks in terms of EQR. Another noteworthy observation is that banks in Ohio, South Dakota, and North Carolina only make up 3 of the top 20 banks in average equity capital ratio. Moreover, none of the largest banks in terms of total assets are present on this list.
 
 
-
-### Figure X: Top and Bottom 20 Histogram
-
-### Figure X: Quarters Line Graph
-
-### Figure X: EQR and Assets: Small Counts
-
-### Figure X: Bubble Plot

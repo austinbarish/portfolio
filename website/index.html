@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.3.290">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -92,22 +92,24 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./methods.html">
+    <a class="nav-link" href="./methods.html" rel="" target="">
  <span class="menu-text">Methods</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./data.html">
+    <a class="nav-link" href="./data.html" rel="" target="">
  <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./authors.html">
+    <a class="nav-link" href="./authors.html" rel="" target="">
  <span class="menu-text">Authors</span></a>
   </li>  
 </ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -121,9 +123,7 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#home" id="toc-home" class="nav-link active" data-scroll-target="#home">Where is your money, and why?</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#what-does-it-mean-for-money-to-be-somewhere" id="toc-what-does-it-mean-for-money-to-be-somewhere" class="nav-link" data-scroll-target="#what-does-it-mean-for-money-to-be-somewhere">What does it mean for money to “be” somewhere?</a></li>
   <li><a href="#a-story-about-the-top-banks" id="toc-a-story-about-the-top-banks" class="nav-link" data-scroll-target="#a-story-about-the-top-banks">A story about the top banks</a>
   <ul class="collapse">
@@ -135,7 +135,6 @@ div.csl-indent {
   <li><a href="#sec-state-bank-deposits" id="toc-sec-state-bank-deposits" class="nav-link" data-scroll-target="#sec-state-bank-deposits">Bank deposits by state</a></li>
   <li><a href="#the-health-of-the-system" id="toc-the-health-of-the-system" class="nav-link" data-scroll-target="#the-health-of-the-system">The health of the system</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -143,27 +142,55 @@ div.csl-indent {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Where is your money, and why?</h1>
+</div>
 
 
-<section id="home" class="level1 unnumbered">
-<h1 class="unnumbered">Where is your money, and why?</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../img/header.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<p><img src="../img/header.jpg" class="quarto-discovered-preview-image img-fluid figure-img" style="width:80.0%"></p>
 <p></p><figcaption class="figure-caption">Photo credit: <span class="citation" data-cites="wilking_signs_2023">Wilking (<a href="#ref-wilking_signs_2023" role="doc-biblioref">2023</a>)</span></figcaption><p></p>
 </figure>
 </div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in the largest U.S. bank failure since the 2008 financial crisis. The 40-year-long bank operation suddenly stopped after depositors panicked when learning that the bank was short on capital. The bank found itself in this position due to several factors, including incorrect investment allocation and customers requiring to use more cash in the bank as Venture Capital firms cut back their funding <span class="citation" data-cites="vanian_heres_2023">(<a href="#ref-vanian_heres_2023" role="doc-biblioref">Vanian 2023</a>)</span>. The public quickly turned its attention to the Federal Deposit Insurance Corporation (FDIC). The FDIC is an independent government agency tasked with insuring deposits, supervising financial institutions, and dealing with the orderly management of a bank failure. Most famously, the FDIC provides a standard insurance amount of $250,000 per depositor, per insured bank, which has accomplished for no depositor to lose a penny of insured funds due to a failure since 1934 <span class="citation" data-cites="federal_deposit_insurance_corporation_what_2020">(<a href="#ref-federal_deposit_insurance_corporation_what_2020" role="doc-biblioref">Federal Deposit Insurance Corporation 2020</a>)</span>. The case of the FDIC showcased just one of the fascinating aspects of the U.S. banking system that was largely unknown to the general public. It also inspired us to carry out this project. With it, we aim to inform our audience of several distinguishing facts about the U.S. banking system.</p>
+<p>First, let’s explore the assets, equity, or liabilities by state in <a href="#fig-interactive-table">Figure&nbsp;1</a>:</p>
+<section id="sec-interactive-table" class="level4">
+<h4 class="anchored" data-anchor-id="sec-interactive-table"><strong>Table of US bank assets, equity and liabilities per state of of 2022Q4</strong></h4>
+<div class="cell" data-execution_count="2">
+<div id="fig-interactive-table" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+
+
+        <iframe width="700" height="600" src="../website/plots/interactive_table.html" frameborder="0" allowfullscreen=""></iframe>
+        
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: shows an interactive table with a dropdown allowing the selection of assets, equity, or liabilities.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</section>
 </section>
 <section id="what-does-it-mean-for-money-to-be-somewhere" class="level2">
 <h2 class="anchored" data-anchor-id="what-does-it-mean-for-money-to-be-somewhere">What does it mean for money to “be” somewhere?</h2>
 <p>Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer’s accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve’s definition of a bank’s location: its main office as listed in the bank’s charter <span class="citation" data-cites="board_of_governors_of_the_federal_reserve_system_frb_2022">(<a href="#ref-board_of_governors_of_the_federal_reserve_system_frb_2022" role="doc-biblioref">Board of Governors of the Federal Reserve System 2022</a>)</span>.</p>
-<p><a href="#fig-grid-bubble-map">Figure&nbsp;1</a> shows expected behavior from 1992 to 2002: assets growing in the U.S. are the main financial hubs of New York and California. However, something strange started to happen in 2012. Assets start rapidly growing in South Dakota, Ohio, and North Carolina. By the fourth quarter of 2022, these assets have kept growing. What is happening?</p>
+<p><a href="#fig-grid-bubble-map">Figure&nbsp;2</a> shows expected behavior from 1992 to 2002: assets growing in the U.S. are the main financial hubs of New York and California. However, something strange started to happen in 2012. Assets start rapidly growing in South Dakota, Ohio, and North Carolina. By the fourth quarter of 2022, these assets have kept growing. What is happening?</p>
 <section id="sec-grid-bubble-map" class="level4">
 <h4 class="anchored" data-anchor-id="sec-grid-bubble-map"><strong>Grid bubble map of the progression of bank assets per decade per state</strong></h4>
-<div class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="3">
 <div id="fig-grid-bubble-map" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
@@ -192,21 +219,21 @@ div.csl-indent {
         </div><div class="map-box"><div class="map-title">2022-12-31</div>
         <iframe width="350" height="300" src="../website/plots/map_3.html" frameborder="0" allowfullscreen=""></iframe>
         </div></div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: shows a 2x2 grid of Folium maps depicting the relative size of fourth-quarter U.S. bank assets per state every ten years since 1992.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: shows a 2x2 grid of Folium maps depicting the relative size of fourth-quarter U.S. bank assets per state every ten years since 1992.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </section>
 <section id="sec-dot-and-heatmap" class="level4">
 <h4 class="anchored" data-anchor-id="sec-dot-and-heatmap"><strong>Dot map with heatmap overlay of bank assets as of Q4 2022</strong></h4>
-<p>In <a href="#fig-dot-and-heatmap">Figure&nbsp;2</a>, we take a deeper dive into what’s going on. We can see in the heatmap layer that there are many places in the U.S. where banks aggregate; however, there is nothing that seems particularly special about South Dakota, Ohio, and North Carolina. However, upon further inspection, if we zoom into the plot, we can see that Citibank and Wells Fargo are in South Dakota, JP Morgan Chase in Ohio, and Bank of America ignored Carolina. How can this be?</p>
-<div class="cell" data-execution_count="3">
+<p>In <a href="#fig-dot-and-heatmap">Figure&nbsp;3</a>, we take a deeper dive into what’s going on. We can see in the heatmap layer that there are many places in the U.S. where banks aggregate; however, there is nothing that seems particularly special about South Dakota, Ohio, and North Carolina. However, upon further inspection, if we zoom into the plot, we can see that Citibank and Wells Fargo are in South Dakota, JP Morgan Chase in Ohio, and Bank of America ignored Carolina. How can this be?</p>
+<div class="cell" data-execution_count="4">
 <div id="fig-dot-and-heatmap" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/heatmap.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: shows dots representing the ZIP Code of the FDIC-insured banks’ location within the U.S., where the bubbles represent the relative size of the assets, allowing one to see the location of the largest banks.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: shows dots representing the ZIP Code of the FDIC-insured banks’ location within the U.S., where the bubbles represent the relative size of the assets, allowing one to see the location of the largest banks.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -216,13 +243,13 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="a-story-about-the-top-banks">A story about the top banks</h2>
 <section id="figure-1-temporal-trend-of-the-total-domestic-deposits-in-the-us-for-the-past-3-decades" class="level3">
 <h3 class="anchored" data-anchor-id="figure-1-temporal-trend-of-the-total-domestic-deposits-in-the-us-for-the-past-3-decades">Figure 1: temporal trend of the total domestic deposits in the US for the past 3 decades</h3>
-<div class="cell" data-execution_count="4">
+<div class="cell" data-execution_count="5">
 <div id="fig-temporal-assets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/timeseries/plot_1.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: A stacked bar plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4: A stacked bar plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -230,13 +257,13 @@ div.csl-indent {
 </section>
 <section id="figure-2-disparity-of-the-top-4-banks" class="level3">
 <h3 class="anchored" data-anchor-id="figure-2-disparity-of-the-top-4-banks">Figure 2: Disparity of the top 4 banks</h3>
-<div class="cell" data-execution_count="5">
+<div class="cell" data-execution_count="6">
 <div id="fig-top-banks" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/timeseries/plot_2.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;4: A bar plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5: A bar plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -244,13 +271,13 @@ div.csl-indent {
 </section>
 <section id="figure-3-the-distribution-of-commercial-banks-in-the-us-by-the-assets-in-possession" class="level3">
 <h3 class="anchored" data-anchor-id="figure-3-the-distribution-of-commercial-banks-in-the-us-by-the-assets-in-possession">Figure 3: The distribution of commercial banks in the US by the assets in possession</h3>
-<div class="cell" data-execution_count="6">
+<div class="cell" data-execution_count="7">
 <div id="fig-top-commercial" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/timeseries/plot_3.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;5: A bar plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6: A bar plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -258,13 +285,13 @@ div.csl-indent {
 </section>
 <section id="figure-4-breakdown-of-top-5-banks-the-next-125-banks-and-all-other-banks" class="level3">
 <h3 class="anchored" data-anchor-id="figure-4-breakdown-of-top-5-banks-the-next-125-banks-and-all-other-banks">Figure 4: Breakdown of top 5 banks, the next 125 banks, and all other banks</h3>
-<div class="cell" data-execution_count="7">
+<div class="cell" data-execution_count="8">
 <div id="fig-grouped" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/timeseries/plot_4.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;6: A grouped bar plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;7: A grouped bar plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -276,17 +303,17 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="sec-state-bank-deposits">Bank deposits by state</h2>
 <section id="state-bank-deposits-by-bank" class="level4">
 <h4 class="anchored" data-anchor-id="state-bank-deposits-by-bank"><strong>State bank deposits by bank</strong></h4>
-<div class="cell" data-execution_count="8">
+<div class="cell" data-execution_count="9">
 <div id="fig-state-bank-deposits" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/plot-3.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;7: shows the differences in the size of the deposits in California, Ohio, Texas, North Carolina, New York, and South Dakota.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;8: shows the differences in the size of the deposits in California, Ohio, Texas, North Carolina, New York, and South Dakota.</figcaption><p></p>
 </figure>
 </div>
 </div>
-<p>There is a lot to unpack with <a href="#fig-state-bank-deposits">Figure&nbsp;7</a>. First, your eyes might be drawn to the rapid growth beginning in 2020 across the board but most obviously in Texas. Meanwhile, there is no obvious drop in deposits from the pandemic. Instead, we see the massive influx of cash into the banking system as a product of the pandemic and stimulus packages.</p>
+<p>There is a lot to unpack with <a href="#fig-state-bank-deposits">Figure&nbsp;8</a>. First, your eyes might be drawn to the rapid growth beginning in 2020 across the board but most obviously in Texas. Meanwhile, there is no obvious drop in deposits from the pandemic. Instead, we see the massive influx of cash into the banking system as a product of the pandemic and stimulus packages.</p>
 <p>Secondly, and most importantly to our story here, is the differences in the size of the deposits in these states. You may even be confused at first and guess that the labels are on the wrong states because your intuition tells you that California, Texas, and New York should have significantly more cash in the bank than smaller states like South Dakota. However, that is where we were just as surprised as you are. As you may have noticed in our geo-spacial plot, huge banks are located in cities you would not expect. For example, Wells Fargo and Citibank are centered in Sioux Falls, South Dakota. As you can see, the deposits in these banks completely envelop the rest of the deposits in the state. Similarly, in Ohio and North Carolina, the large banks located there make up the majority of the total deposits in the state.</p>
 <p>Why these banks are located in these unlikely locations is up to speculations, but regulation could certainly play a role, namely, corporate tax rates. South Dakota and Ohio both lack any corporate taxes and North Carolina has one of the lowest in the country <span class="citation" data-cites="fritts_state_2023">(<a href="#ref-fritts_state_2023" role="doc-biblioref">Fritts 2023</a>)</span>. These corporate taxes may help explain why Wells Fargo moved from California to South Dakota in 2003, or why Citibank followed them to Sioux Falls in 2011. There certainly could be more at play, however, tax breaks and heavy regulation may help explain why big banks are leaving the country’s richest states for ones that will not tax them.</p>
 </section>
@@ -296,13 +323,13 @@ div.csl-indent {
 <p>A bank’s equity capital ratio, similar to a bank’s tier 1 capital ratio, is the amount of a bank’s equity as a measure of its total capital. It is a measure of a bank’s financial strength and ability to withstand economic downturns and absorb losses. The FDIC often requires a minimum 4% equity capital ratio for banks that it insures in order to allow the bank to become less reliant on debt and increase shareholder satisfaction. The equity capital ratio is an interesting figure to help project the stability of a bank.</p>
 <section id="top-and-bottom-20-histogram" class="level4">
 <h4 class="anchored" data-anchor-id="top-and-bottom-20-histogram"><strong>Top and Bottom 20 Histogram</strong></h4>
-<div class="cell" data-execution_count="9">
+<div class="cell" data-execution_count="10">
 <div id="fig-top-bottom-histogram" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/eqr/plot1.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;8: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9: A line plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -310,13 +337,13 @@ div.csl-indent {
 </section>
 <section id="quarters-line-graph" class="level4">
 <h4 class="anchored" data-anchor-id="quarters-line-graph"><strong>Quarters Line Graph</strong></h4>
-<div class="cell" data-execution_count="10">
+<div class="cell" data-execution_count="11">
 <div id="fig-quarters-line-graph" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/eqr/plot2.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;9: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;10: A line plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -324,13 +351,13 @@ div.csl-indent {
 </section>
 <section id="eqr-and-assets-small-counts" class="level4">
 <h4 class="anchored" data-anchor-id="eqr-and-assets-small-counts"><strong>EQR and Assets: Small Counts</strong></h4>
-<div class="cell" data-execution_count="11">
+<div class="cell" data-execution_count="12">
 <div id="fig-eqr-and-assets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/eqr/plot3.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;10: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;11: A line plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -338,13 +365,13 @@ div.csl-indent {
 </section>
 <section id="bubble-plot" class="level4">
 <h4 class="anchored" data-anchor-id="bubble-plot"><strong>Bubble Plot</strong></h4>
-<div class="cell" data-execution_count="12">
+<div class="cell" data-execution_count="13">
 <div id="fig-bubble-plot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
         <iframe width="700" height="600" src="../website/plots/eqr/plot4.html" frameborder="0" allowfullscreen=""></iframe>
         
-<p></p><figcaption class="figure-caption">Figure&nbsp;11: A line plot</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;12: A line plot</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -353,7 +380,7 @@ div.csl-indent {
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-</section>
+<p>In this project, we looked at the U.S. banking system through many different aspects. We observed the fact that assets of U.S. banks are concentrated predominantly in the states of South Dakota, Ohio, and North Carolina. We also analyzed potential reasons for this occurrence. We also dive deep into the analytics of how banks’ assets in the U.S. are disproportionately concentrated in few institutions and finally consider the system’s health.</p>
 </section>
 <section id="references" class="level1">
 
@@ -362,20 +389,20 @@ div.csl-indent {
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-board_of_governors_of_the_federal_reserve_system_frb_2022" class="csl-entry" role="doc-biblioentry">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-board_of_governors_of_the_federal_reserve_system_frb_2022" class="csl-entry" role="listitem">
 Board of Governors of the Federal Reserve System. 2022. <span>“<span>FRB</span>: <span>Large</span> <span>Commercial</span> <span>Banks</span>– <span>December</span> 31, 2022.”</span> <a href="https://www.federalreserve.gov/releases/lbr/current/">https://www.federalreserve.gov/releases/lbr/current/</a>.
 </div>
-<div id="ref-federal_deposit_insurance_corporation_what_2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-federal_deposit_insurance_corporation_what_2020" class="csl-entry" role="listitem">
 Federal Deposit Insurance Corporation. 2020. <span>“What <span>We</span> <span>Do</span>.”</span> <em>Federal Deposit Insurance Corporation</em>. <a href="https://www.fdic.gov/about/what-we-do/index.html">https://www.fdic.gov/about/what-we-do/index.html</a>.
 </div>
-<div id="ref-fritts_state_2023" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fritts_state_2023" class="csl-entry" role="listitem">
 Fritts, Janelle. 2023. <span>“State <span>Corporate</span> <span>Income</span> <span>Tax</span> <span>Rates</span> and <span>Brackets</span>.”</span> <em>Tax Foundation</em>. <a href="https://taxfoundation.org/publications/state-corporate-income-tax-rates-and-brackets/">https://taxfoundation.org/publications/state-corporate-income-tax-rates-and-brackets/</a>.
 </div>
-<div id="ref-vanian_heres_2023" class="csl-entry" role="doc-biblioentry">
+<div id="ref-vanian_heres_2023" class="csl-entry" role="listitem">
 Vanian, Jonathan, Rohan Goswami. 2023. <span>“Here’s How the Second-Biggest Bank Collapse in <span>U</span>.<span>S</span>. History Happened in Just 48 Hours.”</span> <em>CNBC</em>. <a href="https://www.cnbc.com/2023/03/10/silicon-valley-bank-collapse-how-it-happened.html">https://www.cnbc.com/2023/03/10/silicon-valley-bank-collapse-how-it-happened.html</a>.
 </div>
-<div id="ref-wilking_signs_2023" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wilking_signs_2023" class="csl-entry" role="listitem">
 Wilking, Rick. 2023. <span>“Signs Explaining <span>Federal</span> <span>Deposit</span> <span>Insurance</span> <span>Corporation</span> (<span>FDIC</span>) and Other Banking Policies Are Shown on the Counter of a Bank in <span>Westminster</span>, <span>Colorado</span>.”</span> <em>Reuters</em>, March. <a href="https://www.reuters.com/business/finance/us-banking-regulator-has-begun-misconduct-probes-signature-svb-failures-2023-03-27/">https://www.reuters.com/business/finance/us-banking-regulator-has-begun-misconduct-probes-signature-svb-failures-2023-03-27/</a>.
 </div>
 </div></section></div></main> <!-- /main -->
@@ -406,9 +433,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -473,6 +514,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -516,6 +643,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">A project by <a href="./authors.html">Group 4</a> <br></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">Made with <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/anly503/spring2023-project-team-4">View the source at GitHub</a></div>
   </div>
 </footer>
