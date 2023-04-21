@@ -1,1 +1,41 @@
 # Methods {#welcome .unnumbered}
+
+
+### Figure X: Grid bubble map of the progression of bank assets per decade
+
+
+
+
+### Figure X: Dot map with heatmap of bank assets as of Q4 2022
+
+### Figure X: temporal trend of the total domestic deposits in the US for the past 3 decades
+
+### Figure X: Disparity of the top 4 banks
+
+### Figure X: The distribution of commercial banks in the US by the assets in possession
+
+### Figure X: Breakdown of top 5 banks, the next 125 banks, and all other banks
+
+
+### Figure X: State bank deposits by bank
+
+The data for this plot comes from the quarterly bank financial data collected using the FDIC API. Then, in the Data Cleaning tab, we grouped the data by state, by bank, and by date meaning our data now showed the total assets, deposits, etc. that each bank in a given state held in a given quarter. This helped to shrink what was previously a massive dataset. However, that was still quite large. Therefore, that data file (../data/quarterly_banks_by_state/quarterly_banks_by_state.csv) is not in our github, however, you can see the code to create this file under ./code/data_cleaning/quarterly_data_cleaning.ipynb. Running this notebook will allow you to see exactly what data we are using.
+
+This plot went through a lot of variations. It began by included every state's total assets in five year windows with a slider to let the user move through the data. We then realize that five years was no where near enough time to see meaningful change so we expanded it to a decade long window. From there we realized that it would be better to just show all of the time at once, so the slider was scrapped. After doing some digging with the geo-spacial data, we found some interesting trends with the amount of money deposited in states you would not expect, such as South Dakota. In particular, we found that the biggest banks had tons of assets here. Quickly we realized this was worth exploring further so I split the data up by banks. However, it remained difficult to see how different the amounts of money was between states as you had to flip back and forth using the button. Finally, we switched to this subplot view which displays all of the states at once. The left column features the top three states by GDP while the right column features the three states we felt were most surprising in containing a ton of deposits despite being smaller states. They are all sorted vertically by GDP. 
+
+Before the final submission, we will look to make some of the data selection more clearly with column titles. Additionally, we may look to add some annotations that point out some important dates. For example, Wells Fargo moving from California to South Dakota in 2003. We may also consider adding an additional line to each state displaying their full deposit totals to highlight the rapid drops of increases of gaining or losing a big bank.
+
+
+### Figure X: EQR
+
+For this portion of the analysis, I chose to examine banks that represent the top and bottom 20 in average EQR by quarter. For this analysis, I filtered out any banks that do not appear in the data for more than 100 quarters (roughly 80% of the quarters). This is to eliminate any potential outliers in the data. The mean value does not all observations in the data; it only includes all banks with more than 100 quarters of data since Q1 1992. Looking at the histogram, we notice that the average EQR of 11.22 is far closer to the 20 banks that have the lowest equity capital ratio compared to the 20 banks that have the highest equity capital ratio. Looking at the 5 number summary, we see that the average (11.22) is lower than the median (10.27), indicating that there are a few banks with a far higher equity capital ratio than the majority of the rest of the banks in the FDIC database. When we more closely examine the banks that fall in the range of top or bottom 20, we see that there is no consistent state across these banks. It is noteworthy that Michigan has 2 of the 3 highest banks in terms of EQR. Another noteworthy observation is that banks in Ohio, South Dakota, and North Carolina only make up 3 of the top 20 banks in average equity capital ratio. Moreover, none of the largest banks in terms of total assets are present on this list. 
+
+
+
+### Figure X: Top and Bottom 20 Histogram
+
+### Figure X: Quarters Line Graph
+
+### Figure X: EQR and Assets: Small Counts
+
+### Figure X: Bubble Plot

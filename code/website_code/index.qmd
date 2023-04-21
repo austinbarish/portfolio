@@ -18,7 +18,7 @@ On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in
 Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer's accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve's definition of a bank's location: its main office as listed in the bank's charter [@board_of_governors_of_the_federal_reserve_system_frb_2022].
 
 
-### Figure 1
+### Figure X: Grid bubble map of the progression of bank assets per decade
 
 ```{python}
 #| echo: false
@@ -59,7 +59,7 @@ display(HTML(html_structure))
 ```
 
 
-### Figure 2
+### Figure X: Dot map with heatmap of bank assets as of Q4 2022
 
 ```{python}
 #| echo: false
@@ -71,13 +71,60 @@ IFrame(src='../img/plots/heatmap.html', width=700, height=600)
 
 ## A story about the top 5 banks
 
+### Figure X: temporal trend of the total domestic deposits in the US for the past 3 decades
 
 
-## What about deposits?
+The above plot provides a temporal trend of the total domestic deposits in the US for the past 3 decades. Looking at this particular plot, we see a staggering uptick in bank deposits over the past 3 decades. Breaking down the assets by the bank class, we also see that each of the bank classes also have their own trends in terms of growth over the years. Firstly, looking at National Member Banks, we see that the majority of deposits belong to them. These banks are ones that are members of the Federal Reserve Bank, the central bank of the US. However, from the temporal trends, we see that National Member Banks did not always hold the majority of assets in the country. The only time there was an apparent upshot in the assets was around the 2000 mark, when the National Member Banks got a hold of a lot more assets and skyrocketed ahead of the other types of banks. We also see that Stock & Mutual Savings Banks have the last deposited in them, as they offer the most risk.
+
+### Figure X: Disparity of the top 4 banks
+
+The US is home to some of the largest and most popular commercial banks in the world. These banks offer a wide array of services to individuals and businesses. The banks we're most familiar with are the ones that are prevalent not only all over the country, but all over the world as well. These multinationals field a behemoth of assets, and dominate the entire industry. In the US, we see that there are 4 main banks which dominate the rest of the top 10. These banks are JP Morgan Chase, Bank of America, Wells Fargo, and Citibank. The stark desparity in these top 4 is noticeable by examining how Wells Fargo, the 4th largest bank in the US by assets, holds \$1.73B, while US Bank, the 5th largest bank, only holds \$584M, which is about 3 times less then that of US Bank. This resembles a skew in the distribution of assets held by the top 10 commercial banks in the US, with the top 4 banks holding the majority of the assets.
+
+
+### Figure X: The distribution of commercial banks in the US by the assets in possession
+
+Looking at the distribution of commercial banks in the US by the assets in possession, we get a better idea of what the entire distribution of assets is across the country. Our knowledge is mostly limited to the big brand names of banks: JP Morgan Chase, Wells Fargo, Bank of America, etc. These banks are the minority in the larger picture, as their access to capital and resources is only enjoyed by 3.6% of banks in the US. The majority of these banks only hold between \$100,000 and \$1M, taking up 62.4% of the entire distribution. Surprisingly, we see that a substantial 15.7% of banks are extremely small, holding less than \$100,000 in assets in 2022. Only a small fraction of these banks are in fact extremely large, but as we will see in the next plot, they hold immense amounts of assets.
+
+### Figure X: Breakdown of top 5 banks, the next 125 banks, and all other banks
+
+This plot breaks down the banks in the banks in the US by dividing them into groups: the top 5 banks, the next 125 banks, and all other banks. The total assets held by these banks is measured over the past 30 years, and this is was determines the groups and rankings.
+
+Looking at the most recent decade, we see that the top 5 banks in the US hold the same amount in assets as the next 125 banks in the US, and have about 3 times as many assets as every other bank in the country, which amounts to a total of 4031 banks. We see a large skew in the distribution of assets across the country, and this shows how concentrated the banking industry is right at the top. Furthermore, looking at the temporal trends, we also notice that the top 5 banks have not always dominated all other banks, and the distribution has progressively gotten more and more concentrated at the top.
+
+## Visualizing deposits
+
+### Figure X: State bank deposits by bank
+
+There is a lot to unpack with this plot. First, your eyes might be drawn to the rapid growth beginning in 2020 across the board but most obviously in Texas. Meanwhile, there is no obvious drop in deposits from the pandemic. Instead, we see the massive influx of cash into the banking system as a product of the pandemic and stimulus packages.
+
+Secondly, and most importantly to our story here, is the differences in the size of the deposits in these states. You may even be confused at first and guess that the labels are on the wrong states because your intuition tells you that California, Texas, and New York should have significantly more cash in the bank than smaller states like South Dakota. However, that is where we were just as surprised as you are. As you may have noticed in our geo-spacial plot, huge banks are located in cities you would not expect. For example, Wells Fargo and Citibank are centered in Sioux Falls, South Dakota. As you can see, the deposits in these banks completely envelop the rest of the deposits in the state. Similarly, in Ohio and North Carolina, the large banks located there make up the majority of the total deposits in the state. 
+
+Why these banks are located in these unlikely locations is up to speculations, but regulation could certainly play a role, namely, corporate tax rates. South Dakota and Ohio both lack any corporate taxes and North Carolina has one of the lowest in the country (https://taxfoundation.org/publications/state-corporate-income-tax-rates-and-brackets/). These corporate taxes may help explain why Wells Fargo moved from California to South Dakota in 2003, or why Citibank followed them to Sioux Falls in 2011. There certainly could be more at play, however, tax breaks and heavy regulation may help explain why big banks are leaving the country's richest states for ones that will not tax them. 
 
 
 
-## Should we be worried?
+## The health of the system
 
+A bank's equity capital ratio, similar to a bank's tier 1 capital ratio, is the amount of a bank's equity as a measure of its total capital. It is a measure of a bank's financial strength and ability to withstand economic downturns and absorb losses. The FDIC often requires a minimum 4% equity capital ratio for banks that it insures in order to allow the bank to become less reliant on debt and increase shareholder satisfaction. The equity capital ratio is an interesting figure to help project the stability of a bank. 
+
+### Figure X: Top and Bottom 20 Histogram
+
+For this portion of the analysis, I chose to examine banks that represent the top and bottom 20 in average EQR by quarter. For this analysis, I filtered out any banks that do not appear in the data for more than 100 quarters (roughly 80% of the quarters). This is to eliminate any potential outliers in the data. The mean value does not all observations in the data; it only includes all banks with more than 100 quarters of data since Q1 1992. Looking at the histogram, we notice that the average EQR of 11.22 is far closer to the 20 banks that have the lowest equity capital ratio compared to the 20 banks that have the highest equity capital ratio. Looking at the 5 number summary, we see that the average (11.22) is lower than the median (10.27), indicating that there are a few banks with a far higher equity capital ratio than the majority of the rest of the banks in the FDIC database. When we more closely examine the banks that fall in the range of top or bottom 20, we see that there is no consistent state across these banks. It is noteworthy that Michigan has 2 of the 3 highest banks in terms of EQR. Another noteworthy observation is that banks in Ohio, South Dakota, and North Carolina only make up 3 of the top 20 banks in average equity capital ratio. Moreover, none of the largest banks in terms of total assets are present on this list. 
+
+### Figure X: Quarters Line Graph
+
+We see based on the line graph above that, for the most part, the 4 major banks maintain a relatively consistent equity capital ratio. After 2004, which is the first quarter that JP Morgan Chase Bank NA is present in this data, we notice that none of the banks ever reach an equity capital ratio higher than 13, and for the most part, they have all reached a similar value between 8 and 10 since 2020. The only time any of these banks record an equity capital ratio that is well above the cumulative average is prior to the turn of the 20th century, when Bank of America NA records several quarters with an equity capital ratio over 20. Comparing the four largest banks to the overall average for all FDIC-insured banks present in the data, we see that, for the most part, the four largest banks are either identical to, or slightly below, the overall average equity capital ratio over the past 2 decades. This is due to the differing immediate needs between large national banks, such as Wells Fargo and Bank of America, and smaller, more localized banks. There are a few reasons for the diffence in focus. The first is that larger banks often have greater access to capital markets, and are thus less reliant on using their own capital to fund everyday business operations. Therefore, they do not necessarily need to maintain a high equity capital ratio. The next reason is because smaller banks often take a more conservative stance on risk management, and since equity capital ratio is a way to quantify a bank's risk management, it can in part explain why a smaller bank's equity capital ratio is higher, on average. Finally, the difference can be explained by differences in regulatory laws and the market/customer base that a bank is typically functioning in. Nevertheless, the FDIC does set regulations for a minimum equity capital ratio, so even the largest banks in the industry need to ensure that they have a sufficient equity capital ratio and are thus in a stronger financial position in the event of an economic downturn. While larger banks have more resources than smaller banks and thus have more methods of improving their financial position to respond to potential problems, they still must maintain sufficient equity.
+
+### Figure X: EQR and Assets: Small Counts
+
+This plot attempts to look at smaller banks in terms of mean total assets owned over all quarters and forecast their average equity capital ratio. This heatmap contains over 200,000 unique banks, all with average total assets owned below 500,000. Based on the values of the heatmap, we see that the majority of these banks hold a small amount of assets, typically below 100,000. Nevertheless, most banks that make up this proportion maintain an equity capital ratio between 8 and 12, which is consistent relative to the average that we have previously examined. 
+
+### Figure X: Bubble Plot
+
+A major trend we notice when looking at this time series bubble plot is the gradual increase in quantity of banks with an equity capital ratio in the range of the average that is consistent with what we have been examining thus far. What is also noticeable is that there does not appear to be a major distinction by bank class. State chartered stock savings banks, denoted in the legend as SI, appear to always have a relatively low equity capital ratio, while commercial and federal savings banks, denoted as N, NM, and SB in the above plot, tend to have a higher equity capital ratio.
 
 ## Conclusion
+
+
+
+# References

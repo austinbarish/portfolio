@@ -7,7 +7,7 @@ project:
 website:
   title: Where is your money, and why?
   search: false
-  favicon: ../../img/favicon.ico
+  favicon: ../img/favicon.ico
   navbar:
     left:
       - href: index.qmd
