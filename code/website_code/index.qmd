@@ -95,6 +95,13 @@ Looking at the most recent decade, we see that the top 5 banks in the US hold th
 
 ### Figure X: State bank deposits by bank
 
+```{python}
+#| echo: false
+
+IFrame(src='../img/plots/plot-3.html', width=700, height=600)
+
+```
+
 There is a lot to unpack with this plot. First, your eyes might be drawn to the rapid growth beginning in 2020 across the board but most obviously in Texas. Meanwhile, there is no obvious drop in deposits from the pandemic. Instead, we see the massive influx of cash into the banking system as a product of the pandemic and stimulus packages.
 
 Secondly, and most importantly to our story here, is the differences in the size of the deposits in these states. You may even be confused at first and guess that the labels are on the wrong states because your intuition tells you that California, Texas, and New York should have significantly more cash in the bank than smaller states like South Dakota. However, that is where we were just as surprised as you are. As you may have noticed in our geo-spacial plot, huge banks are located in cities you would not expect. For example, Wells Fargo and Citibank are centered in Sioux Falls, South Dakota. As you can see, the deposits in these banks completely envelop the rest of the deposits in the state. Similarly, in Ohio and North Carolina, the large banks located there make up the majority of the total deposits in the state. 
