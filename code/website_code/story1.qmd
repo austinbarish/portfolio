@@ -1,0 +1,67 @@
+
+
+```{python}
+#| echo: false
+
+# libraries
+from IPython.display import display, HTML, IFrame
+
+```
+
+
+## What does it mean for money to "be" somewhere?
+
+Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer's accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve's definition of a bank's location: its main office as listed in the bank's charter [@board_of_governors_of_the_federal_reserve_system_frb_2022].
+
+
+### Figure X: Grid bubble map of the progression of bank assets per decade
+
+```{python}
+#| echo: false
+
+unique_dates = ['1992-12-31', '2002-12-31', '2012-12-31', '2022-12-31']
+
+# init html structure
+html_structure = """
+<style>
+    .map-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .map-box {
+        width: 50%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .map-title {
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+<div class="map-container">
+"""
+
+# add iframes to the html
+for i, date in enumerate(unique_dates):
+    map_path = f'../img/plots/map_{i}.html'
+    html_structure += f'<div class="map-box"><div class="map-title">{date}</div>{IFrame(src=map_path, width=350, height=300)._repr_html_()}</div>'
+
+# close html
+html_structure += '</div>'
+# show
+display(HTML(html_structure))
+
+
+```
+
+
+### Figure X: Dot map with heatmap of bank assets as of Q4 2022
+
+```{python}
+#| echo: false
+
+IFrame(src='../img/plots/heatmap.html', width=700, height=600)
+
+```
+
+

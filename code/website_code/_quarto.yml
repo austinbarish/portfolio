@@ -11,7 +11,17 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home      
+        text: Home       
+      - href: story1.qmd
+        text: Story 1       
+      - href: story2.qmd
+        text: Story 2       
+      - href: story3.qmd
+        text: Story 3       
+      - href: story4.qmd
+        text: Story 4       
+      - href: story5.qmd
+        text: Story 5      
       - href: methods.qmd
         text: Methods        
       - href: code.qmd

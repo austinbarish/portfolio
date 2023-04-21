@@ -1,0 +1,24 @@
+
+```{python}
+#| echo: false
+
+# libraries
+from IPython.display import display, HTML, IFrame
+
+```
+
+
+
+
+
+### Figure X: Bubble Plot
+
+```{python}
+#| echo: false
+
+IFrame(src='../img/plots/eqr/plot4.html', width=700, height=600)
+
+```
+
+A major trend we notice when looking at this time series bubble plot is the gradual increase in quantity of banks with an equity capital ratio in the range of the average that is consistent with what we have been examining thus far. What is also noticeable is that there does not appear to be a major distinction by bank class. State chartered stock savings banks, denoted in the legend as SI, appear to always have a relatively low equity capital ratio, while commercial and federal savings banks, denoted as N, NM, and SB in the above plot, tend to have a higher equity capital ratio.
+
