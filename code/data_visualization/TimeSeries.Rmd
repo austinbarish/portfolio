@@ -262,15 +262,18 @@ names(decades_wide)[names(decades_wide) == "next-125"] <- "next125"
 ```
 
 ```{r}
-ap <- decades_wide %>% plot_ly()
+ap <- decades_wide %>% plot_ly() #text = list('15.7%'))
 ap <- ap %>%
   add_trace(x = decades_wide$year, y = ~top5, type = 'bar', name = 'Top 5')
 
 ap <- ap %>%
   add_trace(x = decades_wide$year, y = ~next125, type = 'bar', name = 'Next 125')
-
+text = c("Text A", "Text B", "Text C", "Text D", "Text E")
 ap <- ap %>%
   add_trace(x = decades_wide$year, y = ~others, type = 'bar', name = 'Others')
+#hovertemplate = paste('<i>Price</i>: $%{top5:.2f}',
+#                        '<br><b>X</b>: %year<br>',
+#                        '<b>%{text}</b>'))
 
 f <- list(
   family = "Arial",
