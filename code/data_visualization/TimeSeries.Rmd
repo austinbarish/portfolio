@@ -16,7 +16,6 @@ execute:
 getwd()
 ```
 
-
 ```{r}
 library(plotly)
 library(tidyverse)
@@ -25,7 +24,6 @@ library(tidyr)
 library(htmlwidgets)
 # lubridate, zoo, xts
 ```
-
 
 ```{r}
 merge_csv_files <- function(folder_path) {
@@ -76,10 +74,10 @@ df_agg <- df %>% group_by(date, BKCLASS) %>% summarise(total_deposits = sum(DEPD
 #g <- ggplot(df_agg, aes(date, total_deposits))
 #p <- g + geom_bar(aes(fill = BKCLASS))
 a <- ggplot(df_agg, aes(x = date)) + geom_bar(aes(y = total_deposits, fill = BKCLASS), stat = 'identity') + 
-  ggtitle("Time Series of Total Domestic Deposits, 1992-2022") + 
   ylab("Total Deposits") + 
   xlab("Date") +
-  theme_bw()
+  theme_bw() +
+  scale_fill_discrete(name = "Bank Class")
 a <- ggplotly(a)
 
 a
@@ -87,7 +85,7 @@ saveWidget(a, file = "../../website/plots/timeseries/plot_1.html")
 
 ```
 
-The above plot provides a temporal trend of the total domestic deposite in the US for the past 3 decades. Looking at this particular plot, we see a staggering uptick in bank deposits over the past 3 decades. Breaking down the assets by the bank class, we also see that each of the bank classes also have their own trends in terms of growth over the years. Firstly, looking at National Member Banks, we see that the majority of deposits belong to them. These banks are ones that are members of the Federal Reserve Bank, the central bank of the US. However, from the temporal trends, we see that National Member Banks did not always hold the majority of assets in the country. The only time there was an apparent upshot in the assets was around the 2000 mark, when the National Member Banks got a hold of a lot more assets and skyrocketed ahead of the other types of banks. We also see that Stock & Mutual Savings Banks have the last deposited in them, as they offer the most risk.
+The above plot provides a temporal trend of the total domestic deposits in the US for the past 3 decades. Looking at this particular plot, we see a staggering uptick in bank deposits over the past 3 decades. Breaking down the assets by the bank class, we also see that each of the bank classes also have their own trends in terms of growth over the years. Firstly, looking at National Member Banks, we see that the majority of deposits belong to them. These banks are ones that are members of the Federal Reserve Bank, the central bank of the US. However, from the temporal trends, we see that National Member Banks did not always hold the majority of assets in the country. The only time there was an apparent upshot in the assets was around the 2000 mark, when the National Member Banks got a hold of a lot more assets and skyrocketed ahead of the other types of banks. We also see that Stock & Mutual Savings Banks have the last deposited in them, as they offer the most risk.
 
 ```{r}
 # group the data by year, bank name, and quarter and calculate the mean assets
@@ -121,8 +119,8 @@ b <- ggplot(sliced, aes(x = NAME, y = mean_assets)) +
   xlab("Bank Name") +
   ylab("Mean Assets") +
   labs(
-    title = "Mean Assets by Bank (Top 10) for 2022",
-    subtitle = "Averaged over quarterly data",
+    title = "",
+    subtitle = "",
     caption = "Source: https://banks.data.fdic.gov/docs/"
   ) + 
   theme_classic() +
@@ -130,10 +128,10 @@ b <- ggplot(sliced, aes(x = NAME, y = mean_assets)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 b <- ggplotly(b) %>%
-  layout(title = list(text = paste0('Mean Assets by US Banks (Top 10) for 2022',
+  layout(title = list(text = paste0('',
                                     '<br>',
                                     '<sup>',
-                                    'Averaged over quarterly data',
+                                    '',
                                     '</sup>')),
          annotations = 
  list(x = 1, y = -0.8, text = "Source: https://banks.data.fdic.gov/docs/", 
@@ -145,7 +143,7 @@ b
 saveWidget(b, file = "../../website/plots/timeseries/plot_2.html")
 ```
 
-The US is home to some of the largest and most popular commercial banks in the world. These banks offer a wide array of services to individuals and businesses. The banks we're most familiar with are the ones that are prevalent not only all over the country, but all over the world as well. These multinationals field a behemoth of assets, and dominate the entire industry. In the US, we see that there are 4 main banks which dominate the rest of the top 10. These banks are JP Morgan Chase, Bank of America, Wells Fargo, and Citibank. The stark disparity in these top 4 is noticeable by examining how Wells Fargo, the 4th largest bank in the US by assets, holds $1.73B, while US Bank, the 5th largest bank, only holds $584M, which is about 3 times less then that of US Bank. This resembles a skew in the distribution of assets held by the top 10 commercial banks in the US, with the top 4 banks holding the majority of the assets.
+The US is home to some of the largest and most popular commercial banks in the world. These banks offer a wide array of services to individuals and businesses. The banks we're most familiar with are the ones that are prevalent not only all over the country, but all over the world as well. These multinationals field a behemoth of assets, and dominate the entire industry. In the US, we see that there are 4 main banks which dominate the rest of the top 10. These banks are JP Morgan Chase, Bank of America, Wells Fargo, and Citibank. The stark disparity in these top 4 is noticeable by examining how Wells Fargo, the 4th largest bank in the US by assets, holds \$1.73B, while US Bank, the 5th largest bank, only holds \$584M, which is about 3 times less then that of US Bank. This resembles a skew in the distribution of assets held by the top 10 commercial banks in the US, with the top 4 banks holding the majority of the assets.
 
 ```{r}
 # create factor variable asset class
@@ -176,7 +174,7 @@ c <- plot_ly(
   hovertext = "Asset Class, Count",
   orientation = "v",
   marker = list(color = "green")) |>
-  layout(title = list(text = "<b>Distribution of US Banks by Assets in Possession, 2022</b>",
+  layout(title = list(text = "",
                       font = list(color = "black",
                                   family = "Open Sans",
                                   size = 17
@@ -206,7 +204,7 @@ c
 saveWidget(c, file = "../../website/plots/timeseries/plot_3.html")
 ```
 
-Looking at the distribution of commercial banks in the US by the assets in possession, we get a better idea of what the entire distribution of assets is across the country. Our knowledge is mostly limited to the big brand names of banks: JP Morgan Chase, Wells Fargo, Bank of America, etc. These banks are the minority in the larger picture, as their access to capital and resources is only enjoyed by 3.6% of banks in the US. The majority of these banks only hold between $100,000 and $1M, taking up 62.4% of the entire distribution. Surprisingly, we see that a substantial 15.7% of banks are extremely small, holding less than $100,000 in assets in 2022. Only a small fraction of these banks are in fact extremely large, but as we will see in the next plot, they hold immense amounts of assets.
+Looking at the distribution of commercial banks in the US by the assets in possession, we get a better idea of what the entire distribution of assets is across the country. Our knowledge is mostly limited to the big brand names of banks: JP Morgan Chase, Wells Fargo, Bank of America, etc. These banks are the minority in the larger picture, as their access to capital and resources is only enjoyed by 3.6% of banks in the US. The majority of these banks only hold between \$100,000 and \$1M, taking up 62.4% of the entire distribution. Surprisingly, we see that a substantial 15.7% of banks are extremely small, holding less than \$100,000 in assets in 2022. Only a small fraction of these banks are in fact extremely large, but as we will see in the next plot, they hold immense amounts of assets.
 
 ```{r}
 filtered_2012 <- grouped %>%
@@ -256,38 +254,40 @@ merged_decades$asset_group <- as.factor(merged_decades$asset_group) # make assee
 decades_summarised <- merged_decades %>% # summarise
   group_by(year, asset_group) %>%
   summarize(total_assets = sum(mean_assets))
+
+decades_wide <- spread(decades_summarised, key = asset_group, value = total_assets) # convert to wide type
+
+names(decades_wide)[names(decades_wide) == "top-5"] <- "top5"
+names(decades_wide)[names(decades_wide) == "next-125"] <- "next125"
 ```
 
 ```{r}
-years <- c("1992", "2002", "2012", "2022")
+ap <- decades_wide %>% plot_ly()
+ap <- ap %>%
+  add_trace(x = decades_wide$year, y = ~top5, type = 'bar', name = 'Top 5')
 
+ap <- ap %>%
+  add_trace(x = decades_wide$year, y = ~next125, type = 'bar', name = 'Next 125')
 
-d <- ggplot(data=decades_summarised, aes(x=year, y=total_assets, fill=asset_group)) +
-    geom_bar(stat="identity", position=position_dodge(), colour="black") +
-    xlab("Year") +
-    ylab("Total Assets") +
-    scale_x_continuous(breaks = c(1992, 2002, 2012, 2022)) +
-    theme_classic()
-    #scale_fill_manual(values=c("#999999", "#E69F00"))
-#plot(p)
+ap <- ap %>%
+  add_trace(x = decades_wide$year, y = ~others, type = 'bar', name = 'Others')
 
-d <- ggplotly(d) %>%
-  layout(title = list(text = paste0('<b>', 'Total Assets in Possession by Bank', '<b>',
-                                    '<br>',
-                                    '<sup>',
-                                    'Change in concentration of assets controlled over the past 4 decades',
-                                    '</sup>')),
-         xaxis = list(title = "Year", 
-                                   categoryorder = "array",
-                                   categoryarray = c('1992', '2002', '2012', '2022')),
-         annotations = 
- list(x = 1, y = -0.8, text = "Source: https://banks.data.fdic.gov/docs/", 
-      showarrow = F, xref='paper', yref='paper', 
-      xanchor='right', yanchor='auto', xshift=0, yshift=0,
-      font=list(size=8, color="black"))
- )
-d
-saveWidget(d, file = "../../website/plots/timeseries/plot_4.html")
+f <- list(
+  family = "Arial",
+  size = 18,
+  color = "black")
+f1 <- list(
+  title = "Year",
+  titlefont = f)
+f2 <- list(
+  title = "Total Assets",
+  titlefont = f)
+
+ap <- ap %>% layout(xaxis = f1, yaxis = f2)
+ap <- ap %>% layout(legend=list(title=list(text='Asset Group')))
+ap
+
+saveWidget(ap, file = "../../website/plots/timeseries/plot_4.html")
 ```
 
 This plot breaks down the banks in the banks in the US by dividing them into groups: the top 5 banks, the next 125 banks, and all other banks. The total assets held by these banks is measured over the past 30 years, and this is was determines the groups and rankings.
