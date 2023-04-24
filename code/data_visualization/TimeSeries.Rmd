@@ -278,10 +278,10 @@ f <- list(
   color = "black")
 f1 <- list(
   title = "Year",
-  titlefont = f)
+  titlefont = "Arial")
 f2 <- list(
   title = "Total Assets",
-  titlefont = f)
+  titlefont = "Arial")
 
 ap <- ap %>% layout(xaxis = f1, yaxis = f2)
 ap <- ap %>% layout(legend=list(title=list(text='Asset Group')))
