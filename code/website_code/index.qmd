@@ -15,9 +15,9 @@ from IPython.display import display, HTML, IFrame
 
 ## Introduction
 
-On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in the largest U.S. bank failure since the 2008 financial crisis. The 40-year-long bank operation suddenly stopped after depositors panicked when learning that the bank was short on capital. The bank found itself in this position due to several factors, including incorrect investment allocation and customers requiring to use more cash in the bank as Venture Capital firms cut back their funding [@vanian_heres_2023]. The public quickly turned its attention to the Federal Deposit Insurance Corporation (FDIC). The FDIC is an independent government agency tasked with insuring deposits, supervising financial institutions, and dealing with the orderly management of a bank failure. Most famously,  the FDIC provides a standard insurance amount of $250,000 per depositor, per insured bank, which has accomplished for no depositor to lose a penny of insured funds due to a failure since 1934 [@federal_deposit_insurance_corporation_what_2020]. The case of the FDIC showcased just one of the fascinating aspects of the U.S. banking system that was largely unknown to the general public. It also inspired us to carry out this project. With it, we aim to inform our audience of several distinguishing facts about the U.S. banking system.
+On Friday, March 10th, 2023, U.S. regulators seized Silicon Valley Bank (SVB) in the largest U.S. bank failure since the 2008 financial crisis. The 40-year-long bank operation suddenly stopped after depositors panicked when learning that the bank was short on capital. The bank found itself in this position due to several factors, including incorrect investment allocation and customers requiring to use more cash in the bank as Venture Capital firms cut back their funding [@vanian_heres_2023]. As a result, the public quickly turned its attention to the Federal Deposit Insurance Corporation (FDIC). The FDIC is an independent government agency tasked with insuring deposits, supervising financial institutions, and dealing with the orderly management of a bank failure. Most famously,  the FDIC provides a standard insurance amount of $250,000 per depositor, per insured bank, which has accomplished for no depositor to lose a penny of insured funds due to a failure since 1934 [@federal_deposit_insurance_corporation_what_2020]. The case of the FDIC showcased just one of the fascinating aspects of the U.S. banking system that was largely unknown to the general public. It also inspired us to carry out this project. With it, we aim to inform our audience of several distinguishing facts about the U.S. banking system and to do so in a visually captivating manner.
 
-First, let's explore the assets, equity, or liabilities by state in @fig-interactive-table:
+First, we explore the average assets, equity, or liabilities segmented of each as of the end of the fourth quarter of 2022 @fig-interactive-table:
 
 #### **Table of US bank assets, equity and liabilities per state of of 2022Q4** {#sec-interactive-table}
 
@@ -31,7 +31,9 @@ IFrame(src='../website/plots/interactive_table.html', width=700, height=600)
 
 ```
 
-## What does it mean for money to "be" somewhere?
+While the average statewide banking system has 721.7 million U.S. dollars in equity and 7,784.8 billion in assets, we can see a considerable variation among the states. Notably, North Carolina, Delaware, and South Dakota	have average assets of 72,627.3, 64,104.4, and 61,841.7 U.S. dollars, respectively, while states such as Minnesota, Kansas, and Wyoming average 460.8, 439.6, and 359.0 U.S. dollars, respectively.
+
+## Where is Money Located?
 
 Let us clarify that your money is actually stored as bits in bank-operated servers. Each bank needs to maintain records of their customer's accounts, so multiple copies of this data may be stored across different servers. That is where your money actually is, but that is not very interesting. In this project, we will refer to money being where the bank is. However, that leads to a second question: What does it mean for a bank to be somewhere? Is it where the headquarters are? Is it where the executives work? Is it where most of its branches are? We adopt the Federal Reserve's definition of a bank's location: its main office as listed in the bank's charter [@board_of_governors_of_the_federal_reserve_system_frb_2022].
 
@@ -83,7 +85,7 @@ display(HTML(html_structure))
 #### **Dot map with heatmap overlay of bank assets as of Q4 2022** {#sec-dot-and-heatmap}
 
 
-In @fig-dot-and-heatmap, we take a deeper dive into what's going on. We can see in the heatmap layer that there are many places in the U.S. where banks aggregate; however, there is nothing that seems particularly special about South Dakota, Ohio, and North Carolina. However, upon further inspection, if we zoom into the plot, we can see that Citibank and Wells Fargo are in South Dakota, JP Morgan Chase in Ohio, and Bank of America ignored Carolina. How can this be?
+In @fig-dot-and-heatmap, we take a deeper dive into what's going on. We can see in the heatmap layer that there are many places in the U.S. where banks aggregate; however, there is nothing that seems particularly special about South Dakota, Ohio, and North Carolina. However, upon further inspection, if we zoom into the plot, we can see that Citibank and Wells Fargo are in South Dakota, JP Morgan Chase in Ohio, and Bank of America in North Carolina. How can this be?
 
 
 
