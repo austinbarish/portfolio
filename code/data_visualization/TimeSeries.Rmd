@@ -262,15 +262,20 @@ names(decades_wide)[names(decades_wide) == "next-125"] <- "next125"
 ```
 
 ```{r}
+decades_wide$top5 = decades_wide$top5 * 1000
+decades_wide$next125 = decades_wide$next125 * 1000
+decades_wide$others = decades_wide$others * 1000
+```
+
+```{r}
 ap <- decades_wide %>% plot_ly() #text = list('15.7%'))
 ap <- ap %>%
-  add_trace(x = decades_wide$year, y = ~top5, type = 'bar', name = 'Top 5')
+  add_trace(x = decades_wide$year, y = ~top5, type = 'bar', name = 'Top 5', marker = list(color = '#118C4F'))
 
 ap <- ap %>%
-  add_trace(x = decades_wide$year, y = ~next125, type = 'bar', name = 'Next 125')
-text = c("Text A", "Text B", "Text C", "Text D", "Text E")
+  add_trace(x = decades_wide$year, y = ~next125, type = 'bar', name = 'Next 125', marker = list(color = '#FFB90D'))
 ap <- ap %>%
-  add_trace(x = decades_wide$year, y = ~others, type = 'bar', name = 'Others')
+  add_trace(x = decades_wide$year, y = ~others, type = 'bar', name = 'Others' , marker = list(color = 'red'))
 #hovertemplate = paste('<i>Price</i>: $%{top5:.2f}',
 #                        '<br><b>X</b>: %year<br>',
 #                        '<b>%{text}</b>'))
@@ -283,14 +288,21 @@ f1 <- list(
   title = "Year",
   titlefont = "Arial")
 f2 <- list(
-  title = "Total Assets",
+  title = "Total Assets (USD)",
   titlefont = "Arial")
+f3 <- list(
+  family = "Arial",
+  size = 18,
+  color = "black")
 
 ap <- ap %>% layout(xaxis = f1, yaxis = f2)
+ap <- ap %>% layout(title= list(text = "", y = 0.98, font = f3))
 ap <- ap %>% layout(legend=list(title=list(text='Asset Group')))
 ap
 
 saveWidget(ap, file = "../../website/plots/timeseries/plot_4.html")
+
+#
 ```
 
 This plot breaks down the banks in the banks in the US by dividing them into groups: the top 5 banks, the next 125 banks, and all other banks. The total assets held by these banks is measured over the past 30 years, and this is was determines the groups and rankings.
