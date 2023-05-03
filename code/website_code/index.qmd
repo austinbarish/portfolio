@@ -179,27 +179,35 @@ Why these banks are located in these unlikely locations is up to speculations, b
 
 ## The health of the system
 
-A bank's equity capital ratio, similar to a bank's tier 1 capital ratio, is the amount of a bank's equity as a measure of its total capital. It is a measure of a bank's financial strength and ability to withstand economic downturns and absorb losses. The FDIC often requires a minimum 4% equity capital ratio for banks that it insures in order to allow the bank to become less reliant on debt and increase shareholder satisfaction. The equity capital ratio is an interesting figure to help project the stability of a bank. 
+In order to tie our research together, we wanted to examine the top banks compared to the rest of the FDIC-insured banks in a similar metric. Since this project started as a result of the failure of Silicon Valley Bank in March of 2023, we wanted to explore a metric that demonstrated a bank's ability to react to economic downturn. The metric we decided to explore is the equity capital ratio. A bank’s equity capital ratio (which will be denoted as EQR), similar to a bank’s tier 1 capital ratio, is the amount of a bank’s equity as a measure of its total capital. It is a measure of a bank’s financial strength and ability to withstand economic downturns and absorb losses. The FDIC often requires a minimum 4% equity capital ratio for banks that it insures in order to allow the bank to become less reliant on debt and increase shareholder satisfaction. The equity capital ratio is an interesting figure to help project the stability of a bank.
+
+For this section, we will take a look at some of the outliers in terms of average equity capital ratio, and also compare the four largest banks that we have been analyzing throughout this project to smaller banks to see if they manage their equity differently. Each bank uniquely positions themselves to be able to respond to financial hardship. Some banks are more suited to take risks and maintain a lower equity capital ratio, and this can be due to a variety of factors that we will explore later.
+
+First, we will look at the highest and lowest banks in terms of equity capital ratio.
+
 
 #### **Top and Bottom 20 Histogram** {#sec-top-bottom-histogram}
 
 ```{python}
 #| echo: false
 #| label: fig-top-bottom-histogram
-#| fig-cap: "A line plot "
+#| fig-cap: "Linked histogram and line chart of top and bottom 20 banks in terms of average equity capital ratio, along with overall average. Selecting a column of the histogram will modify the line chart to only display that particular bank."
 
 IFrame(src='../website/plots/eqr/plot1.html', width=700, height=600)
 
 ```
 
-For this portion of the analysis, I chose to examine banks that represent the top and bottom 20 in average EQR by quarter. For this analysis, I filtered out any banks that do not appear in the data for more than 100 quarters (roughly 80% of the quarters). This is to eliminate any potential outliers in the data. The mean value does not all observations in the data; it only includes all banks with more than 100 quarters of data since Q1 1992. Looking at the histogram, we notice that the average EQR of 11.22 is far closer to the 20 banks that have the lowest equity capital ratio compared to the 20 banks that have the highest equity capital ratio. Looking at the 5 number summary, we see that the average (11.22) is lower than the median (10.27), indicating that there are a few banks with a far higher equity capital ratio than the majority of the rest of the banks in the FDIC database. When we more closely examine the banks that fall in the range of top or bottom 20, we see that there is no consistent state across these banks. It is noteworthy that Michigan has 2 of the 3 highest banks in terms of EQR. Another noteworthy observation is that banks in Ohio, South Dakota, and North Carolina only make up 3 of the top 20 banks in average equity capital ratio. Moreover, none of the largest banks in terms of total assets are present on this list. 
+This plot examines banks that represent the top and bottom 20 in average EQR by quarter, with an additional column for the overall average. For this analysis, I filtered out any banks that do not appear in the data for more than 100 quarters (roughly 80% of the quarters). This is to eliminate any potential outliers in the data. The mean value does not all observations in the data; it only includes all banks with more than 100 quarters of data since Q1 1992. Looking at the histogram, we notice that the average EQR of 11.22 is far closer to the 20 banks that have the lowest equity capital ratio compared to the 20 banks that have the highest equity capital ratio. Looking at the 5 number summary, we see that the average (11.22) is lower than the median (10.27), indicating that there are a few banks with a far higher equity capital ratio than the majority of the rest of the banks in the FDIC database. When we more closely examine the banks that fall in the range of top or bottom 20, we see that there is no consistent state across these banks. It is noteworthy that Michigan has 2 of the 3 highest banks in terms of EQR. Another noteworthy observation is that banks in Ohio, South Dakota, and North Carolina only make up 3 of the top 20 banks in average equity capital ratio. Moreover, none of the largest banks in terms of total assets are present on this list.
+
+Next, we will attempt to get a better idea of the equity capital ratio for the specific banks that we have been analyzing, and see if they deviate from the overall trend.
+
 
 #### **Quarters Line Graph** {#sec-quarters-line-graph}
 
 ```{python}
 #| echo: false
 #| label: fig-quarters-line-graph
-#| fig-cap: "A line plot "
+#| fig-cap: "Two line plots. The upper line plot reflects the quarterly equity capital ratio over a 30-year period for each of the top four banks we have noted, and the lower line plot reflects the overall average equity capital ratio for each quarter."
 
 IFrame(src='../website/plots/eqr/plot2.html', width=700, height=600)
 
@@ -207,12 +215,14 @@ IFrame(src='../website/plots/eqr/plot2.html', width=700, height=600)
 
 We see based on the line graph above that, for the most part, the 4 major banks maintain a relatively consistent equity capital ratio. After 2004, which is the first quarter that JP Morgan Chase Bank NA is present in this data, we notice that none of the banks ever reach an equity capital ratio higher than 13, and for the most part, they have all reached a similar value between 8 and 10 since 2020. The only time any of these banks record an equity capital ratio that is well above the cumulative average is prior to the turn of the 20th century, when Bank of America NA records several quarters with an equity capital ratio over 20. Comparing the four largest banks to the overall average for all FDIC-insured banks present in the data, we see that, for the most part, the four largest banks are either identical to, or slightly below, the overall average equity capital ratio over the past 2 decades. This is due to the differing immediate needs between large national banks, such as Wells Fargo and Bank of America, and smaller, more localized banks. There are a few reasons for the diffence in focus. The first is that larger banks often have greater access to capital markets, and are thus less reliant on using their own capital to fund everyday business operations. Therefore, they do not necessarily need to maintain a high equity capital ratio. The next reason is because smaller banks often take a more conservative stance on risk management, and since equity capital ratio is a way to quantify a bank's risk management, it can in part explain why a smaller bank's equity capital ratio is higher, on average. Finally, the difference can be explained by differences in regulatory laws and the market/customer base that a bank is typically functioning in. Nevertheless, the FDIC does set regulations for a minimum equity capital ratio, so even the largest banks in the industry need to ensure that they have a sufficient equity capital ratio and are thus in a stronger financial position in the event of an economic downturn. While larger banks have more resources than smaller banks and thus have more methods of improving their financial position to respond to potential problems, they still must maintain sufficient equity.
 
+For the next part of the analysis, we will focus on smaller banks in terms of average total assets to see if they differ in their optimal strategy when it comes to maintaining a specific equity capital ratio.
+
 #### **EQR and Assets: Small Counts** {#sec-eqr-and-assets}
 
 ```{python}
 #| echo: false
 #| label: fig-eqr-and-assets
-#| fig-cap: "A line plot "
+#| fig-cap: "Heatmap of equity capital ratio vs average total assets owned. Filtered to only include banks with average total assets owned less than or equal to 500,000. The plot also shows the overall distibutions of the two columns in histogram form."
 
 IFrame(src='../website/plots/eqr/plot3.html', width=700, height=600)
 
@@ -226,13 +236,16 @@ This plot attempts to look at smaller banks in terms of mean total assets owned 
 ```{python}
 #| echo: false
 #| label: fig-bubble-plot
-#| fig-cap: "A line plot "
+#| fig-cap: "Bubble plot showing equity capital and equity capital ratio for Q4 of given year. Color represents bank class, as noted in the legend."
 
 IFrame(src='../website/plots/eqr/plot4.html', width=700, height=600)
 
 ```
 
 A major trend we notice when looking at this time series bubble plot is the gradual increase in quantity of banks with an equity capital ratio in the range of the average that is consistent with what we have been examining thus far. What is also noticeable is that there does not appear to be a major distinction by bank class. State chartered stock savings banks, denoted in the legend as SI, appear to always have a relatively low equity capital ratio, while commercial and federal savings banks, denoted as N, NM, and SB in the above plot, tend to have a higher equity capital ratio.
+
+This helps us understand that even though banks such as Wells Fargo and Bank of America far surpass other FDIC-insured banks in terms of total deposits, their strategy when it comes to maintaining a specific equity capital ratio remains consistent with smaller banks. The general trends in terms of EQR for the larger banks fall in line with the general trendline for average EQR, especially over the past decade or so, when we have begun to notice the disparity in terms of assets and deposits of these banks.
+
 
 
 
