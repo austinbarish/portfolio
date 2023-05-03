@@ -31,6 +31,6 @@ format:
     theme:
       - sandstone
       - custom.scss
-    toc: true
 
 bibliography: references.bib
+csl: nature.csl

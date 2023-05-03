@@ -1,4 +1,11 @@
-# Methods {#methods .unnumbered}
+---
+format:
+  html:
+    toc: false
+    number-sections: false
+---
+
+# Methods  {#methods}
 
 This section describes the process, considerations, and tools that went into developing each visualization in the Home tab. All the code for this project is available on [GitHub](https://github.com/anly503/spring2023-project-team-4/tree/main/code).
 

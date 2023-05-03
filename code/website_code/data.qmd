@@ -1,4 +1,4 @@
-# Data {#data .unnumbered}
+# Data {#data}
 
 This section contains a thorough description of the data used in this project. First, we discuss the banking data, its collection, and its main definitions. Second, we describe the coordinate data used for the geospatial plots. All data table are available on [GitHub](https://github.com/anly503/spring2023-project-team-4/tree/main/data).
 
