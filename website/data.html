@@ -72,7 +72,7 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -115,30 +115,18 @@ div.csl-indent {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a>
-  <ul class="collapse">
-  <li><a href="#banking-data" id="toc-banking-data" class="nav-link" data-scroll-target="#banking-data">Banking data</a></li>
-  <li><a href="#zip-coordinates" id="toc-zip-coordinates" class="nav-link" data-scroll-target="#zip-coordinates">Zip coordinates</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<section id="data" class="level1 unnumbered">
-<h1 class="unnumbered">Data</h1>
+<section id="data" class="level1">
+<h1>Data</h1>
 <p>This section contains a thorough description of the data used in this project. First, we discuss the banking data, its collection, and its main definitions. Second, we describe the coordinate data used for the geospatial plots. All data table are available on <a href="https://github.com/anly503/spring2023-project-team-4/tree/main/data">GitHub</a>.</p>
 <section id="banking-data" class="level2">
 <h2 class="anchored" data-anchor-id="banking-data">Banking data</h2>
-<p>We gathered the data from the FDIC’s API <span class="citation" data-cites="federal_deposit_insurance_corporation_bankfind_2023">(<a href="#ref-federal_deposit_insurance_corporation_bankfind_2023" role="doc-biblioref">Federal Deposit Insurance Corporation 2023</a>)</span>. The API allows querying financial institutions’ general and structural data, historical financial information, and bank failure information. In this study, we focus on historical financial information. The FDIC API offers a comprehensive menu of fields covering all the previously mentioned topics, from financial ratios, income and balance sheet data, bank structure information, and more (field list available <a href="https://github.com/anly503/spring2023-project-team-4/tree/main/data/data_documentation">here</a>).</p>
+<p>We gathered the data from the FDIC’s API<span class="citation" data-cites="federal_deposit_insurance_corporation_bankfind_2023"><sup><a href="#ref-federal_deposit_insurance_corporation_bankfind_2023" role="doc-biblioref">1</a></sup></span>. The API allows querying financial institutions’ general and structural data, historical financial information, and bank failure information. In this study, we focus on historical financial information. The FDIC API offers a comprehensive menu of fields covering all the previously mentioned topics, from financial ratios, income and balance sheet data, bank structure information, and more (field list available <a href="https://github.com/anly503/spring2023-project-team-4/tree/main/data/data_documentation">here</a>).</p>
 <p>Even though the website offers a query and CSV-download user interface, we constructed our own Python API client to make the process faster (available <a href="https://github.com/anly503/spring2023-project-team-4/tree/main/code/data_gathering">here</a>). The client uses the Python <code>requests</code> library to bring in the API’s json response, where function <code>get_all_financial_reporting_data()</code> processes the endpoint, reporting period, fields, and result_limit as required.</p>
 <p>We then collected the quarterly financial information for all insured banks from Q1 1992 to Q4 2022 (30 years). The data is available <a href="https://github.com/anly503/spring2023-project-team-4/tree/main/data/quarterly_financials">here</a>. Next, we cleaned the data to combine the 30 years’ worth of data, which totaled 1,014,549 rows. We collected 16 data fields (columns) described as follows:</p>
 <table class="table">
@@ -240,22 +228,22 @@ div.csl-indent {
 </section>
 <section id="zip-coordinates" class="level2">
 <h2 class="anchored" data-anchor-id="zip-coordinates">Zip coordinates</h2>
-<p>We collected coordinate data for developing geospatial visualizations. The data consists of zip codes and cartographic boundaries. The zip code data originates from the ZIP Code Tabulation Areas based on the 2020 Census tabulation blocks, available in <span class="citation" data-cites="us_census_bureau_gazetteer_2022">US Census Bureau (<a href="#ref-us_census_bureau_gazetteer_2022" role="doc-biblioref">2022</a>)</span>. The cartographic boundaries consist of a shapefile describing states at the 500k resolution level, available in <span class="citation" data-cites="us_census_bureau_cartographic_2021">US Census Bureau (<a href="#ref-us_census_bureau_cartographic_2021" role="doc-biblioref">2021</a>)</span>.</p>
+<p>We collected coordinate data for developing geospatial visualizations. The data consists of zip codes and cartographic boundaries. The zip code data originates from the ZIP Code Tabulation Areas based on the 2020 Census tabulation blocks, available in<span class="citation" data-cites="us_census_bureau_gazetteer_2022"><sup><a href="#ref-us_census_bureau_gazetteer_2022" role="doc-biblioref">2</a></sup></span>. The cartographic boundaries consist of a shapefile describing states at the 500k resolution level, available in<span class="citation" data-cites="us_census_bureau_cartographic_2021"><sup><a href="#ref-us_census_bureau_cartographic_2021" role="doc-biblioref">3</a></sup></span>.</p>
 
 
 
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-line-spacing="2" role="list">
 <div id="ref-federal_deposit_insurance_corporation_bankfind_2023" class="csl-entry" role="listitem">
-Federal Deposit Insurance Corporation. 2023. <span>“<span>BankFind</span> <span>Suite</span>: <span>API</span> for <span>Data</span> <span>Miners</span> &amp; <span>Developers</span>.”</span> <a href="https://banks.data.fdic.gov/docs/">https://banks.data.fdic.gov/docs/</a>.
-</div>
-<div id="ref-us_census_bureau_cartographic_2021" class="csl-entry" role="listitem">
-US Census Bureau. 2021. <span>“Cartographic <span>Boundary</span> <span>Files</span> - <span>Shapefile</span>.”</span> <em>Census.gov</em>. <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html</a>.
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Federal Deposit Insurance Corporation. <a href="https://banks.data.fdic.gov/docs/"><span>BankFind</span> <span>Suite</span>: <span>API</span> for <span>Data</span> <span>Miners</span> &amp; <span>Developers</span></a>. (2023).</div>
 </div>
 <div id="ref-us_census_bureau_gazetteer_2022" class="csl-entry" role="listitem">
-———. 2022. <span>“Gazetteer <span>Files</span>.”</span> <em>Census.gov</em>. <a href="https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html">https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html</a>.
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">US Census Bureau. <a href="https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html">Gazetteer <span>Files</span></a>. <em>Census.gov</em> (2022).</div>
+</div>
+<div id="ref-us_census_bureau_cartographic_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">US Census Bureau. <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">Cartographic <span>Boundary</span> <span>Files</span> - <span>Shapefile</span></a>. <em>Census.gov</em> (2021).</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

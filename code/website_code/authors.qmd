@@ -1,4 +1,4 @@
-# Authors {#authors .unnumbered}
+# Authors {#authors}
 
 ::: {layout-ncol=2}
 
