@@ -64,23 +64,11 @@ Before the final submission, we will look to make some of the data selection mor
 ### Figure 9: Top and Bottom 20 Histogram
 [View plot](index.qmd#sec-state-bank-deposits)
 
-
-
-
-
-<section id="figure-9-the-health-of-the-system" class="level3">
-
-<h3 class="anchored" data-anchor-id="figure-9-the-health-of-the-system">Figure 9: Top and Bottom 20 Histogram</h3>
-
-<p><a href="./index.html#the-health-of-the-system">View plot</a></p>
-
 This plot was built using the Altair library within python. As mentioned on the home page, this plot depicts a modified dataset where only banks that are present for at least 100 quarters are represented, including within the 'mean' column. The interactivity within the Altair library allows the user to click on a bar within the histogram and have that bank's equity capital ratio for each quarter since 1992 Q1 shown in the line graph below the histogram.
 
 The intention with this plot was to get an understanding of whether banks that remain steady for an extended period of time fall close to the average EQR, and we find that this is not necessarily the case. However, it is more noteworthy that none of the four major banks that we have previously examined are present within the top and bottom 20 banks. In fact, as we will see in Figure 10, they fall remarkably close to the overall average. What we also note is that only 4 of the top 20 banks in this subset are from the three states we noted earlier (NC, OH, SD), with one being from North Carolina, and the remaining three being headquartered in Ohio. Additionally, 3 of the top 20 banks in terms of average equity capital ratio are from California, and two are from Michigan.
 
 We experimented with the entire dataset, but the data were so skewed in both directions that we ultimately chose to only represent banks that appeared for at least 100 quarters since 1992. Some banks that likely only made up a few quarters had an EQR of over 100, and some even had values below 0. Therefore, in order to gain more meaningful insights about the general range of equity capital ratio over the past 30 years, we chose this specific subset of the data for this linked plot.
-
-</section>
 
 
 
