@@ -52,6 +52,12 @@ IFrame(src='../website/plots/interactive_table.html', width=width_percentage, he
 
 ```
 
+::: {.callout-note}
+Using this **interactive data table**, we can obtain a broad view of the US banking system size by several metrics, setting the stage for the following sections.
+:::
+
+
+
 While the average statewide banking system has 721.7 million U.S. dollars in equity and 7,784.8 billion in assets, we can see a considerable variation among the states. Notably, North Carolina, Delaware, and South Dakota	have average assets of 72,627.3, 64,104.4, and 61,841.7 U.S. dollars, respectively, while states such as Minnesota, Kansas, and Wyoming average 460.8, 439.6, and 359.0 U.S. dollars, respectively.
 
 ## Where is Money Located? {#where-is-money-located}
@@ -119,7 +125,7 @@ IFrame(src='../website/plots/heatmap.html', width=width_percentage, height=600)
 ```
 
 ::: {.callout-note}
-For this innovative view, we included both a heatmap and a dot map on a Folium object. This view allows us to see clearly that the density of banks in a region does not strongly impact the size of banking assets in a state, but rather, whether large banks have moved to that state. These elements foreshadow the discussion in the sections to come.
+For this **innovative view**, we included both a heatmap and a dot map on a Folium object with tooltips present. Due to Folium constraints, each of these elements was coded using for loops to assign data to the right element. This view allows us to see clearly that the density of banks in a region does not strongly impact the size of banking assets in a state, but rather, whether large banks have moved to that state. These elements foreshadow the discussion in the sections to come.
 :::
 
 ## A Deeper Dive by State {#deeper-dive-by-state}
@@ -229,6 +235,11 @@ width_percentage = "100%"
 IFrame(src='../website/plots/eqr/plot1.html', width=width_percentage, height=800)
 
 ```
+
+::: {.callout-note}
+For this **linked view**, we can depart from the global view of the EQR trends to obtain a clearer insight into the trends of one specific bank by selecting it on the top plot.
+:::
+
 
 This plot examines banks that represent the top and bottom 20 in average EQR by quarter, with an additional column for the overall average. For this analysis, I filtered out any banks that do not appear in the data for more than 100 quarters (roughly 80% of the quarters). This is to eliminate any potential outliers in the data. The mean value does not all observations in the data; it only includes all banks with more than 100 quarters of data since Q1 1992. Looking at the histogram, we notice that the average EQR of 11.22 is far closer to the 20 banks that have the lowest equity capital ratio compared to the 20 banks that have the highest equity capital ratio. Looking at the 5 number summary, we see that the average (11.22) is lower than the median (10.27), indicating that there are a few banks with a far higher equity capital ratio than the majority of the rest of the banks in the FDIC database. When we more closely examine the banks that fall in the range of top or bottom 20, we see that there is no consistent state across these banks. It is noteworthy that Michigan has 2 of the 3 highest banks in terms of EQR. Another noteworthy observation is that banks in Ohio, South Dakota, and North Carolina only make up 3 of the top 20 banks in average equity capital ratio. Moreover, none of the largest banks in terms of total assets are present on this list.
 

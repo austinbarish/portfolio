@@ -257,7 +257,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For this innovative view, we included both a heatmap and a dot map on a Folium object. This view allows us to see clearly that the density of banks in a region does not strongly impact the size of banking assets in a state, but rather, whether large banks have moved to that state. These elements foreshadow the discussion in the sections to come.</p>
+<p>For this <strong>innovative view</strong>, we included both a heatmap and a dot map on a Folium object with tooltips present. Due to Folium constraints, each of these elements was coded using for loops to assign data to the right element. This view allows us to see clearly that the density of banks in a region does not strongly impact the size of banking assets in a state, but rather, whether large banks have moved to that state. These elements foreshadow the discussion in the sections to come.</p>
 </div>
 </div>
 </section>
@@ -358,6 +358,19 @@ Note
 </figure>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For this <strong>linked view</strong>, we can depart from the global view of the EQR trends to obtain a clearer insight into the trends of one specific bank by selecting it on the top plot.</p>
+</div>
+</div>
 <p>This plot examines banks that represent the top and bottom 20 in average EQR by quarter, with an additional column for the overall average. For this analysis, I filtered out any banks that do not appear in the data for more than 100 quarters (roughly 80% of the quarters). This is to eliminate any potential outliers in the data. The mean value does not all observations in the data; it only includes all banks with more than 100 quarters of data since Q1 1992. Looking at the histogram, we notice that the average EQR of 11.22 is far closer to the 20 banks that have the lowest equity capital ratio compared to the 20 banks that have the highest equity capital ratio. Looking at the 5 number summary, we see that the average (11.22) is lower than the median (10.27), indicating that there are a few banks with a far higher equity capital ratio than the majority of the rest of the banks in the FDIC database. When we more closely examine the banks that fall in the range of top or bottom 20, we see that there is no consistent state across these banks. It is noteworthy that Michigan has 2 of the 3 highest banks in terms of EQR. Another noteworthy observation is that banks in Ohio, South Dakota, and North Carolina only make up 3 of the top 20 banks in average equity capital ratio. Moreover, none of the largest banks in terms of total assets are present on this list.</p>
 <p>Next, we will attempt to get a better idea of the equity capital ratio for the specific banks that we have been analyzing, and see if they deviate from the overall trend.</p>
 </section>
@@ -408,7 +421,7 @@ Note
 </section>
 <section id="conclusion" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">6</span> Conclusion</h2>
-<p>In this project, we examined several fascinating aspects of the U.S. banking system. First, we found that South Dakota and Ohio bank assets have grown rapidly compared to more populated states like New York and California. Once broken down by bank, we found the reason to be that the largest banks in the country had moved to these smaller states. We then compared the highest GDP states to the states that house the four largest banks and found that these banks make up almost all those states’ total deposits. The same large bank’s total deposits also far exceed all deposits in those higher GDP states. Further research shows this is due to relaxed banking regulations and lower tax rates.7</p>
+<p>In this project, we examined several fascinating aspects of the U.S. banking system. First, we found that South Dakota and Ohio bank assets have grown rapidly compared to more populated states like New York and California. Once broken down by bank, we found the reason to be that the largest banks in the country had moved to these smaller states. We then compared the highest GDP states to the states that house the four largest banks and found that these banks make up almost all those states’ total deposits. The same large bank’s total deposits also far exceed all deposits in those higher GDP states. Further research shows this is due to relaxed banking regulations and lower tax rates<span class="citation" data-cites="fritts_state_2023"><sup><a href="#ref-fritts_state_2023" role="doc-biblioref">5</a></sup></span>.</p>
 <p>We also explored the temporal trends in the concentration of assets held by U.S. banks. We identified how a few top players dominate the industry entirely and how this trend has worsened over the last three decades. Finally, we noted no significant differences in equity capital ratio between top banks, especially over the past few decades, as these banks have scaled in size. We found the cause to be differing immediate needs between larger and smaller banks. Our main takeaway for our audience is that the banking system tells a story of financial wellness while also raising caution on the concentration of resources and regulatory arbitrage.</p>
 </section>
 <section id="references" class="level2 unnumbered">
