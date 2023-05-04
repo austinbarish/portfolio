@@ -277,7 +277,7 @@ Note
 </section>
 <section id="deeper-dive-by-state" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="deeper-dive-by-state"><span class="header-section-number">3</span> A Deeper Dive by State</h2>
-<p>There is a lot to unpack with <a href="#fig-state-bank-deposits">Figure&nbsp;4</a>. First, your eyes might be drawn to the rapid growth beginning in 2020 across the board but most obviously in Texas. Meanwhile, there is no obvious drop in deposits from the pandemic. Instead, we see the massive influx of cash into the banking system as a product of the pandemic and stimulus packages.</p>
+<p>Intuition may suggest that California, Texas, and New York should have significantly more bank deposits than smaller states like South Dakota, given their respective populations and GDP. However, large banks such as Wells Fargo and Citibank have their main offices in Sioux Falls, South Dakota. The deposits in these banks entirely envelop the rest of the deposits in the state. Similarly, JP Morgan Chase’s main office is in Ohio, and Bank of America is in North Carolina, making up the vast majority of the total deposits in the state.</p>
 <section id="sec-state-bank-deposits" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="sec-state-bank-deposits"><strong>State Bank Deposits by Bank</strong></h4>
 <div class="cell" data-execution_count="5">
@@ -290,8 +290,8 @@ Note
 </figure>
 </div>
 </div>
-<p>Secondly, and most importantly to our story here, is the differences in the size of the deposits in these states. You may even be confused at first and guess that the labels are on the wrong states because your intuition tells you that California, Texas, and New York should have significantly more cash in the bank than smaller states like South Dakota. However, that is where we were just as surprised as you are. As you may have noticed in our geo-spacial plot, huge banks are located in cities you would not expect. For example, Wells Fargo and Citibank are centered in Sioux Falls, South Dakota. As you can see, the deposits in these banks completely envelop the rest of the deposits in the state. Similarly, in Ohio and North Carolina, the large banks located there make up the majority of the total deposits in the state.</p>
-<p>Why these banks are located in these unlikely locations is up to speculations, but regulation could certainly play a role, namely, corporate tax rates. South Dakota and Ohio both lack any corporate taxes and North Carolina has one of the lowest in the country<span class="citation" data-cites="fritts_state_2023"><sup><a href="#ref-fritts_state_2023" role="doc-biblioref">5</a></sup></span>. These corporate taxes may help explain why Wells Fargo moved from California to South Dakota in 2003, or why Citibank followed them to Sioux Falls in 2011. There certainly could be more at play, however, tax breaks and heavy regulation may help explain why big banks are leaving the country’s richest states for ones that will not tax them.</p>
+<p>In the 1980s, South Dakota eliminated the cap on interest rates and fees to attract investment during an economic recession. Citibank was the first to answer. The success of this move prompted other banks such as Wells Fargo, Capital One, and First Premier to move to the state, which, in 2013, held more bank assets than any other state in the U.S.<span class="citation" data-cites="journal_how_2013"><sup><a href="#ref-journal_how_2013" role="doc-biblioref">5</a></sup></span> Bank of America’s main office is in Charlotte, North Carolina, for similar regulatory reasons, which is now the second largest state by bank asset size<span class="citation" data-cites="frost_uss_2019"><sup><a href="#ref-frost_uss_2019" role="doc-biblioref">6</a></sup></span>. Figure 3 shows the effect of these moves on state deposits.</p>
+<p>While not central to <a href="#fig-state-bank-deposits">Figure&nbsp;4</a>, we noted a rapid deposit growth in 2020 due to various stimulus efforts. It is important to notice the difference in the y-axis between the two columns. The left column features the three largest states by GDP, while the right features the three states we found to be most notable<span class="citation" data-cites="bureau_of_economic_analysis_gdp_2023"><sup><a href="#ref-bureau_of_economic_analysis_gdp_2023" role="doc-biblioref">7</a></sup></span>. Namely, these states house the four largest banks by total deposits. We can easily detect the differences between states. However, in the next section, we discuss the overall structure of the market and the relative significance of the top banks in the system.</p>
 </section>
 </section>
 <section id="story-about-the-top-banks" class="level2" data-number="4">
@@ -408,7 +408,7 @@ Note
 <div id="fig-eqr-and-assets" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
-        <iframe width="100%" height="600" src="../website/plots/eqr/plot3.html" frameborder="0" allowfullscreen=""></iframe>
+        <iframe width="100%" height="700" src="../website/plots/eqr/plot3.html" frameborder="0" allowfullscreen=""></iframe>
         
 <p></p><figcaption class="figure-caption">Figure&nbsp;11: Heatmap of equity capital ratio vs average total assets owned. Filtered to only include banks with average total assets owned less than or equal to 500,000. The plot also shows the overall distibutions of the two columns in histogram form.</figcaption><p></p>
 </figure>
@@ -422,7 +422,7 @@ Note
 <div id="fig-bubble-plot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 
-        <iframe width="100%" height="600" src="../website/plots/eqr/plot4.html" frameborder="0" allowfullscreen=""></iframe>
+        <iframe width="100%" height="650" src="../website/plots/eqr/plot4_large.html" frameborder="0" allowfullscreen=""></iframe>
         
 <p></p><figcaption class="figure-caption">Figure&nbsp;12: Bubble plot showing equity capital and equity capital ratio for Q4 of given year. Color represents bank class, as noted in the legend.</figcaption><p></p>
 </figure>
@@ -434,7 +434,7 @@ Note
 </section>
 <section id="conclusion" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">6</span> Conclusion</h2>
-<p>In this project, we examined several fascinating aspects of the U.S. banking system. First, we found that South Dakota and Ohio bank assets have grown rapidly compared to more populated states like New York and California. Once broken down by bank, we found the reason to be that the largest banks in the country had moved to these smaller states. We then compared the highest GDP states to the states that house the four largest banks and found that these banks make up almost all those states’ total deposits. The same large bank’s total deposits also far exceed all deposits in those higher GDP states. Further research shows this is due to relaxed banking regulations and lower tax rates<span class="citation" data-cites="fritts_state_2023"><sup><a href="#ref-fritts_state_2023" role="doc-biblioref">5</a></sup></span>.</p>
+<p>In this project, we examined several fascinating aspects of the U.S. banking system. First, we found that South Dakota and Ohio bank assets have grown rapidly compared to more populated states like New York and California. Once broken down by bank, we found the reason to be that the largest banks in the country had moved to these smaller states. We then compared the highest GDP states to the states that house the four largest banks and found that these banks make up almost all those states’ total deposits. The same large bank’s total deposits also far exceed all deposits in those higher GDP states. Further research shows this is due to relaxed banking regulations and lower tax rates<span class="citation" data-cites="fritts_state_2023"><sup><a href="#ref-fritts_state_2023" role="doc-biblioref">8</a></sup></span>.</p>
 <p>We also explored the temporal trends in the concentration of assets held by U.S. banks. We identified how a few top players dominate the industry entirely and how this trend has worsened over the last three decades. Finally, we noted no significant differences in equity capital ratio between top banks, especially over the past few decades, as these banks have scaled in size. We found the cause to be differing immediate needs between larger and smaller banks. Our main takeaway for our audience is that the banking system tells a story of financial wellness while also raising caution on the concentration of resources and regulatory arbitrage.</p>
 </section>
 <section id="references" class="level2 unnumbered">
@@ -457,8 +457,17 @@ Note
 <div id="ref-board_of_governors_of_the_federal_reserve_system_frb_2022" class="csl-entry" role="listitem">
 <div class="csl-left-margin">4. </div><div class="csl-right-inline">Board of Governors of the Federal Reserve System. <a href="https://www.federalreserve.gov/releases/lbr/current/"><span>FRB</span>: <span>Large</span> <span>Commercial</span> <span>Banks</span>– <span>December</span> 31, 2022</a>. (2022).</div>
 </div>
+<div id="ref-journal_how_2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Journal, A. S., National. <a href="https://www.theatlantic.com/business/archive/2013/07/how-citibank-made-south-dakota-the-top-state-in-the-us-for-business/425661/">How <span>Citibank</span> <span>Made</span> <span>South</span> <span>Dakota</span> the <span>Top</span> <span>State</span> in the <span>U</span>.<span>S</span>. For <span>Business</span></a>. <em>The Atlantic</em> (2013).</div>
+</div>
+<div id="ref-frost_uss_2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Frost, N. <a href="https://qz.com/1545417/charlotte-becomes-major-banking-hub-due-to-bbt-suntrust-merger">The <span>US</span>’s second-largest city for banking is not what you’d expect</a>. <em>Quartz</em> (2019).</div>
+</div>
+<div id="ref-bureau_of_economic_analysis_gdp_2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Bureau of Economic Analysis. <a href="https://www.bea.gov/data/gdp/gdp-state"><span>GDP</span> by <span>State</span></a>. (2023).</div>
+</div>
 <div id="ref-fritts_state_2023" class="csl-entry" role="listitem">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline">Fritts, J. <a href="https://taxfoundation.org/publications/state-corporate-income-tax-rates-and-brackets/">State <span>Corporate</span> <span>Income</span> <span>Tax</span> <span>Rates</span> and <span>Brackets</span></a>. <em>Tax Foundation</em> (2023).</div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Fritts, J. <a href="https://taxfoundation.org/publications/state-corporate-income-tax-rates-and-brackets/">State <span>Corporate</span> <span>Income</span> <span>Tax</span> <span>Rates</span> and <span>Brackets</span></a>. <em>Tax Foundation</em> (2023).</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -276,7 +276,7 @@ For the next part of the analysis, we will focus on smaller banks in terms of av
 #| fig-cap: "Heatmap of equity capital ratio vs average total assets owned. Filtered to only include banks with average total assets owned less than or equal to 500,000. The plot also shows the overall distibutions of the two columns in histogram form."
 
 width_percentage = "100%"
-IFrame(src='../website/plots/eqr/plot3.html', width=width_percentage, height=600)
+IFrame(src='../website/plots/eqr/plot3.html', width=width_percentage, height=700)
 
 ```
 
@@ -291,7 +291,7 @@ This plot attempts to look at smaller banks in terms of mean total assets owned 
 #| fig-cap: "Bubble plot showing equity capital and equity capital ratio for Q4 of given year. Color represents bank class, as noted in the legend."
 
 width_percentage = "100%"
-IFrame(src='../website/plots/eqr/plot4.html', width=width_percentage, height=600)
+IFrame(src='../website/plots/eqr/plot4_large.html', width=width_percentage, height=650)
 
 ```
 
