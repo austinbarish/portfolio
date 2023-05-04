@@ -69,12 +69,16 @@ The intention with this plot was to get an understanding of whether banks that r
 
 We experimented with the entire dataset, but the data were so skewed in both directions that we ultimately chose to only represent banks that appeared for at least 100 quarters since 1992. Some banks that likely only made up a few quarters had an EQR of over 100, and some even had values below 0. Therefore, in order to gain more meaningful insights about the general range of equity capital ratio over the past 30 years, we chose this specific subset of the data for this linked plot.
 
+It is important to note that we chose to force the user to scroll horizontally throughout the plot in order to view the legend as well as some of the most recent years. This was a choice we made to optimize text size and keep the plots aligned along the margins. The other option was to drastically shrink the text size in the plot, which we felt would be detrimental to the overall ability for the user to view the plot.
+
 
 
 ### Figure 10: Top 4 banks EQR by quarter with overall average
 [View plot](index.qmd#sec-quarters-line-graph)
 
 <p>This plot was built using the Altair library within python. This plot separates the 4 major banks that we examine throughout this project, and compares them to the overage average. The overall average does include the four banks, but it will not be skewed by the data since there are over 4,000 unique FDIC-insured banks within our dataset, and each are weighed equally in terms of determining the average for each quarter since 1992. </p>
+
+Similar to Figure 9, we chose to force the user to scroll horizontally throughout the plot. This was a choice we made to optimize text size and keep the plots aligned along the margins. The other option was to shrink the text size in the plot, which we felt would be detrimental to the overall ability for the user to view the plot.
 
 
 
@@ -91,3 +95,4 @@ This plot was built using the Plotly library within python. Inspiration for the 
 
 This plot contains a subset of the full dataset, as it explores only Q4 values from 1992, 2002, 2012, and 2022. Therefore, there are no averages taken for banks; these are the equity capital and equity capital ratio values for that specific quarter. We also filtered the dataset so it only included banks with a non-negative equity capital ratio, and an equity capital value less than or equal to 20,000,000. This is for the same reasons as illustrated in Figure 11. Essentially, we wanted to focus in on the smaller banks, since we already examined the equity capital ratio of the four large banks. Moreover, in an effort to make the plot fit on the page and look asthetically pleasing, we wanted to remove outliers and keep a filter where a large percentage of the data is still present, but the dispersion is not too drastic.
 
+Similar to Figure 9 and Figure 10, we chose to keep the font size large enough that would require the user to scroll a bit to see the legend and the larger banks in terms of equity capital. We made this choice to allow the font to be more readable, while sacrificing the ability to see the whole plot.
