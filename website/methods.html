@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Where is your money, and why? – methods</title>
+<title>Where is Your Money, and Why? – methods</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Where is your money, and why?</span>
+    <span class="navbar-title">Where is Your Money, and Why?</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -147,22 +147,14 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="./index.html#sec-state-bank-deposits">View plot</a></p>
 <p>The data for this plot comes from the quarterly bank financial data collected using the FDIC API. Then, in the Data Cleaning tab, we grouped the data by state, by bank, and by date meaning our data now showed the total assets, deposits, etc. that each bank in a given state held in a given quarter. This helped to shrink what was previously a massive dataset. However, that was still quite large. Therefore, that data file was added to <code>.gitignore</code>, however, you can see the code to create this file under <code>quarterly_data_cleaning.ipynb</code>. Running this notebook will allow you to see exactly what data we are using.</p>
 <p>This plot went through a lot of variations. It began by included every state’s total assets in five year windows with a slider to let the user move through the data. We then realize that five years was no where near enough time to see meaningful change so we expanded it to a decade long window. From there we realized that it would be better to just show all of the time at once, so the slider was scrapped. After doing some digging with the geo-spacial data, we found some interesting trends with the amount of money deposited in states you would not expect, such as South Dakota. In particular, we found that the biggest banks had tons of assets here. Quickly we realized this was worth exploring further so I split the data up by banks. However, it remained difficult to see how different the amounts of money was between states as you had to flip back and forth using the button. Finally, we switched to this subplot view which displays all of the states at once. The left column features the top three states by GDP while the right column features the three states we felt were most surprising in containing a ton of deposits despite being smaller states. They are all sorted vertically by GDP.</p>
-<p>Before the final submission, we will look to make some of the data selection more clearly with column titles. Additionally, we may look to add some annotations that point out some important dates. For example, Wells Fargo moving from California to South Dakota in 2003. We may also consider adding an additional line to each state displaying their full deposit totals to highlight the rapid drops of increases of gaining or losing a big bank.</p>
+<p>After the poster fair, we decided to standardize the y-axes of all of the plots so that the differences in size between each state is more obvious. Now, the user is not asked to recognize the different y-axis maxes and instead they can easily see that, for example, California is half of the size of North Carolina. It also helps to conceptualize the size of the banks in the right column and see just how large JP Morgan, for example, is.</p>
 </section>
 <section id="figure-9-top-and-bottom-20-histogram" class="level3">
 <h3 class="anchored" data-anchor-id="figure-9-top-and-bottom-20-histogram">Figure 9: Top and Bottom 20 Histogram</h3>
 <p><a href="./index.html#sec-state-bank-deposits">View plot</a></p>
-<section id="figure-9-the-health-of-the-system" class="level3">
-<h3 class="anchored" data-anchor-id="figure-9-the-health-of-the-system">
-Figure 9: Top and Bottom 20 Histogram
-</h3>
-<p>
-<a href="./index.html#the-health-of-the-system">View plot</a>
-</p>
 <p>This plot was built using the Altair library within python. As mentioned on the home page, this plot depicts a modified dataset where only banks that are present for at least 100 quarters are represented, including within the ‘mean’ column. The interactivity within the Altair library allows the user to click on a bar within the histogram and have that bank’s equity capital ratio for each quarter since 1992 Q1 shown in the line graph below the histogram.</p>
 <p>The intention with this plot was to get an understanding of whether banks that remain steady for an extended period of time fall close to the average EQR, and we find that this is not necessarily the case. However, it is more noteworthy that none of the four major banks that we have previously examined are present within the top and bottom 20 banks. In fact, as we will see in Figure 10, they fall remarkably close to the overall average. What we also note is that only 4 of the top 20 banks in this subset are from the three states we noted earlier (NC, OH, SD), with one being from North Carolina, and the remaining three being headquartered in Ohio. Additionally, 3 of the top 20 banks in terms of average equity capital ratio are from California, and two are from Michigan.</p>
 <p>We experimented with the entire dataset, but the data were so skewed in both directions that we ultimately chose to only represent banks that appeared for at least 100 quarters since 1992. Some banks that likely only made up a few quarters had an EQR of over 100, and some even had values below 0. Therefore, in order to gain more meaningful insights about the general range of equity capital ratio over the past 30 years, we chose this specific subset of the data for this linked plot.</p>
-</section>
 </section>
 <section id="figure-10-top-4-banks-eqr-by-quarter-with-overall-average" class="level3">
 <h3 class="anchored" data-anchor-id="figure-10-top-4-banks-eqr-by-quarter-with-overall-average">Figure 10: Top 4 banks EQR by quarter with overall average</h3>

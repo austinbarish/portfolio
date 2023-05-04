@@ -5,7 +5,7 @@ project:
   output-dir: ../../website
 
 website:
-  title: Where is your money, and why?
+  title: Where is Your Money, and Why?
   search: false
   favicon: ../img/favicon.ico
   navbar:

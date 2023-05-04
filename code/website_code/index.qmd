@@ -5,7 +5,7 @@ format:
     number-sections: true
 ---
 
-# Where Is Your Money, And Why? {#home}
+# Where is Your Money, and Why? {#home}
 
 
 ![Photo credit: @wilking_signs_2023](../img/header.jpg){width=80%}

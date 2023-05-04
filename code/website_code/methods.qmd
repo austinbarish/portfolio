@@ -30,28 +30,7 @@ Alternative attempts to produce this plot included cluster markers which failed 
 
 This second geospatial plot follows a similar logic to the previous; however, it only shows data as of December 31st, 2022. The main difference is that it shows a point in the ZIP code where each bank is. The plot also has a heatmap overlay showing the concentration of banks in the U.S. map. This plot also uses bubble size to show the size of the banks' assets, in which the largest banks in the U.S. distinguish themselves clearly.
 
-
-### Figure 4: temporal trend of the total domestic deposits in the US for the past 3 decades
-[View plot](index.qmd#sec-temporal-assets)
-
-The data for this plot includes the total demostic deposits held by US banks for the past 3 decades, and is scraped using the FDIC API. Using 'Ggplot' in RStudio, the plot is formed by placing stacked bars, representing total assets for the year in the US. The data preparation included aggregating the datagrame and grouping the column names by the current year, in order to calculate the total assets. Next, the data is also categorised into the different bank classes, including, Federal Reserve Members, Savings Banks, Mutual Savings Banks, etc. This is done so that the viewer is able to see the temporal trends not only in the total assets in the country for a given year, but to also see the trends within the different groups. 
-
-### Figure 5: Disparity of the top 4 banks
-[View plot](index.qmd#sec-top-banks)
-
-The previous plot yields a result about the growth in assets over the years, but, in order to better understand the reason for this, the data frame is then aggregated by mean assets for the bank name and the year 2022, and then arranged in descending order to view the largest banks in the US for the most recent year. The plot is a bar plot, with the mean assets for the year (calculated over quarterly data) on the y axis and the bank name on the x axis.
-
-### Figure 6: The distribution of commercial banks in the US by the assets in possession
-[View plot](index.qmd#sec-top-commercial)
-
-Now, from the previous plot, top few banks are the ones that dominate the entire industry, so we adjust the data to take a more hollistic approach towards viewing the banks, and then create a categorical variable for the asset class for the year 2022, divided by the mean US Dollars in assets. This variable has 4 categories. The number of banks in each category is plotted on the y axis with bars, and the x axis represents the bank names.
-
-### Figure 7: Breakdown of top 5 banks, the next 125 banks, and all other banks
-[View plot](index.qmd#sec-grouped-top-banks)
-
-Only a small percentage of the banks in the previous plot belonged to the largest asset class with assets ranging from 10 million to 4 billion dollars, so we next decided to compare the top 5 banks, the next 125 banks, and all other banks in terms of their total assets, and also observe a temporal trend. The data is then aggregated again: creating nother categorical variable for the asset group, and assigning them to banks based on the descending of their assets for a given year. The data is thereby prepared in such a way that the viewer can observe the disparity in how the top banks completely dominate the industry, and also view how this has not always been the case. 
-
-### Figure 8: State bank deposits by bank
+### Figure 4: State bank deposits by bank
 [View plot](index.qmd#sec-state-bank-deposits)
 
 The data for this plot comes from the quarterly bank financial data collected using the FDIC API. Then, in the Data Cleaning tab, we grouped the data by state, by bank, and by date meaning our data now showed the total assets, deposits, etc. that each bank in a given state held in a given quarter. This helped to shrink what was previously a massive dataset. However, that was still quite large. Therefore, that data file was added to `.gitignore`, however, you can see the code to create this file under `quarterly_data_cleaning.ipynb`. Running this notebook will allow you to see exactly what data we are using.
@@ -59,6 +38,26 @@ The data for this plot comes from the quarterly bank financial data collected us
 This plot went through a lot of variations. It began by included every state's total assets in five year windows with a slider to let the user move through the data. We then realize that five years was no where near enough time to see meaningful change so we expanded it to a decade long window. From there we realized that it would be better to just show all of the time at once, so the slider was scrapped. After doing some digging with the geo-spacial data, we found some interesting trends with the amount of money deposited in states you would not expect, such as South Dakota. In particular, we found that the biggest banks had tons of assets here. Quickly we realized this was worth exploring further so I split the data up by banks. However, it remained difficult to see how different the amounts of money was between states as you had to flip back and forth using the button. Finally, we switched to this subplot view which displays all of the states at once. The left column features the top three states by GDP while the right column features the three states we felt were most surprising in containing a ton of deposits despite being smaller states. They are all sorted vertically by GDP. 
 
 After the poster fair, we decided to standardize the y-axes of all of the plots so that the differences in size between each state is more obvious. Now, the user is not asked to recognize the different y-axis maxes and instead they can easily see that, for example, California is half of the size of North Carolina. It also helps to conceptualize the size of the banks in the right column and see just how large JP Morgan, for example, is.
+
+### Figure 5: temporal trend of the total domestic deposits in the US for the past 3 decades
+[View plot](index.qmd#sec-temporal-assets)
+
+The data for this plot includes the total demostic deposits held by US banks for the past 3 decades, and is scraped using the FDIC API. Using 'Ggplot' in RStudio, the plot is formed by placing stacked bars, representing total assets for the year in the US. The data preparation included aggregating the datagrame and grouping the column names by the current year, in order to calculate the total assets. Next, the data is also categorised into the different bank classes, including, Federal Reserve Members, Savings Banks, Mutual Savings Banks, etc. This is done so that the viewer is able to see the temporal trends not only in the total assets in the country for a given year, but to also see the trends within the different groups. 
+
+### Figure 6: Disparity of the top 4 banks
+[View plot](index.qmd#sec-top-banks)
+
+The previous plot yields a result about the growth in assets over the years, but, in order to better understand the reason for this, the data frame is then aggregated by mean assets for the bank name and the year 2022, and then arranged in descending order to view the largest banks in the US for the most recent year. The plot is a bar plot, with the mean assets for the year (calculated over quarterly data) on the y axis and the bank name on the x axis.
+
+### Figure 7: The distribution of commercial banks in the US by the assets in possession
+[View plot](index.qmd#sec-top-commercial)
+
+Now, from the previous plot, top few banks are the ones that dominate the entire industry, so we adjust the data to take a more hollistic approach towards viewing the banks, and then create a categorical variable for the asset class for the year 2022, divided by the mean US Dollars in assets. This variable has 4 categories. The number of banks in each category is plotted on the y axis with bars, and the x axis represents the bank names.
+
+### Figure 8: Breakdown of top 5 banks, the next 125 banks, and all other banks
+[View plot](index.qmd#sec-grouped-top-banks)
+
+Only a small percentage of the banks in the previous plot belonged to the largest asset class with assets ranging from 10 million to 4 billion dollars, so we next decided to compare the top 5 banks, the next 125 banks, and all other banks in terms of their total assets, and also observe a temporal trend. The data is then aggregated again: creating nother categorical variable for the asset group, and assigning them to banks based on the descending of their assets for a given year. The data is thereby prepared in such a way that the viewer can observe the disparity in how the top banks completely dominate the industry, and also view how this has not always been the case. 
 
 
 ### Figure 9: Top and Bottom 20 Histogram
