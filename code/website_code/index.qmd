@@ -130,7 +130,11 @@ For this **innovative view**, we included both a heatmap and a dot map on a Foli
 
 ## A Deeper Dive by State {#deeper-dive-by-state}
 
-There is a lot to unpack with @fig-state-bank-deposits. First, your eyes might be drawn to the rapid growth beginning in 2020 across the board but most obviously in Texas. Meanwhile, there is no obvious drop in deposits from the pandemic. Instead, we see the massive influx of cash into the banking system as a product of the pandemic and stimulus packages.
+
+Intuition may suggest that California, Texas, and New York should have significantly more bank deposits than smaller states like South Dakota, given their respective populations and GDP. However, large banks such as Wells Fargo and Citibank have their main offices in Sioux Falls, South Dakota. The deposits in these banks entirely envelop the rest of the deposits in the state. Similarly, JP Morgan Chase's main office is in Ohio, and Bank of America is in North Carolina, making up the vast majority of the total deposits in the state.
+
+
+
 
 
 #### **State Bank Deposits by Bank** {#sec-state-bank-deposits .unnumbered}
@@ -146,9 +150,11 @@ IFrame(src='../website/plots/plot-3.html', width=width_percentage, height=650)
 ```
 
 
-Secondly, and most importantly to our story here, is the differences in the size of the deposits in these states. You may even be confused at first and guess that the labels are on the wrong states because your intuition tells you that California, Texas, and New York should have significantly more cash in the bank than smaller states like South Dakota. However, that is where we were just as surprised as you are. As you may have noticed in our geo-spacial plot, huge banks are located in cities you would not expect. For example, Wells Fargo and Citibank are centered in Sioux Falls, South Dakota. As you can see, the deposits in these banks completely envelop the rest of the deposits in the state. Similarly, in Ohio and North Carolina, the large banks located there make up the majority of the total deposits in the state. 
+In the 1980s, South Dakota eliminated the cap on interest rates and fees to attract investment during an economic recession. Citibank was the first to answer. The success of this move prompted other banks such as Wells Fargo, Capital One, and First Premier to move to the state, which, in 2013, held more bank assets than any other state in the U.S. [@journal_how_2013] Bank of America's main office is in Charlotte, North Carolina, for similar regulatory reasons, which is now the second largest state by bank asset size [@frost_uss_2019]. Figure 3 shows the effect of these moves on state deposits.
 
-Why these banks are located in these unlikely locations is up to speculations, but regulation could certainly play a role, namely, corporate tax rates. South Dakota and Ohio both lack any corporate taxes and North Carolina has one of the lowest in the country [@fritts_state_2023]. These corporate taxes may help explain why Wells Fargo moved from California to South Dakota in 2003, or why Citibank followed them to Sioux Falls in 2011. There certainly could be more at play, however, tax breaks and heavy regulation may help explain why big banks are leaving the country's richest states for ones that will not tax them. 
+While not central to @fig-state-bank-deposits, we noted a rapid deposit growth in 2020 due to various stimulus efforts. It is important to notice the difference in the y-axis between the two columns. The left column features the three largest states by GDP, while the right features the three states we found to be most notable [@bureau_of_economic_analysis_gdp_2023]. Namely, these states house the four largest banks by total deposits. We can easily detect the differences between states. However, in the next section, we discuss the overall structure of the market and the relative significance of the top banks in the system.
+
+
 
 
 
