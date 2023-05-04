@@ -22,6 +22,8 @@ library(tidyverse)
 library(ggplot2)
 library(tidyr)
 library(htmlwidgets)
+options(warn = - 1)
+library(withr)
 # lubridate, zoo, xts
 ```
 
@@ -68,17 +70,44 @@ df$BKCLASS <- replace(df$BKCLASS, df$BKCLASS=="SL", "State Stock Savings & Loans
 df$BKCLASS <- replace(df$BKCLASS, df$BKCLASS=="OI", "Other Insured Institutions")
 
 df_agg <- df %>% group_by(date, BKCLASS) %>% summarise(total_deposits = sum(DEPDOM)) # aggregate for different bank classes
+
+colnames(df_agg)[1] <- 'Date'
+colnames(df_agg)[2] <- 'Bank Class'
+colnames(df_agg)[3] <- 'Total Deposits'
 ```
 
 ```{r}
+df_agg$`Total Deposits` <- df_agg$`Total Deposits` * 1000
+```
+
+```{r}
+options(scipen=999)
 #g <- ggplot(df_agg, aes(date, total_deposits))
 #p <- g + geom_bar(aes(fill = BKCLASS))
-a <- ggplot(df_agg, aes(x = date)) + geom_bar(aes(y = total_deposits, fill = BKCLASS), stat = 'identity') + 
-  ylab("Total Deposits") + 
+a <- ggplot(df_agg, aes(x = `Date`)) + geom_bar(aes(y = `Total Deposits`, fill = `Bank Class`), stat = 'identity') + 
+  ylab("Total Deposits (USD)") + 
   xlab("Date") +
   theme_bw() +
-  scale_fill_discrete(name = "Bank Class")
-a <- ggplotly(a)
+  scale_fill_discrete(name = "Bank Class") + 
+  scale_y_continuous(labels = function(x) paste0(format(x/1e12, scientific = FALSE), "T"))
+
+  #scale_y_continuous(labels = function(x) paste0(x/1e12, "T"))
+
+#a <- ggplotly(a)
+#z <- subplot(
+#  with_options(list(digits = 1), ggplotly(a)),
+#  with_options(list(digits = 6, scipen = 20), ggplotly(a))
+#)
+
+
+a <- ggplotly(a, tooltip = c("Date", "Total Deposits", "Bank Class")) %>%
+  layout(hoverlabel = list(bgcolor = "white", font = list(family = "arial", size = 12)),
+         hovertemplate = paste(
+           "Date: %{x}<br> <br>",
+           "%{x} <br>",
+           "Total Deposits (USD): %{y:.20f}"
+         )
+  )
 
 a
 saveWidget(a, file = "../../website/plots/timeseries/plot_1.html")
@@ -108,13 +137,31 @@ filtered_desc <- filtered %>% # for 2022
 ```
 
 ```{r}
+filtered_desc$mean_assets <- filtered_desc$mean_assets * 1000
+```
+
+```{r}
 x <- 10
 
 sliced <- filtered_desc %>% # create sliced df for top 10 banks
   slice(1:x)
 
+sliced <- filtered %>%
+  arrange(desc(mean_assets))
+```
 
-b <- ggplot(sliced, aes(x = NAME, y = mean_assets)) +
+```{r}
+colnames(sliced)[1] <- 'Year'
+colnames(sliced)[2] <- 'Name'
+colnames(sliced)[3] <- 'MeanAssets'
+
+sliced$Name[1:10] <- c("JP Morgan", "Bank of America", "Citibank", "Wells Fargo", "US Bank", "PNC", "Truist", "Goldman Sachs", "Capital One", "TD")
+
+```
+
+```{r}
+
+b <- ggplot(sliced, aes(x = Name, y = MeanAssets)) +
   geom_bar(stat = "identity") +
   xlab("Bank Name") +
   ylab("Mean Assets") +
