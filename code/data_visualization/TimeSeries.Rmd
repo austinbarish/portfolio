@@ -24,7 +24,9 @@ library(tidyr)
 library(htmlwidgets)
 options(warn = - 1)
 library(withr)
+library(scales)
 # lubridate, zoo, xts
+options(scipen=999)
 ```
 
 ```{r}
@@ -73,18 +75,18 @@ df_agg <- df %>% group_by(date, BKCLASS) %>% summarise(total_deposits = sum(DEPD
 
 colnames(df_agg)[1] <- 'Date'
 colnames(df_agg)[2] <- 'Bank Class'
-colnames(df_agg)[3] <- 'Total Deposits'
+colnames(df_agg)[3] <- 'TotalDeposits'
 ```
 
 ```{r}
-df_agg$`Total Deposits` <- df_agg$`Total Deposits` * 1000
+df_agg$TotalDeposits <- df_agg$TotalDeposits * 1000
+df_agg$`Total Deposits` <- dollar_format()(df_agg$TotalDeposits)
 ```
 
 ```{r}
-options(scipen=999)
 #g <- ggplot(df_agg, aes(date, total_deposits))
 #p <- g + geom_bar(aes(fill = BKCLASS))
-a <- ggplot(df_agg, aes(x = `Date`)) + geom_bar(aes(y = `Total Deposits`, fill = `Bank Class`), stat = 'identity') + 
+a <- ggplot(df_agg, aes(x = `Date`)) + geom_bar(aes(y = TotalDeposits, fill = `Bank Class`, text = paste("Date: ", Date, "<br>Total Deposits: ", `Total Deposits`, "<br> Bank Class: ", `Bank Class`)), stat = 'identity') + 
   ylab("Total Deposits (USD)") + 
   xlab("Date") +
   theme_bw() +
@@ -100,7 +102,7 @@ a <- ggplot(df_agg, aes(x = `Date`)) + geom_bar(aes(y = `Total Deposits`, fill =
 #)
 
 
-a <- ggplotly(a, tooltip = c("Date", "Total Deposits", "Bank Class")) %>%
+a <- ggplotly(a, tooltip = c("text")) %>%
   layout(hoverlabel = list(bgcolor = "white", font = list(family = "arial", size = 12)),
          hovertemplate = paste(
            "Date: %{x}<br> <br>",
@@ -148,65 +150,108 @@ sliced <- filtered_desc %>% # create sliced df for top 10 banks
 
 sliced <- filtered %>%
   arrange(desc(mean_assets))
-```
 
-```{r}
 colnames(sliced)[1] <- 'Year'
 colnames(sliced)[2] <- 'Name'
 colnames(sliced)[3] <- 'MeanAssets'
 
 sliced$Name[1:10] <- c("JP Morgan", "Bank of America", "Citibank", "Wells Fargo", "US Bank", "PNC", "Truist", "Goldman Sachs", "Capital One", "TD")
 
+sliced <- head(sliced,10)
+```
+
+
+```{r}
+sliced <- sliced %>%
+  mutate(`Mean Assets` = paste0("$", format(as.character(MeanAssets), big.mark = ",", decimal.mark = ".")))
+
+sliced$`Mean Assets`[1] <- "$3,342,013,000"
+sliced$`Mean Assets`[2] <- "$2,445,012,750"
+sliced$`Mean Assets`[3] <- "$1,729,885,500"
+sliced$`Mean Assets`[4] <- "$1,726,695,000"
+sliced$`Mean Assets`[5] <- "$584,035,798"
+sliced$`Mean Assets`[6] <- "$543,735,276"
+sliced$`Mean Assets`[7] <- "$535,884,500"
+sliced$`Mean Assets`[8] <- "$494,355,250"
+sliced$`Mean Assets`[9] <- "$404,712,304"
+sliced$`Mean Assets`[10] <- "$400,928,240"
+
+sliced$MeanAssets <- sliced$MeanAssets * 1000
+
+sliced$`Mean Assets` <- dollar_format()(sliced$MeanAssets)
+```
+
+```{r}
+range(sliced$`Mean Assets`)
+```
+```{r}
+typeof(sliced$`Mean Assets`)
 ```
 
 ```{r}
 
-b <- ggplot(sliced, aes(x = Name, y = MeanAssets)) +
-  geom_bar(stat = "identity") +
+
+# b <- ggplot(sliced, aes(x = Name, y = MeanAssets)) +
+#   geom_bar(stat = "identity") +
+#   xlab("Bank Name") +
+#   ylab("Mean Assets") +
+#   labs(
+#     title = "",
+#     subtitle = "",
+#     caption = "Source: https://banks.data.fdic.gov/docs/"
+#   ) + 
+#   scale_y_continuous(labels = function(x) paste0(format(x/1e12, scientific = FALSE), "T")) +
+#   theme_classic() +
+#   #scale_y_discrete(limits = rev(levels(sliced_reorder$category))) + 
+#   geom_col(fill = "#008001") + 
+#   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+# b <- b + scale_x_discrete(limits = fct_reorder(sliced$Name, sliced$MeanAssets, .desc = TRUE))
+# 
+# b <- ggplotly(b)
+# b %>% add_trace(hoverinfo='text')
+b <- ggplot(sliced, aes(x = Name, y = MeanAssets, text = paste("Bank Name: ", Name, "<br>Mean Assets: ", `Mean Assets`)))
+b <- b + geom_bar(stat = "identity", fill = "#008001") +
   xlab("Bank Name") +
-  ylab("Mean Assets") +
-  labs(
-    title = "",
-    subtitle = "",
-    caption = "Source: https://banks.data.fdic.gov/docs/"
-  ) + 
+  ylab("Mean Assets (USD)") +
+  scale_y_continuous(labels = function(x) paste0(format(x/1e12, scientific = FALSE), "T")) +
   theme_classic() +
-  geom_col(fill = "#008001") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-b <- ggplotly(b) %>%
-  layout(title = list(text = paste0('',
-                                    '<br>',
-                                    '<sup>',
-                                    '',
-                                    '</sup>')),
-         annotations = 
- list(x = 1, y = -0.8, text = "Source: https://banks.data.fdic.gov/docs/", 
-      showarrow = F, xref='paper', yref='paper', 
-      xanchor='right', yanchor='auto', xshift=0, yshift=0,
-      font=list(size=8, color="black"))
- )
+b <- b + scale_x_discrete(limits = fct_reorder(sliced$Name, sliced$MeanAssets, .desc = TRUE))
+
+b <- ggplotly(b, tooltip = "text")
 b
 saveWidget(b, file = "../../website/plots/timeseries/plot_2.html")
 ```
+
 
 The US is home to some of the largest and most popular commercial banks in the world. These banks offer a wide array of services to individuals and businesses. The banks we're most familiar with are the ones that are prevalent not only all over the country, but all over the world as well. These multinationals field a behemoth of assets, and dominate the entire industry. In the US, we see that there are 4 main banks which dominate the rest of the top 10. These banks are JP Morgan Chase, Bank of America, Wells Fargo, and Citibank. The stark disparity in these top 4 is noticeable by examining how Wells Fargo, the 4th largest bank in the US by assets, holds \$1.73B, while US Bank, the 5th largest bank, only holds \$584M, which is about 3 times less then that of US Bank. This resembles a skew in the distribution of assets held by the top 10 commercial banks in the US, with the top 4 banks holding the majority of the assets.
 
 ```{r}
 # create factor variable asset class
 filtered_desc$asset_class <- cut(filtered_desc$mean_assets,
-                                 breaks = c(-Inf, 100000, 1000000, 10000000, Inf),
-                                 labels = c("<100,000", "100,000-1,000,000", "1,000,000-10,000,000", "10,000,000-4,000,000,000"))
+                                 breaks = c(-Inf, 100000000, 1000000000, 10000000000, Inf),
+                                 labels = c("<100M", "100M-1B", "1B-10B", "10B-4T"))
 
 unique(filtered_desc$asset_class)
+
+filtered_desc$Count <- ifelse(filtered_desc$asset_class == "<100M", 564,
+                              ifelse(filtered_desc$asset_class == "100M-1B", 2595,
+                                     ifelse(filtered_desc$asset_class == "1B-10B", 761,
+                                            ifelse(filtered_desc$asset_class == "10B-4T", 151, NA))))
+
+stats <- data.frame(
+  asset_class = c("<100M", "100M-1B", "1B-10B", "10B-4T"),
+  count = c(564, 2595, 761, 151)
+)
 ```
 
 ```{r}
 percent = c('15.7%', '62.4%', '18.3%', '3.6%')
 
-filtered_desc$percent <- ifelse(filtered_desc$asset_class == "<100,000", "15.7%", 
-                        ifelse(filtered_desc$asset_class == "100,000-1,000,000", "62.4%",
-                               ifelse(filtered_desc$asset_class == "1,000,000-10,000,000", "18.3%",
+filtered_desc$percent <- ifelse(filtered_desc$asset_class == "<100M", "15.7%", 
+                        ifelse(filtered_desc$asset_class == "100M-1B", "62.4%",
+                               ifelse(filtered_desc$asset_class == "1B-10B", "18.3%",
                                       "3.6%")))
 
 c <- plot_ly(
@@ -219,6 +264,7 @@ c <- plot_ly(
   text = list('15.7%', '62.4%', '18.3%', '3.6%'),
   #hoverinfo = "Asset Class, Count",
   hovertext = "Asset Class, Count",
+  #hovertext = paste("Asset Class: ", filtered_desc$asset_class, "<br>Count: ", filtered_desc$Count),
   orientation = "v",
   marker = list(color = "green")) |>
   layout(title = list(text = "",
@@ -296,7 +342,7 @@ merged_decades <- rbind(filtered_1992, filtered_2002, filtered_2012, filtered_de
 
 merged_decades <- merged_decades[, -c(5,6)]
 
-merged_decades$asset_group <- as.factor(merged_decades$asset_group) # make asseet group factor type
+merged_decades$asset_group <- as.factor(merged_decades$asset_group) # make asset group factor type
 
 decades_summarised <- merged_decades %>% # summarise
   group_by(year, asset_group) %>%
@@ -309,13 +355,13 @@ names(decades_wide)[names(decades_wide) == "next-125"] <- "next125"
 ```
 
 ```{r}
-decades_wide$top5 = decades_wide$top5 * 1000
-decades_wide$next125 = decades_wide$next125 * 1000
-decades_wide$others = decades_wide$others * 1000
+decades_wide[1:3, 2:4] <- decades_wide[1:3, 2:4] * 1000
 ```
 
 ```{r}
-ap <- decades_wide %>% plot_ly() #text = list('15.7%'))
+ap <- decades_wide %>% plot_ly(
+    hovertext = "Year, Total Assets"
+) #text = list('15.7%'))
 ap <- ap %>%
   add_trace(x = decades_wide$year, y = ~top5, type = 'bar', name = 'Top 5', marker = list(color = '#118C4F'))
 
@@ -326,6 +372,7 @@ ap <- ap %>%
 #hovertemplate = paste('<i>Price</i>: $%{top5:.2f}',
 #                        '<br><b>X</b>: %year<br>',
 #                        '<b>%{text}</b>'))
+
 
 f <- list(
   family = "Arial",

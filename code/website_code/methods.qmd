@@ -39,10 +39,10 @@ This plot went through a lot of variations. It began by included every state's t
 
 After the poster fair, we decided to standardize the y-axes of all of the plots so that the differences in size between each state is more obvious. Now, the user is not asked to recognize the different y-axis maxes and instead they can easily see that, for example, California is half of the size of North Carolina. It also helps to conceptualize the size of the banks in the right column and see just how large JP Morgan, for example, is.
 
-### Figure 5: temporal trend of the total domestic deposits in the US for the past 3 decades
+### Figure 5: Temporal trend of the total domestic deposits in the US for the past 3 decades
 [View plot](index.qmd#sec-temporal-assets)
 
-The data for this plot includes the total demostic deposits held by US banks for the past 3 decades, and is scraped using the FDIC API. Using 'Ggplot' in RStudio, the plot is formed by placing stacked bars, representing total assets for the year in the US. The data preparation included aggregating the datagrame and grouping the column names by the current year, in order to calculate the total assets. Next, the data is also categorised into the different bank classes, including, Federal Reserve Members, Savings Banks, Mutual Savings Banks, etc. This is done so that the viewer is able to see the temporal trends not only in the total assets in the country for a given year, but to also see the trends within the different groups. 
+The data for this plot includes the total domestic deposits held by US banks for the past 3 decades, and is scraped using the FDIC API. Using `ggplot` in RStudio, the plot is formed by placing stacked bars, representing total assets for the year in the US. The data preparation included aggregating the dataframe and grouping the column names by the current year, in order to calculate the total assets. Next, the data is also categorised into the different bank classes, including Federal Reserve Members, Savings Banks, Mutual Savings Banks, etc. This is done so that the viewer is able to see the temporal trends not only in the total assets in the country for a given year, but to also see the trends within the different groups. 
 
 ### Figure 6: Disparity of the top 4 banks
 [View plot](index.qmd#sec-top-banks)

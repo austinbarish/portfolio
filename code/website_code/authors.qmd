@@ -15,8 +15,8 @@ I am in the 5-year combined/accelerated program at DSAN, meaning that I am curre
 ::: {layout-ncol=2}
 
 ### Raunak Advani
-![](../img/authors/raunak_advani.jpeg)
-I’m currently a senior at Georgetown University completing my undergraduate degree in Economics with a minor in Psychology. I’m currently enrolled in Georgetown’s Accelerated BA/MS DSAN program, which means that I will complete both my BA in Economics and MS in DSAN in 5 years. Originally from Mumbai, India, I first come to the United States to attend boarding school in Connecticut after finishing my 10th grade back home. ra1113@georgetown.edu
+![](../img/authors/raunak_advani.jpg)
+I’m currently a senior at Georgetown University completing my undergraduate degree in Economics with a minor in Psychology. I’m currently enrolled in Georgetown’s Accelerated BA/MS DSAN program, which means that I will complete both my BA in Economics and MS in DSAN in 5 years. I'm interested in data analytics, economics research, and machine learning, and their potential applications in the corporate world. ra1113@georgetown.edu
 
 ### Victor De Lima
 ![](../img/authors/victor_delima.jpeg)

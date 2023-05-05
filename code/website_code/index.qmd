@@ -165,60 +165,61 @@ While not central to @fig-state-bank-deposits, we noted a rapid deposit growth i
 ```{python}
 #| echo: false
 #| label: fig-temporal-assets
-#| fig-cap: "A stacked bar plot"
+#| fig-cap: "shows the temporal trends in domestic deposits held by different asset classes, for the past 3 decades"
 
 width_percentage = "100%"
 IFrame(src='../website/plots/timeseries/plot_1.html', width=width_percentage, height=600)
 
 ```
 
-The above plot provides a temporal trend of the total domestic deposits in the US for the past 3 decades. Looking at this particular plot, we see a staggering uptick in bank deposits over the past 3 decades. Breaking down the assets by the bank class, we also see that each of the bank classes also have their own trends in terms of growth over the years. Firstly, looking at National Member Banks, we see that the majority of deposits belong to them. These banks are ones that are members of the Federal Reserve Bank, the central bank of the US. However, from the temporal trends, we see that National Member Banks did not always hold the majority of assets in the country. The only time there was an apparent upshot in the assets was around the 2000 mark, when the National Member Banks got a hold of a lot more assets and skyrocketed ahead of the other types of banks. We also see that Stock & Mutual Savings Banks have the least deposited in them, as they offer the most risk.
+After exploring the states with the most deposits in the US, we switch gears to explore the trend of the total domestic deposits in the entire country for the past 3 decades, facetted by the different bank classes. Looking at this particular plot, we see a staggering uptick in bank deposits over the past 3 decades. Breaking down the assets by the bank class, we also see that each of the bank classes also have their own trends in terms of growth over the years. Firstly, looking at National Member Banks, we see that the majority of deposits belong to them. These banks are ones that are members of the Federal Reserve Bank, the central bank of the US. However, from the temporal trends, we see that National Member Banks did not always hold the majority of assets in the country. The only time there was an apparent upshot in the assets was around the 2000 mark, when the National Member Banks got a hold of a lot more assets and skyrocketed ahead of the other types of banks. We also see that Stock & Mutual Savings Banks have the least amount deposited in them, as they offer the most risk.
 
-#### **Assets Held by the Top 4 Banks in 2022 in Comparison to All Others** {#sec-top-banks .unnumbered}
+
+#### **Assets Held by the Top 10 Banks in 2022 in Comparison to All Others** {#sec-top-banks .unnumbered}
 
 ```{python}
 #| echo: false
 #| label: fig-top-banks
-#| fig-cap: "A bar plot"
+#| fig-cap: "shows the 10 largest banks in the US for Q42022 by the amount of assets held"
 
 width_percentage = "100%"
 IFrame(src='../website/plots/timeseries/plot_2.html', width=width_percentage, height=600)
 
 ```
 
-The US is home to some of the largest and most popular commercial banks in the world. These banks offer a wide array of services to individuals and businesses. The banks we're most familiar with are the ones that are prevalent not only all over the country, but all over the world as well. These multinationals field a behemoth of assets, and dominate the entire industry. In the US, we see that there are 4 main banks which dominate the rest of the top 10. These banks are JP Morgan Chase, Bank of America, Wells Fargo, and Citibank. The stark desparity in these top 4 is noticeable by examining how Wells Fargo, the 4th largest bank in the US by assets, holds \$1.73B, while US Bank, the 5th largest bank, only holds \$584M, which is about 3 times less then that of US Bank. This resembles a skew in the distribution of assets held by the top 10 commercial banks in the US, with the top 4 banks holding the majority of the assets.
+The US is home to some of the largest and most popular commercial banks in the world. These banks offer a wide array of services to individuals and businesses. The banks we’re most familiar with are the ones that are prevalent not only all over the country, but all over the world as well. These multinationals field a behemoth of assets, and dominate the entire industry. In the US, we see that there are 4 main banks which dominate the rest of the top 10. These banks are JP Morgan, Bank of America, Wells Fargo, and Citibank. The stark disparity in these top 4 is noticeable by examining how Wells Fargo, the 4th largest bank in the US by assets, holds \$1.73B, while US Bank, the 5th largest bank, only holds \$584M, which is about 3 times less than that of US Bank. This resembles a skew in the distribution of assets held by the top 10 commercial banks in the US, with the top 4 banks holding the majority of the assets. These discoveries follow on to looking at the overall distribution of assets by banks.
 
-#### **The Distribution of Commercial Banks in the US by the Assets in Possession for 2022Q4** {#sec-top-commercial .unnumbered}
+#### **The Distribution of Commercial Banks in the US by the Assets in Possession for 2022** {#sec-top-commercial .unnumbered}
 
 
 ```{python}
 #| echo: false
 #| label: fig-top-commercial
-#| fig-cap: "A bar plot"
+#| fig-cap: "shows the distribution of banks in the US for Q42022, grouped by the amount of assets held at the time"
 
 width_percentage = "100%"
 IFrame(src='../website/plots/timeseries/plot_3.html', width=width_percentage, height=600)
 
 ```
 
-Looking at the distribution of commercial banks in the US by the assets in possession, we get a better idea of what the entire distribution of assets is across the country. Our knowledge is mostly limited to the big brand names of banks: JP Morgan Chase, Wells Fargo, Bank of America, etc. These banks are the minority in the larger picture, as their access to capital and resources is only enjoyed by 3.6% of banks in the US. The majority of these banks only hold between \$100,000 and \$1M, taking up 62.4% of the entire distribution. Surprisingly, we see that a substantial 15.7% of banks are extremely small, holding less than \$100,000 in assets in 2022. Only a small fraction of these banks are in fact extremely large, but as we will see in the next plot, they hold immense amounts of assets.
+Looking at the distribution of commercial banks in the US by the assets in possession, we get a better idea of what the entire distribution of assets is across the country. Our knowledge is mostly limited to the big brand names of banks: JP Morgan, Wells Fargo, Bank of America, etc. These banks are the minority in the larger picture, as their access to capital and resources is only enjoyed by 3.6% of banks in the US. The majority of these banks only hold between \$100M and \$1B, taking up 62.4% of the entire distribution. Surprisingly, we see that a substantial 15.7% of banks are extremely small, holding less than \$100M in assets in Q42022. Only a small fraction of these banks are in fact extremely large, which might indicate a healthy banking ecosystem. However, as we will see in the next plot, the few top banks hold an immense amounts of assets.
+
 
 #### **Breakdown of Top 5 Banks, the Next 125 Banks, and All Other Banks** {#sec-grouped-top-banks .unnumbered}
 
 ```{python}
 #| echo: false
 #| label: fig-grouped-top-banks
-#| fig-cap: "A grouped bar plot which shows the temporal trend of the distribution of assets"
+#| fig-cap: "shows the temporal trend of the distribution of assets held by different asset classes"
 
 width_percentage = "100%"
 IFrame(src='../website/plots/timeseries/plot_4.html', width=width_percentage, height=600)
 
 ```
 
-This plot breaks down the banks in the banks in the US by dividing them into groups: the top 5 banks, the next 125 banks, and all other banks. The total assets held by these banks is measured over the past 30 years, and this is was determines the groups and rankings.
+This plot breaks down U.S. banks by placing them into one of three groups based on the number of assets they held. The total assets these banks hold determine the groups and rankings for each year over the past three decades. Examining the plot, we see that in the most recent decade, the top 5 banks in the U.S. hold the same amount in assets as the subsequent 125 banks and have about three times as many assets as every other bank in the country, amounting to 4,031 banks. We observe a strong skew in the distribution of assets across the country, and this shows how concentrated the banking industry is right at the top. We also notice how a few banks, including Bank of America, Citibank, and JP Morgan, held the most assets during the period examined.
 
-Looking at the most recent decade, we see that the top 5 banks in the US hold the same amount in assets as the next 125 banks in the US, and have about 3 times as many assets as every other bank in the country, which amounts to a total of 4031 banks. We see a large skew in the distribution of assets across the country, and this shows how concentrated the banking industry is right at the top. Furthermore, looking at the temporal trends, we also notice that the top 5 banks have not always dominated all other banks, and the distribution has progressively gotten more and more concentrated at the top.
-
+Furthermore, looking at temporal trends, we also notice that the top 5 banks in the U.S. have not always wholly dominated all the other banks; this distribution has progressively gotten more and more concentrated at the top. For example, for 1992 and 2002, we noticed a far smaller concentration level in the industry. However, in 2022, we see a complete change, as the top 5 banks hold more assets than the other groups. These developments may cause concern for the health of competition in the industry, and next, we will evaluate the overall health of the system.
 
 
 ## The Health Of The System {#health-of-the-system}
@@ -264,7 +265,7 @@ IFrame(src='../website/plots/eqr/plot2_double.html', width=width_percentage, hei
 
 ```
 
-We see based on the line graph above that, for the most part, the 4 major banks maintain a relatively consistent equity capital ratio. After 2004, which is the first quarter that JP Morgan Chase Bank NA is present in this data, we notice that none of the banks ever reach an equity capital ratio higher than 13, and for the most part, they have all reached a similar value between 8 and 10 since 2020. The only time any of these banks record an equity capital ratio that is well above the cumulative average is prior to the turn of the 20th century, when Bank of America NA records several quarters with an equity capital ratio over 20. Comparing the four largest banks to the overall average for all FDIC-insured banks present in the data, we see that, for the most part, the four largest banks are either identical to, or slightly below, the overall average equity capital ratio over the past 2 decades. This is due to the differing immediate needs between large national banks, such as Wells Fargo and Bank of America, and smaller, more localized banks. There are a few reasons for the diffence in focus. The first is that larger banks often have greater access to capital markets, and are thus less reliant on using their own capital to fund everyday business operations. Therefore, they do not necessarily need to maintain a high equity capital ratio. The next reason is because smaller banks often take a more conservative stance on risk management, and since equity capital ratio is a way to quantify a bank's risk management, it can in part explain why a smaller bank's equity capital ratio is higher, on average. Finally, the difference can be explained by differences in regulatory laws and the market/customer base that a bank is typically functioning in. Nevertheless, the FDIC does set regulations for a minimum equity capital ratio, so even the largest banks in the industry need to ensure that they have a sufficient equity capital ratio and are thus in a stronger financial position in the event of an economic downturn. While larger banks have more resources than smaller banks and thus have more methods of improving their financial position to respond to potential problems, they still must maintain sufficient equity.
+We see based on the line graph above that, for the most part, the 4 major banks maintain a relatively consistent equity capital ratio. After 2004, which is the first quarter that JP Morgan Chase Bank NA is present in this data, we notice that none of the banks ever reach an equity capital ratio higher than 13, and for the most part, they have all reached a similar value between 8 and 10 since 2020. The only time any of these banks record an equity capital ratio that is well above the cumulative average is prior to the turn of the 20th century, when Bank of America NA records several quarters with an equity capital ratio over 20. Comparing the four largest banks to the overall average for all FDIC-insured banks present in the data, we see that, for the most part, the four largest banks are either identical to, or slightly below, the overall average equity capital ratio over the past 2 decades. This is due to the differing immediate needs between large national banks, such as Wells Fargo and Bank of America, and smaller, more localized banks. There are a few reasons for the difference in focus. The first is that larger banks often have greater access to capital markets, and are thus less reliant on using their own capital to fund everyday business operations. Therefore, they do not necessarily need to maintain a high equity capital ratio. The next reason is because smaller banks often take a more conservative stance on risk management, and since equity capital ratio is a way to quantify a bank's risk management, it can in part explain why a smaller bank's equity capital ratio is higher, on average. Finally, the difference can be explained by differences in regulatory laws and the market/customer base that a bank is typically functioning in. Nevertheless, the FDIC does set regulations for a minimum equity capital ratio, so even the largest banks in the industry need to ensure that they have a sufficient equity capital ratio and are thus in a stronger financial position in the event of an economic downturn. While larger banks have more resources than smaller banks and thus have more methods of improving their financial position to respond to potential problems, they still must maintain sufficient equity.
 
 The main idea is to see that there is not a major distinction between the four largest banks and the rest of the FDIC-insured banks in terms of their quarterly equity capital ratio.
 
