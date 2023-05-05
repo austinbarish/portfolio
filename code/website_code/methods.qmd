@@ -47,17 +47,17 @@ The data for this plot includes the total domestic deposits held by US banks for
 ### Figure 6: Disparity of the top 4 banks
 [View plot](index.qmd#sec-top-banks)
 
-The previous plot yields a result about the growth in assets over the years, but, in order to better understand the reason for this, the data frame is then aggregated by mean assets for the bank name and the year 2022, and then arranged in descending order to view the largest banks in the US for the most recent year. The plot is a bar plot, with the mean assets for the year (calculated over quarterly data) on the y axis and the bank name on the x axis.
+The previous plot yields a result about the growth in assets over the years, but, in order to better understand the reason for this, the data frame is then aggregated by mean assets for the bank name and the year 2022, and then arranged in descending order to view the largest banks in the US for the most recent year, to create a dataframe called `filtered_desc`. The plot is a bar plot, with the mean assets for the year (calculated over quarterly data) on the y axis and the bank name on the x axis.
 
 ### Figure 7: The distribution of commercial banks in the US by the assets in possession
 [View plot](index.qmd#sec-top-commercial)
 
-Now, from the previous plot, top few banks are the ones that dominate the entire industry, so we adjust the data to take a more hollistic approach towards viewing the banks, and then create a categorical variable for the asset class for the year 2022, divided by the mean US Dollars in assets. This variable has 4 categories. The number of banks in each category is plotted on the y axis with bars, and the x axis represents the bank names.
+Now, from the previous plot, top few banks are the ones that dominate the entire industry, so we adjust the data to take a more holistic approach towards viewing the banks, and then create a categorical variable for the asset class for the year 2022, divided by the mean US Dollars in assets. This variable has 4 categories. The number of banks in each category is plotted on the y axis with bars, and the x axis represents the bank names.
 
 ### Figure 8: Breakdown of top 5 banks, the next 125 banks, and all other banks
 [View plot](index.qmd#sec-grouped-top-banks)
 
-Only a small percentage of the banks in the previous plot belonged to the largest asset class with assets ranging from 10 million to 4 billion dollars, so we next decided to compare the top 5 banks, the next 125 banks, and all other banks in terms of their total assets, and also observe a temporal trend. The data is then aggregated again: creating nother categorical variable for the asset group, and assigning them to banks based on the descending of their assets for a given year. The data is thereby prepared in such a way that the viewer can observe the disparity in how the top banks completely dominate the industry, and also view how this has not always been the case. 
+Only a small percentage of the banks in the previous plot belonged to the largest asset class with assets ranging from 10 million to 4 billion dollars, so we next decided to compare the top 5 banks, the next 125 banks, and all other banks in terms of their total assets, and also observe a temporal trend. The data is then aggregated again: creating another categorical variable for the asset group, and assigning them to banks based on the descending of their assets for a given year. The data is thereby prepared in such a way that the viewer can observe the disparity in how the top banks completely dominate the industry, and also view how this has not always been the case. 
 
 
 ### Figure 9: Top and Bottom 20 Histogram
