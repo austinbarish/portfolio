@@ -1,13 +1,11 @@
 ---
-title: "Austin Barish"
 format:
   html:
     embed-resources: true
 ---
+## About Me
 
 ![](./images/headshot.JPG){fig-alt="Me"}
-
-## About Me
 
 Hi! My name is Austin. I am an aspiring Data Scientist currently pursuing a MS in Data Science and Analytics from Georgetown University. I am a member of the accelerated DSAN BA-MS program, meaning I began my graduate studies during my senior year of my undergraduate education. I graduated from Georgetown's College of Arts and Sciences with a Bachelor of the Arts in Economics and Philosophy in May, 2023. With the accelerated program, I am on track to graduate with my MS in May, 2024. 
 

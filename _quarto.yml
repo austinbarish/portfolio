@@ -10,6 +10,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - text: Data Visualizations Final Project
+        file: ./spring2023-project-team-4/website/index.html
 
 format:
   html:
