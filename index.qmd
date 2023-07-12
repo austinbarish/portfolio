@@ -1,5 +1,8 @@
 ---
 title: "Austin Barish"
+format:
+  html:
+    embed-resources: true
 ---
 
 ![](./images/headshot.JPG){fig-alt="Me"}
@@ -12,33 +15,33 @@ Hi! My name is Austin. I am an aspiring Data Scientist currently pursuing a MS i
 
 Outside of school, I am a huge sports fan. Namely, I am a fan of the Denver Broncos, Georgetown Hoyas, and your 2023 NBA Champion Denver Nuggets. I have also recently picked up an interest in soccer; you can often find me in the stands of Audi Field supporting DC United. Being from Colorado, I also love to ski and exercise. Finally, I am a massive foodie and am always looking for new restaurant recommendations.
 
-![Me and Nuggets' GM Calvin Booth; he is 6'11" I promise)](./images/nuggets.jpeg){fig-align="center"}
+![Me and Nuggets' GM Calvin Booth; he is 6'11" I promise](./images/nuggets.jpeg){fig-align="center"}
 
 ## Languages and Tools
-::: {layout-ncol=10}
-![Python](./images/languages-and-tools/python.png){width=100}
+::: {layout-ncol=5, layout-nrow=2}
+![Python](./images/languages-and-tools/python.svg.png){width=100, height=100}
 
-![R](./images/languages-and-tools/R_logo.svg.png){width=100}
+![R](./images/languages-and-tools/rstudio.png){width=100, height=100}
 
-![SQL](./images/languages-and-tools/sql.png){width=100}
+![SQL](./images/languages-and-tools/sql.png){width=100, height=100}
 
-![HTML](./images/languages-and-tools/HTML5.svg.png){width=100}
+![HTML](./images/languages-and-tools/HTML5.svg.png){width=100, height=100}
 
-![Tableau](./images/languages-and-tools/tableau.png){width=100}
+![Tableau](./images/languages-and-tools/tableau.svg.png){width=100, height=100}
 
-![Pandas](./images/languages-and-tools/pandas.svg.png){width=100}
+![Pandas](./images/languages-and-tools/pandas.svg.png){width=100, height=100}
 
-![Numpy](./images/languages-and-tools/numpy.png){width=100}
+![Numpy](./images/languages-and-tools/numpy.png){width=100, height=100}
 
-![NetworkX](./images/languages-and-tools/networkx.png){width=100}
+![NetworkX](./images/languages-and-tools/networkx.png){width=100, height=100}
 
-![OpenCV](./images/languages-and-tools/opencv.png){width=100}
+![OpenCV](./images/languages-and-tools/opencv.png){width=100, height=100}
 
-![Scikit-Learn](./images/languages-and-tools/scikit-learn.svg.png){width=100}
+![Scikit-Learn](./images/languages-and-tools/scikit.svg.png){width=100, height=100}
 :::
 
 ## Contacts and Websites
 * Github: <https://github.com/austinbarish>
 * LinkedIn: <https://www.linkedin.com/in/austin-barish>
 * Email: <abb110@georgetown.edu>
-* Phone: +1 (720) 666-3689
+* Phone: (720) 666-3689
