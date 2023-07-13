@@ -1,5 +1,6 @@
 .DS_Store
 data/quarterly_banks_by_state.csv
+data/all_financials.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
