@@ -4,6 +4,10 @@ a:link {
     color: blue;
 }
 
+a.pointer {
+    cursor: pointer;
+}
+
 /* visited link */
 a:visited {
     color: purple;
