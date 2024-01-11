@@ -19,11 +19,10 @@ website:
           - text: NBA Player Guesser
             href: https://austinbarish.shinyapps.io/nba-player-guesser/
           - text: NBA Embedding comparison (Coming Soon)
-        
-      - text: Resume
-        file: ./Resume.pdf
 
     right:
+      - text: Resume
+        file: ./Resume.pdf
       - icon: linkedin
         href: https://www.linkedin.com/in/austin-barish/
         target: _blank
