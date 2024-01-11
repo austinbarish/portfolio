@@ -12,51 +12,14 @@ website:
     left:
       - href: index.qmd
         text: About
-      - text: Big Data
-        href: https://gu-dsan6000.github.io/fall-2023-reddit-project-team-05/
-        target: _blank
-      - text: Advanced NLP
-        menu: 
-          - text: Final Paper
-            file: ./_site/nlp-final-paper.pdf
-          - text: Final Project and Demo
-            href: https://mfgeary.github.io/dsan5800-final-project/
-            target: _blank
-          - text: Final Project Code
-            href: https://github.com/mfgeary/dsan5800-final-project
-            target: _blank
-      - text: Network Analytics
+      - href: coursework.qmd
+        text: Coursework
+      - text: Passion Projects
         menu:
-          - text: Final Paper
-            file: ./ANLY645/645-final-paper.html
-          - text: Final Project Code
-            href: https://github.com/austinbarish/645-final-project
-            target: _blank
-      - text: Computer Vision
-        menu: 
-          - text: Final Paper
-            file: ./ANLY677/final-paper.pdf
-          - text: Final Project Code
-            href: https://github.com/Matenezamani/Yolo
-            target: _blank
-      - text: Data Visualizations
-        menu:
-          - text: Final Project Website
-            file: ./spring2023-project-team-4/website/index.html
-          - text: Final Project Code
-            href: https://github.com/anly503/spring2023-project-team-4/releases/tag/v1.0-final
-            target: _blank
-          - text: Plotly and Altair
-            file: ./503-plotly-altair.html
-          - text: Matplotlib
-            file: ./matplotlib.html
-      - text: Intro to DSAN
-        menu: 
-          - text: Final Project Website
-            file: ./ANLY501/pages/index.html
-          - text: Final Project Code
-            href: https://github.com/anly501/anly-501-project-austinbarish/releases/tag/v1.0
-            target: _blank
+          - text: NBA Player Guesser
+            href: https://austinbarish.shinyapps.io/nba-player-guesser/
+          - text: NBA Embedding comparison (Coming Soon)
+        
       - text: Resume
         file: ./Resume.pdf
 

@@ -1,0 +1,105 @@
+---
+title: Coursework
+format:
+  html:
+    embed-resources: true
+---
+
+## Big Data and Cloud Computing
+
+### Final Project
+
+Each student was given Reddit data (all comments and submissions) from January 2021 to March 2023, roughly 1.5 Terabytes worth of data. There was then a subset of requirements as to what to do with the data but our topic was open ended.
+
+My group focused on how Redditors discuss music, our work can be found [here](https://gu-dsan6000.github.io/fall-2023-reddit-project-team-05/). I primarily focused on the genre based analysis as well as authoring much of our written segments.
+
+### Skills Developed and Tools Used
+
+* Python
+* AWS
+    * Sagemaker
+    * S3 Storage
+    * Lambda
+* Azure
+    * Machine Learning
+    * Blob Storage
+* Apache Spark
+* Pyspark
+* DuckDB
+* Polars
+* Docker
+* Github
+
+## Advanced NLP
+
+### Final Project
+
+Much of this course was focused on understanding the backend mechanics of NLP tools. Our project was then very open ended: to do something interesting with NLP. My group chose to develop of homophone checker, inspire by my common misuse of them in my writing.
+
+The live demo and write-up can both be found on our [final website](https://mfgeary.github.io/dsan5800-final-project/). The code for the project is hosted on [Github](https://github.com/mfgeary/dsan5800-final-project) alongside our final presentation.
+
+### Skills Developed and Tools Used
+
+* Python
+* Huggingface
+* BERT
+* Spacy
+* Multivariable Calculus
+
+## Network Analytics
+
+### Final Project
+
+Similar to my NLP course, our instructions for this project were very open ended. Having worked with Wikipedia's network (each page as a node and each link as an edge) earlier in the semester, I was inspired to examine the [first-link philosophy phenomena](https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy) I had heard about. All of my findings can be found in my [final paper](./ANLY645/645-final-paper.html) and the code used to create my analysis is hosted on [Github](https://github.com/austinbarish/645-final-project).
+
+### Skills Developed and Tools Used
+
+* Python
+* NetworkX
+* Ovito
+* HTML/Webscraping
+
+## Computer Vision
+
+### Final Project
+
+For this course, each group worked on developing a deep learning model capable of detecting the number of birds in images from the Amazon rainforest. The challenge proved more difficult than the class was up to, none of us acquiring high accuracies. My groups final paper is hosted [here](./ANLY677/final-paper.pdf) and the code for this project can be found on [Github](https://github.com/Matenezamani/Yolo)
+
+### Skills Developed and Tools Used
+
+* Python
+* Google Colab
+* OpenCV
+* Pillow
+
+# Advanced Data Visualizations
+
+### Final Project
+
+This class focused on best data visualization practices, culminating in a large group project to demonstrate our work. My group chose to focus on FDIC data to examine where US banking funds are located in hopes of teaching our viewers more about the US Banking System. 
+
+Our website is not publicly hosted but can be found [here](./spring2023-project-team-4/website/index.html) alongside our code on [Github](https://github.com/anly503/spring2023-project-team-4/releases/tag/v1.0-final)
+
+### Skills Developed and Tools Used
+
+* Python
+* R
+* [Matplotlib](./matplotlib.html)
+* [Plotly](./503-plotly-altair.html)
+* [Altair](./503-plotly-altair.html)
+* ggplot
+* D3
+
+## Intro to DSAN
+
+### Final Project
+
+Many of our assignments for this introductory course were worked into our final project, requiring our work to bend and twist to meet new requirements. Therefore, some of the pages may seem disconnected from the projects broader goals. However, I sought to use machine learning tools to project NBA players minutes as either continous variables or broken into categorical variables based on their stats. My final website can be found [here](./ANLY501/pages/index.html). You may notice it was originally meant to serve as a portfolio but my website creation skills have greatly expanded since then. The code can be found on [Github](https://github.com/anly501/anly-501-project-austinbarish/releases/tag/v1.0).
+
+### Skills Used and Tools Developed
+
+* Python
+* R
+* Scikit-Learn
+* Pandas
+* Matplotlib
