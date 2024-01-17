@@ -72,7 +72,7 @@ For this course, each group worked on developing a deep learning model capable o
 * OpenCV
 * Pillow
 
-# Advanced Data Visualizations
+## Advanced Data Visualizations
 
 ### Final Project
 

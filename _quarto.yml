@@ -17,7 +17,7 @@ website:
       - text: Passion Projects
         menu:
           - text: NBA Player Guesser
-            href: https://austinbarish.shinyapps.io/nba-player-guesser/
+            href: https://austinbarish.shinyapps.io/nbaguesser/
           - text: NBA Embedding comparison (Coming Soon)
 
     right:
