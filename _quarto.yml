@@ -18,6 +18,8 @@ website:
         menu:
           - text: NBA Player Guesser
             href: https://austinbarish.shinyapps.io/nbaguesser/
+          - text: DC Restaurant Grid
+            href: https://austinbarish.shinyapps.io/restaurantgrid/
           - text: NBA Embedding comparison (Coming Soon)
 
     right:
