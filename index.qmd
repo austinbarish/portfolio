@@ -7,16 +7,16 @@ format:
 
 ![](./images/headshot.JPG){width=50% fig-alt="Me" fig-align="center"}
 
-Hi! My name is Austin. I am an aspiring Data Scientist currently pursuing a MS in Data Science and Analytics from Georgetown University. I am a member of the accelerated DSAN BA-MS program, meaning I began my graduate studies during my senior year of my undergraduate education. I graduated from Georgetown's College of Arts and Sciences with a Bachelor of Arts in Economics and Philosophy in May 2023. With the accelerated program, I am on track to graduate with my Master of Science in May 2024. 
-
-![](./images/healey.JPG){width=50% fig-align="center"}
-
-Outside of school, I am a huge sports fan. Namely, I am a fan of the Denver Broncos, Georgetown Hoyas, and your 2023 NBA Champion Denver Nuggets. I have also recently picked up an interest in soccer; you can often find me in the stands of Audi Field supporting DC United. Being from Colorado, I also love to ski and exercise. Finally, I am a massive foodie and am always looking for new restaurant recommendations.
+Hi! My name is Austin. I am an Equity Research Associate at [M Science](https://www.mscience.com/) covering Restaurants and AAPL. My primary focus is on DPZ, WEN, QSR, and PZZA. I currently live in the East Village in New York City. There, I spend my free time exploring local restaurants, going to the gym, and watching sports.Namely, I am a fan of the Denver Broncos, Georgetown Hoyas, and your 2023 NBA Champion Denver Nuggets. When I get the chance, I also love to ski.
 
 ![](./images/nuggets.jpeg){width=50% fig-align="center"}
 
+I finished my latest education in May 2024, receiving a Master of Science in Data Science and Analytics from Georgetown University. In my graduate studies, I focused on Deep Learning, Large Language Models/NLP, and Network Analysis. You can read more on my coursework on the [coursework page](./coursework.qmd). I also completed my undergraduate studies at Georgetown, graduating in 2023 with a Bachelor of Arts in Economics and Philosophy. In undergrad, I was a four year member and director of membership for the [Georgetown University Eating Society (GUES)](https://www.gueatingsociety.com/) and [Sports Writer for The Hoya](https://thehoya.com/staff_name/austin-barish/). My sports coverage took me as far as Indianapolis for the 2021 March Madness Tournament. I remain a fan of the Georgetown Hoyas, particularly the Men's basketball team, despite their ongoing struggles.
+
+![](./images/healey.JPG){width=50% fig-align="center"}
+
 ## Languages and Tools
-::: {layout-ncol=5, layout-nrow=4}
+::: {layout-ncol=5, layout-nrow=5}
 ![Python](./images/languages-and-tools/Python_logo_01.svg.png){width=100, height=100}
 
 ![R](./images/languages-and-tools/rstudio.png){width=100, height=100}
@@ -29,7 +29,17 @@ Outside of school, I am a huge sports fan. Namely, I am a fan of the Denver Bron
 
 ![Apache Spark](./images/languages-and-tools/spark.png){width=100, height=100}
 
+![PyTorch](./images/languages-and-tools/pytorch.svg.png){width=100, height=100}
+
+![TorchVision](./images/languages-and-tools/torchvision.png){width=100, height=100}
+
+![Keras](./images/languages-and-tools/keras.png){width=100, height=100}
+
+![TensorFlow](./images/languages-and-tools/tensorflow.png){width=100, height=100}
+
 ![AWS](./images/languages-and-tools/aws.svg.png){width=100, height=100}
+
+![AWS Lambda](./images/languages-and-tools/aws-lambda.png){width=100, height=100}
 
 ![Azure](./images//languages-and-tools/azure.png){width=100, height=100}
 
@@ -78,12 +88,12 @@ Outside of school, I am a huge sports fan. Namely, I am a fan of the Denver Bron
 * Fall 2023: Advanced Natural Language Processing (NLP)
 
 ### Ongoing and Future Courses
-* Spring 2023: Statistical Learning for Data Science and Analytics
-* Spring 2023: NLP with Large Language Models
-* Spring 2023: Neural Networks and Deep Learning
+* Spring 2024: Statistical Learning for Data Science and Analytics
+* Spring 2024: NLP with Large Language Models
+* Spring 2024: Neural Networks and Deep Learning
 
 ## Contacts and Websites
 * Github: <https://github.com/austinbarish>
 * LinkedIn: <https://www.linkedin.com/in/austin-barish>
-* Email: <abb110@georgetown.edu>
+* Email: <barishaustin@gmail.com>
 * Phone: (720) 666-3689

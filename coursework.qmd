@@ -5,6 +5,8 @@ format:
     embed-resources: true
 ---
 
+**Note: For my coursework, some githubs may appear missing if a professor privatizes a repository. Please [email](barishaustin@gmail.com) me to view any code not available on GitHub.
+
 ## Big Data and Cloud Computing
 
 ### Final Project
