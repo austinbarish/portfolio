@@ -1,10 +1,87 @@
 [
   {
+    "objectID": "coursework.html",
+    "href": "coursework.html",
+    "title": "Coursework",
+    "section": "",
+    "text": "**Note: For my coursework, some githubs may appear missing if a professor privatizes a repository. Please email me to view any code not available on GitHub."
+  },
+  {
+    "objectID": "coursework.html#big-data-and-cloud-computing",
+    "href": "coursework.html#big-data-and-cloud-computing",
+    "title": "Coursework",
+    "section": "Big Data and Cloud Computing",
+    "text": "Big Data and Cloud Computing\n\nFinal Project\nEach student was given Reddit data (all comments and submissions) from January 2021 to March 2023, roughly 1.5 Terabytes worth of data. There was then a subset of requirements as to what to do with the data but our topic was open ended.\nMy group focused on how Redditors discuss music, our work can be found here. I primarily focused on the genre based analysis as well as authoring much of our written segments.\n\n\nSkills Developed and Tools Used\n\nPython\nAWS\n\nSagemaker\nS3 Storage\nLambda\n\nAzure\n\nMachine Learning\nBlob Storage\n\nApache Spark\nPyspark\nDuckDB\nPolars\nDocker\nGithub"
+  },
+  {
+    "objectID": "coursework.html#advanced-nlp",
+    "href": "coursework.html#advanced-nlp",
+    "title": "Coursework",
+    "section": "Advanced NLP",
+    "text": "Advanced NLP\n\nFinal Project\nMuch of this course was focused on understanding the backend mechanics of NLP tools. Our project was then very open ended: to do something interesting with NLP. My group chose to develop of homophone checker, inspire by my common misuse of them in my writing.\nThe live demo and write-up can both be found on our final website. The code for the project is hosted on Github alongside our final presentation.\n\n\nSkills Developed and Tools Used\n\nPython\nHuggingface\nBERT\nSpacy\nMultivariable Calculus"
+  },
+  {
+    "objectID": "coursework.html#network-analytics",
+    "href": "coursework.html#network-analytics",
+    "title": "Coursework",
+    "section": "Network Analytics",
+    "text": "Network Analytics\n\nFinal Project\nSimilar to my NLP course, our instructions for this project were very open ended. Having worked with Wikipedia’s network (each page as a node and each link as an edge) earlier in the semester, I was inspired to examine the first-link philosophy phenomena I had heard about. All of my findings can be found in my final paper and the code used to create my analysis is hosted on Github.\n\n\nSkills Developed and Tools Used\n\nPython\nNetworkX\nOvito\nHTML/Webscraping"
+  },
+  {
+    "objectID": "coursework.html#computer-vision",
+    "href": "coursework.html#computer-vision",
+    "title": "Coursework",
+    "section": "Computer Vision",
+    "text": "Computer Vision\n\nFinal Project\nFor this course, each group worked on developing a deep learning model capable of detecting the number of birds in images from the Amazon rainforest. The challenge proved more difficult than the class was up to, none of us acquiring high accuracies. My groups final paper is hosted here and the code for this project can be found on Github\n\n\nSkills Developed and Tools Used\n\nPython\nGoogle Colab\nOpenCV\nPillow"
+  },
+  {
+    "objectID": "coursework.html#advanced-data-visualizations",
+    "href": "coursework.html#advanced-data-visualizations",
+    "title": "Coursework",
+    "section": "Advanced Data Visualizations",
+    "text": "Advanced Data Visualizations\n\nFinal Project\nThis class focused on best data visualization practices, culminating in a large group project to demonstrate our work. My group chose to focus on FDIC data to examine where US banking funds are located in hopes of teaching our viewers more about the US Banking System.\nOur website is not publicly hosted but can be found here alongside our code on Github\n\n\nSkills Developed and Tools Used\n\nPython\nR\nMatplotlib\nPlotly\nAltair\nggplot\nD3"
+  },
+  {
+    "objectID": "coursework.html#intro-to-dsan",
+    "href": "coursework.html#intro-to-dsan",
+    "title": "Coursework",
+    "section": "Intro to DSAN",
+    "text": "Intro to DSAN\n\nFinal Project\nMany of our assignments for this introductory course were worked into our final project, requiring our work to bend and twist to meet new requirements. Therefore, some of the pages may seem disconnected from the projects broader goals. However, I sought to use machine learning tools to project NBA players minutes as either continous variables or broken into categorical variables based on their stats. My final website can be found here. You may notice it was originally meant to serve as a portfolio but my website creation skills have greatly expanded since then. The code can be found on Github.\n\n\nSkills Used and Tools Developed\n\nPython\nR\nScikit-Learn\nPandas\nMatplotlib"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Austin Barish",
+    "title": "",
     "section": "",
-    "text": "Hi! My name is Austin. I am an aspiring Data Scientist currently pursuing a MS in Data Science and Analytics from Georgetown University. I am a member of the accelerated DSAN BA-MS program, meaning I began my graduate studies during my senior year of my undergraduate education. I graduated from Georgetown’s College of Arts and Sciences with a Bachelor of the Arts in Economics and Philosophy in May, 2023. With the accelerated program, I am on track to graduate with my MS in May, 2024.\n\n\n\nHoping to do better the next time around\n\n\nOutside of school, I am a huge sports fan. Namely, I am a fan of the Denver Broncos, Georgetown Hoyas, and your 2023 NBA Champion Denver Nuggets. I have also recently picked up an interest in soccer; you can often find me in the stands of Audi Field supporting DC United. Being from Colorado, I also love to ski and exercise. Finally, I am a massive foodie and am always looking for new restaurant recommendations.\n\n\n\nMe and Nuggets’ GM Calvin Booth; he is 6’11” I promise"
+    "text": "Hi! My name is Austin. I am an Equity Research Associate at M Science covering Restaurants and AAPL. My primary focus is on DPZ, WEN, QSR, and PZZA. I currently live in the East Village in New York City. There, I spend my free time exploring local restaurants, going to the gym, and watching sports.Namely, I am a fan of the Denver Broncos, Georgetown Hoyas, and your 2023 NBA Champion Denver Nuggets. When I get the chance, I also love to ski.\n\n\n\n\n\nI finished my latest education in May 2024, receiving a Master of Science in Data Science and Analytics from Georgetown University. In my graduate studies, I focused on Deep Learning, Large Language Models/NLP, and Network Analysis. You can read more on my coursework on the coursework page. I also completed my undergraduate studies at Georgetown, graduating in 2023 with a Bachelor of Arts in Economics and Philosophy. In undergrad, I was a four year member and director of membership for the Georgetown University Eating Society (GUES) and Sports Writer for The Hoya. My sports coverage took me as far as Indianapolis for the 2021 March Madness Tournament. I remain a fan of the Georgetown Hoyas, particularly the Men’s basketball team, despite their ongoing struggles."
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "",
+    "section": "",
+    "text": "Hi! My name is Austin. I am an Equity Research Associate at M Science covering Restaurants and AAPL. My primary focus is on DPZ, WEN, QSR, and PZZA. I currently live in the East Village in New York City. There, I spend my free time exploring local restaurants, going to the gym, and watching sports.Namely, I am a fan of the Denver Broncos, Georgetown Hoyas, and your 2023 NBA Champion Denver Nuggets. When I get the chance, I also love to ski.\n\n\n\n\n\nI finished my latest education in May 2024, receiving a Master of Science in Data Science and Analytics from Georgetown University. In my graduate studies, I focused on Deep Learning, Large Language Models/NLP, and Network Analysis. You can read more on my coursework on the coursework page. I also completed my undergraduate studies at Georgetown, graduating in 2023 with a Bachelor of Arts in Economics and Philosophy. In undergrad, I was a four year member and director of membership for the Georgetown University Eating Society (GUES) and Sports Writer for The Hoya. My sports coverage took me as far as Indianapolis for the 2021 March Madness Tournament. I remain a fan of the Georgetown Hoyas, particularly the Men’s basketball team, despite their ongoing struggles."
+  },
+  {
+    "objectID": "index.html#languages-and-tools",
+    "href": "index.html#languages-and-tools",
+    "title": "",
+    "section": "Languages and Tools",
+    "text": "Languages and Tools\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\nSQL\n\n\n\n\n\n\n\nStata\n\n\n\n\n\n\n\nTableau\n\n\n\n\n\n\n\n\n\nApache Spark\n\n\n\n\n\n\n\nPyTorch\n\n\n\n\n\n\n\nTorchVision\n\n\n\n\n\n\n\nKeras\n\n\n\n\n\n\n\nTensorFlow\n\n\n\n\n\n\n\n\n\nAWS\n\n\n\n\n\n\n\nAWS Lambda\n\n\n\n\n\n\n\nAzure\n\n\n\n\n\n\n\nHTML\n\n\n\n\n\n\n\nPandas\n\n\n\n\n\n\n\n\n\nNetworkX\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\n\nScikit-Learn\n\n\n\n\n\n\n\nPlotly\n\n\n\n\n\n\n\nAltair\n\n\n\n\n\n\n\n\n\nDuckDB\n\n\n\n\n\n\n\nPolars\n\n\n\n\n\n\n\nOvito\n\n\n\n\n\n\n\nggplot\n\n\n\n\n\n\n\nMatplotlib"
+  },
+  {
+    "objectID": "index.html#relevant-coursework",
+    "href": "index.html#relevant-coursework",
+    "title": "",
+    "section": "Relevant Coursework",
+    "text": "Relevant Coursework\n\nCompleted Courses\n\nFall 2019: Multivariable Calculus\nSpring 2020: Linear Algebra\nFall 2020: Intro to Data Science and Analytics\nSpring 2021: Intro to Computer Science: Python\nSpring 2021: Economic Statistics\nSummer 2021: Data Visualization for Politics\nFall 2021: Intro to Econometrics\nFall 2021: Game Theory\nFall 2022: Data Science and Analytics\nSpring 2023: Advanced Data Visualizations\nSummer 2023: Network Analytics\nSummer 2023: Image Mining and Computer Vision\nFall 2023: Big Data and Cloud Computing\nFall 2023: Probability Modeling and Statistic Computing\nFall 2023: Advanced Natural Language Processing (NLP)\n\n\n\nOngoing and Future Courses\n\nSpring 2024: Statistical Learning for Data Science and Analytics\nSpring 2024: NLP with Large Language Models\nSpring 2024: Neural Networks and Deep Learning"
+  },
+  {
+    "objectID": "index.html#contacts-and-websites",
+    "href": "index.html#contacts-and-websites",
+    "title": "",
+    "section": "Contacts and Websites",
+    "text": "Contacts and Websites\n\nGithub: https://github.com/austinbarish\nLinkedIn: https://www.linkedin.com/in/austin-barish\nEmail: barishaustin@gmail.com\nPhone: (720) 666-3689"
   },
   {
     "objectID": "about.html",
@@ -12,40 +89,5 @@
     "title": "About",
     "section": "",
     "text": "About this site"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Austin Barish",
-    "section": "Contact",
-    "text": "Contact"
-  },
-  {
-    "objectID": "index.html#contacts",
-    "href": "index.html#contacts",
-    "title": "Austin Barish",
-    "section": "Contacts",
-    "text": "Contacts\n\nEmail: abb110@georgetown.edu\nPhone: +1 (720)-666-3689"
-  },
-  {
-    "objectID": "index.html#contacts-and-websites",
-    "href": "index.html#contacts-and-websites",
-    "title": "Austin Barish",
-    "section": "Contacts and Websites",
-    "text": "Contacts and Websites\n\nGithub: https://github.com/austinbarish\nLinkedIn: https://www.linkedin.com/in/austin-barish\nEmail: abb110@georgetown.edu\nPhone: (720) 666-3689"
-  },
-  {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Austin Barish",
-    "section": "About Me",
-    "text": "About Me\nHi! My name is Austin. I am an aspiring Data Scientist currently pursuing a MS in Data Science and Analytics from Georgetown University. I am a member of the accelerated DSAN BA-MS program, meaning I began my graduate studies during my senior year of my undergraduate education. I graduated from Georgetown’s College of Arts and Sciences with a Bachelor of the Arts in Economics and Philosophy in May, 2023. With the accelerated program, I am on track to graduate with my MS in May, 2024.\n\n\n\nHoping to do better the next time around\n\n\nOutside of school, I am a huge sports fan. Namely, I am a fan of the Denver Broncos, Georgetown Hoyas, and your 2023 NBA Champion Denver Nuggets. I have also recently picked up an interest in soccer; you can often find me in the stands of Audi Field supporting DC United. Being from Colorado, I also love to ski and exercise. Finally, I am a massive foodie and am always looking for new restaurant recommendations.\n\n\n\nMe and Nuggets’ GM Calvin Booth; he is 6’11” I promise"
-  },
-  {
-    "objectID": "index.html#languages-and-tools",
-    "href": "index.html#languages-and-tools",
-    "title": "Austin Barish",
-    "section": "Languages and Tools",
-    "text": "Languages and Tools\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\nSQL\n\n\n\n\n\n\n\nHTML\n\n\n\n\n\n\n\nTableau\n\n\n\n\n\n\n\n\n\nPandas\n\n\n\n\n\n\n\nNumpy\n\n\n\n\n\n\n\nNetworkX\n\n\n\n\n\n\n\nOpenCV\n\n\n\n\n\n\n\nScikit-Learn"
   }
 ]
