@@ -70,7 +70,6 @@ I finished my latest education in May 2024, receiving a Master of Science in Dat
 
 ## Relevant Coursework
 
-### Completed Courses
 * Fall 2019: Multivariable Calculus
 * Spring 2020: Linear Algebra
 * Fall 2020: Intro to Data Science and Analytics
@@ -86,8 +85,6 @@ I finished my latest education in May 2024, receiving a Master of Science in Dat
 * Fall 2023: Big Data and Cloud Computing
 * Fall 2023: Probability Modeling and Statistic Computing
 * Fall 2023: Advanced Natural Language Processing (NLP)
-
-### Ongoing and Future Courses
 * Spring 2024: Statistical Learning for Data Science and Analytics
 * Spring 2024: NLP with Large Language Models
 * Spring 2024: Neural Networks and Deep Learning
@@ -95,5 +92,5 @@ I finished my latest education in May 2024, receiving a Master of Science in Dat
 ## Contacts and Websites
 * Github: <https://github.com/austinbarish>
 * LinkedIn: <https://www.linkedin.com/in/austin-barish>
-* Email: <barishaustin@gmail.com>
+* Personal Email: <barishaustin@gmail.com>
 * Phone: (720) 666-3689

@@ -5,7 +5,36 @@ format:
     embed-resources: true
 ---
 
-**Note: For my coursework, some githubs may appear missing if a professor privatizes a repository. Please [email](barishaustin@gmail.com) me to view any code not available on GitHub.
+**Note: For my coursework, some GitHubs may appear missing if a professor privatizes a repository. Please [email](barishaustin@gmail.com) me to view any code not available on GitHub.**
+
+## Deep Learning and Neural Networks
+
+### Final Project
+
+Inspired by the Twitter account [@ArtButSports](https://x.com/ArtButSports), which likens Sports photos to *real* paintings entirely from memory, we sought to create an AI that could do the same. While image similarity scores are not novel, we used a variety of preprocessing techniques to pull out images that the account might find similar whether that be in color, action of the main subject, or other form. With our models, we created a Streamlit App where users can get Art as any photo, sports or otherwise. Due to the size of the vector store, the app can only be run locally by cloning [our repository](https://github.com/5cminsuhlim/DSAN6600Proj?tab=readme-ov-file). Our efforts yielded some fascinating results, although limited by time and compute resources, we could not fine tune the model to the level needed for consistent results. This is a project I hope to continue to develop with proper resources. Our conclusions can be viewed in [our paper on Research Gate](https://www.researchgate.net/publication/380467940_Image_Similarity_Retrieval_using_Deep_Learning).
+
+
+### Skills Developed and Tools Used
+
+* Python
+* PyTorch
+* CNNs
+* YOLO
+* Deeplake
+* Streamlit
+* PIL
+
+## NLP with Large Language Models
+
+### Final Project
+
+In this project, we sought to fine-tune LLAMA 2 7b (Llama 3 was released just before the completion date) to achieve improved performance on the HELM benchmarks as a part of a [class competition](https://www.linkedin.com/posts/trevor-adriaanse-92844980_chris-larson-and-i-taught-a-seminar-on-large-activity-7193962805195075584-WK57?utm_source=share&utm_medium=member_desktop) utilizing A100 GPUs. To differentiate our model, we sought to create synthetic datasets for fine-tuning. Given LLMs notorious issues with math and Python's ability to solve it, we created hundreds of thousands of basic math questions for our model to train on. Our model demonstrated greater reasoning skills and improved arithmetic skills as a result. You can view our code [here](https://github.com/lecarpen23/dsan5810-final-project/tree/master).
+
+### Skills Developed and Tools Used
+
+* PyTorch
+* Hugging Face
+* LLAMA 2 (7b)
 
 ## Big Data and Cloud Computing
 
@@ -65,7 +94,7 @@ Similar to my NLP course, our instructions for this project were very open ended
 
 ### Final Project
 
-For this course, each group worked on developing a deep learning model capable of detecting the number of birds in images from the Amazon rainforest. The challenge proved more difficult than the class was up to, none of us acquiring high accuracies. My groups final paper is hosted [here](./ANLY677/final-paper.pdf) and the code for this project can be found on [Github](https://github.com/Matenezamani/Yolo)
+For this course, each group worked on developing a deep learning model capable of detecting the number of birds in images from the Amazon rainforest. The challenge proved more difficult than the class was up to, none of us acquiring high accuracies. The code for this project can be found on [Github](https://github.com/Matenezamani/Yolo)
 
 ### Skills Developed and Tools Used
 
@@ -86,9 +115,9 @@ Our website is not publicly hosted but can be found [here](./spring2023-project-
 
 * Python
 * R
-* [Matplotlib](./matplotlib.html)
-* [Plotly](./503-plotly-altair.html)
-* [Altair](./503-plotly-altair.html)
+* Matplotlib
+* Plotly
+* Altair
 * ggplot
 * D3
 
