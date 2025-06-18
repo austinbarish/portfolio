@@ -7,7 +7,7 @@ format:
 
 ![](./images/headshot.JPG){width=50% fig-alt="Me" fig-align="center"}
 
-Hi! My name is Austin. I am an Equity Research Associate at [M Science](https://www.mscience.com/) covering Restaurants and AAPL. My primary focus is on DPZ, WEN, QSR, and PZZA. I currently live in the East Village in New York City. There, I spend my free time exploring local restaurants, going to the gym, and watching sports.Namely, I am a fan of the Denver Broncos, Georgetown Hoyas, and your 2023 NBA Champion Denver Nuggets. When I get the chance, I also love to ski.
+Hi! My name is Austin. I am an Equity Research Associate at [M Science](https://www.mscience.com/) covering Restaurants and AAPL. My primary tickers are MCD, DPZ, WEN, QSR, and PZZA. I currently live in the East Village in New York City. There, I spend my free time exploring local restaurants, going to the gym, and watching sports. Namely, I am a fan of the Denver Broncos, Georgetown Hoyas, and the Denver Nuggets. When I get the chance, I also love to ski.
 
 ![](./images/nuggets.jpeg){width=50% fig-align="center"}
 
